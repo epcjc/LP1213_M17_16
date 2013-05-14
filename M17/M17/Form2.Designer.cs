@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.baseDadosDataSet = new M17.BaseDadosDataSet();
-            this.diretorTurmaTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.diretorTurma_TurmaTableAdapter = new M17.BaseDadosDataSetTableAdapters.DiretorTurma_TurmaTableAdapter();
-            this.turmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diretorTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.professoresTableAdapter = new M17.BaseDadosDataSetTableAdapters.ProfessoresTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProfessorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diretorTurmaTurmaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -45,9 +45,9 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.turmaDataGridViewTextBoxColumn,
-            this.diretorTurmaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.diretorTurmaTurmaBindingSource;
+            this.iDDataGridViewTextBoxColumn,
+            this.nomeProfessorDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.professoresBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -59,26 +59,27 @@
             this.baseDadosDataSet.DataSetName = "BaseDadosDataSet";
             this.baseDadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // diretorTurmaTurmaBindingSource
+            // professoresBindingSource
             // 
-            this.diretorTurmaTurmaBindingSource.DataMember = "DiretorTurma/Turma";
-            this.diretorTurmaTurmaBindingSource.DataSource = this.baseDadosDataSet;
+            this.professoresBindingSource.DataMember = "Professores";
+            this.professoresBindingSource.DataSource = this.baseDadosDataSet;
             // 
-            // diretorTurma_TurmaTableAdapter
+            // professoresTableAdapter
             // 
-            this.diretorTurma_TurmaTableAdapter.ClearBeforeFill = true;
+            this.professoresTableAdapter.ClearBeforeFill = true;
             // 
-            // turmaDataGridViewTextBoxColumn
+            // iDDataGridViewTextBoxColumn
             // 
-            this.turmaDataGridViewTextBoxColumn.DataPropertyName = "Turma";
-            this.turmaDataGridViewTextBoxColumn.HeaderText = "Turma";
-            this.turmaDataGridViewTextBoxColumn.Name = "turmaDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // diretorTurmaDataGridViewTextBoxColumn
+            // nomeProfessorDataGridViewTextBoxColumn
             // 
-            this.diretorTurmaDataGridViewTextBoxColumn.DataPropertyName = "Diretor_Turma";
-            this.diretorTurmaDataGridViewTextBoxColumn.HeaderText = "Diretor_Turma";
-            this.diretorTurmaDataGridViewTextBoxColumn.Name = "diretorTurmaDataGridViewTextBoxColumn";
+            this.nomeProfessorDataGridViewTextBoxColumn.DataPropertyName = "Nome_Professor";
+            this.nomeProfessorDataGridViewTextBoxColumn.HeaderText = "Professor";
+            this.nomeProfessorDataGridViewTextBoxColumn.Name = "nomeProfessorDataGridViewTextBoxColumn";
             // 
             // Form2
             // 
@@ -91,7 +92,7 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diretorTurmaTurmaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -100,9 +101,10 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private BaseDadosDataSet baseDadosDataSet;
-        private System.Windows.Forms.BindingSource diretorTurmaTurmaBindingSource;
-        private BaseDadosDataSetTableAdapters.DiretorTurma_TurmaTableAdapter diretorTurma_TurmaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn turmaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diretorTurmaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource professoresBindingSource;
+        private BaseDadosDataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeProfessorDataGridViewTextBoxColumn;
+
     }
 }

@@ -18,8 +18,13 @@ namespace M17
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baseDadosDataSet._DiretorTurma_Turma' table. You can move, or remove it, as needed.
-            this.diretorTurma_TurmaTableAdapter.FillDiretor_Turma(this.baseDadosDataSet._DiretorTurma_Turma);
+            // TODO: This line of code loads data into the 'baseDadosDataSet.Professores' table. You can move, or remove it, as needed.
+            this.professoresTableAdapter.Fill(this.baseDadosDataSet.Professores);
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
