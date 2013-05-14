@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.baseDadosDataSet = new M17.BaseDadosDataSet();
             this.encarregadoEducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSet = new M17.BaseDadosDataSet();
             this.encarregado_EducaçãoTableAdapter = new M17.BaseDadosDataSetTableAdapters.Encarregado_EducaçãoTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.encarregadoEducaçãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contatoEEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.encarregadoEducaçãoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -47,10 +47,10 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
             this.alunoDataGridViewTextBoxColumn,
             this.encarregadoEducaçãoDataGridViewTextBoxColumn,
-            this.contatoEEDataGridViewTextBoxColumn,
-            this.iDDataGridViewTextBoxColumn});
+            this.contatoEEDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.encarregadoEducaçãoBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -58,19 +58,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(585, 261);
             this.dataGridView1.TabIndex = 0;
             // 
-            // baseDadosDataSet
-            // 
-            this.baseDadosDataSet.DataSetName = "BaseDadosDataSet";
-            this.baseDadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // encarregadoEducaçãoBindingSource
             // 
             this.encarregadoEducaçãoBindingSource.DataMember = "Encarregado_Educação";
             this.encarregadoEducaçãoBindingSource.DataSource = this.baseDadosDataSet;
             // 
+            // baseDadosDataSet
+            // 
+            this.baseDadosDataSet.DataSetName = "BaseDadosDataSet";
+            this.baseDadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // encarregado_EducaçãoTableAdapter
             // 
             this.encarregado_EducaçãoTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             // 
             // alunoDataGridViewTextBoxColumn
             // 
@@ -90,12 +96,6 @@
             this.contatoEEDataGridViewTextBoxColumn.HeaderText = "Contato_EE";
             this.contatoEEDataGridViewTextBoxColumn.Name = "contatoEEDataGridViewTextBoxColumn";
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,8 +106,8 @@
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.encarregadoEducaçãoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,9 +118,9 @@
         private BaseDadosDataSet baseDadosDataSet;
         private System.Windows.Forms.BindingSource encarregadoEducaçãoBindingSource;
         private BaseDadosDataSetTableAdapters.Encarregado_EducaçãoTableAdapter encarregado_EducaçãoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alunoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn encarregadoEducaçãoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contatoEEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
     }
 }
