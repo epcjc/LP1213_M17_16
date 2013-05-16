@@ -18,7 +18,30 @@ namespace M17
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'baseDadosDataSet._Aluno_Ocorrência' table. You can move, or remove it, as needed.
+            //this.aluno_OcorrênciaTableAdapter.FillOcorrência(this.baseDadosDataSet._Aluno_Ocorrência);
+            // TODO: This line of code loads data into the 'baseDadosDataSet.Ocorrência' table. You can move, or remove it, as needed.
+            this.ocorrênciaTableAdapter.Fill(this.baseDadosDataSet.Ocorrência);
+            // TODO: This line of code loads data into the 'baseDadosDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.baseDadosDataSet.Alunos);
+
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.aluno_OcorrênciaTableAdapter.FillOcorrência(this.baseDadosDataSet._Aluno_Ocorrência);
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
+
+        
     }
 }

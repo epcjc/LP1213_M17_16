@@ -40,6 +40,8 @@ namespace M17 {
         
         private _Turma_DiretorTurmaDataTable _tableTurma_DiretorTurma;
         
+        private _Aluno_OcorrênciaDataTable _tableAluno_Ocorrência;
+        
         private global::System.Data.DataRelation relationTurmasDiretor_Turma;
         
         private global::System.Data.DataRelation relationAlunosOcorrência;
@@ -101,6 +103,9 @@ namespace M17 {
                 }
                 if ((ds.Tables["Turma/DiretorTurma"] != null)) {
                     base.Tables.Add(new _Turma_DiretorTurmaDataTable(ds.Tables["Turma/DiretorTurma"]));
+                }
+                if ((ds.Tables["Aluno/Ocorrência"] != null)) {
+                    base.Tables.Add(new _Aluno_OcorrênciaDataTable(ds.Tables["Aluno/Ocorrência"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -202,6 +207,16 @@ namespace M17 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _Aluno_OcorrênciaDataTable _Aluno_Ocorrência {
+            get {
+                return this._tableAluno_Ocorrência;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -291,6 +306,9 @@ namespace M17 {
                 if ((ds.Tables["Turma/DiretorTurma"] != null)) {
                     base.Tables.Add(new _Turma_DiretorTurmaDataTable(ds.Tables["Turma/DiretorTurma"]));
                 }
+                if ((ds.Tables["Aluno/Ocorrência"] != null)) {
+                    base.Tables.Add(new _Aluno_OcorrênciaDataTable(ds.Tables["Aluno/Ocorrência"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -372,6 +390,12 @@ namespace M17 {
                     this._tableTurma_DiretorTurma.InitVars();
                 }
             }
+            this._tableAluno_Ocorrência = ((_Aluno_OcorrênciaDataTable)(base.Tables["Aluno/Ocorrência"]));
+            if ((initTable == true)) {
+                if ((this._tableAluno_Ocorrência != null)) {
+                    this._tableAluno_Ocorrência.InitVars();
+                }
+            }
             this.relationTurmasDiretor_Turma = this.Relations["TurmasDiretor Turma"];
             this.relationAlunosOcorrência = this.Relations["AlunosOcorrência"];
             this.relationDiretor_TurmaOcorrência = this.Relations["Diretor TurmaOcorrência"];
@@ -403,6 +427,8 @@ namespace M17 {
             base.Tables.Add(this.tableEncarregado_Educação);
             this._tableTurma_DiretorTurma = new _Turma_DiretorTurmaDataTable();
             base.Tables.Add(this._tableTurma_DiretorTurma);
+            this._tableAluno_Ocorrência = new _Aluno_OcorrênciaDataTable();
+            base.Tables.Add(this._tableAluno_Ocorrência);
             this.relationTurmasDiretor_Turma = new global::System.Data.DataRelation("TurmasDiretor Turma", new global::System.Data.DataColumn[] {
                         this.tableTurmas.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableDiretor_Turma.ID_TurmaColumn}, false);
@@ -470,6 +496,12 @@ namespace M17 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerialize_Turma_DiretorTurma() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_Aluno_Ocorrência() {
             return false;
         }
         
@@ -551,6 +583,9 @@ namespace M17 {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void _Turma_DiretorTurmaRowChangeEventHandler(object sender, _Turma_DiretorTurmaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _Aluno_OcorrênciaRowChangeEventHandler(object sender, _Aluno_OcorrênciaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2927,6 +2962,364 @@ namespace M17 {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _Aluno_OcorrênciaDataTable : global::System.Data.TypedTableBase<_Aluno_OcorrênciaRow> {
+            
+            private global::System.Data.DataColumn columnAluno;
+            
+            private global::System.Data.DataColumn columnProfessor;
+            
+            private global::System.Data.DataColumn columnDiretor_Turma;
+            
+            private global::System.Data.DataColumn columnEnc_Educação;
+            
+            private global::System.Data.DataColumn columnObservações;
+            
+            private global::System.Data.DataColumn columnTestemunhas;
+            
+            private global::System.Data.DataColumn columnData;
+            
+            private global::System.Data.DataColumn columnResultado_Final;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _Aluno_OcorrênciaDataTable() {
+                this.TableName = "Aluno/Ocorrência";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _Aluno_OcorrênciaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _Aluno_OcorrênciaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AlunoColumn {
+                get {
+                    return this.columnAluno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProfessorColumn {
+                get {
+                    return this.columnProfessor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Diretor_TurmaColumn {
+                get {
+                    return this.columnDiretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Enc_EducaçãoColumn {
+                get {
+                    return this.columnEnc_Educação;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ObservaçõesColumn {
+                get {
+                    return this.columnObservações;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TestemunhasColumn {
+                get {
+                    return this.columnTestemunhas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DataColumn {
+                get {
+                    return this.columnData;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Resultado_FinalColumn {
+                get {
+                    return this.columnResultado_Final;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _Aluno_OcorrênciaRow this[int index] {
+                get {
+                    return ((_Aluno_OcorrênciaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _Aluno_OcorrênciaRowChangeEventHandler _Aluno_OcorrênciaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _Aluno_OcorrênciaRowChangeEventHandler _Aluno_OcorrênciaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _Aluno_OcorrênciaRowChangeEventHandler _Aluno_OcorrênciaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _Aluno_OcorrênciaRowChangeEventHandler _Aluno_OcorrênciaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_Aluno_OcorrênciaRow(_Aluno_OcorrênciaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _Aluno_OcorrênciaRow Add_Aluno_OcorrênciaRow(string Aluno, string Professor, string Diretor_Turma, string Enc_Educação, string Observações, string Testemunhas, System.DateTime Data, string Resultado_Final) {
+                _Aluno_OcorrênciaRow row_Aluno_OcorrênciaRow = ((_Aluno_OcorrênciaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Aluno,
+                        Professor,
+                        Diretor_Turma,
+                        Enc_Educação,
+                        Observações,
+                        Testemunhas,
+                        Data,
+                        Resultado_Final};
+                row_Aluno_OcorrênciaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_Aluno_OcorrênciaRow);
+                return row_Aluno_OcorrênciaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _Aluno_OcorrênciaDataTable cln = ((_Aluno_OcorrênciaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _Aluno_OcorrênciaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnAluno = base.Columns["Aluno"];
+                this.columnProfessor = base.Columns["Professor"];
+                this.columnDiretor_Turma = base.Columns["Diretor_Turma"];
+                this.columnEnc_Educação = base.Columns["Enc_Educação"];
+                this.columnObservações = base.Columns["Observações"];
+                this.columnTestemunhas = base.Columns["Testemunhas"];
+                this.columnData = base.Columns["Data"];
+                this.columnResultado_Final = base.Columns["Resultado_Final"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnAluno = new global::System.Data.DataColumn("Aluno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAluno);
+                this.columnProfessor = new global::System.Data.DataColumn("Professor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProfessor);
+                this.columnDiretor_Turma = new global::System.Data.DataColumn("Diretor_Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnDiretor_Turma.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "Diretor_Turma");
+                this.columnDiretor_Turma.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "Diretor_TurmaColumn");
+                this.columnDiretor_Turma.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnDiretor_Turma");
+                this.columnDiretor_Turma.ExtendedProperties.Add("Generator_UserColumnName", "Diretor_Turma");
+                base.Columns.Add(this.columnDiretor_Turma);
+                this.columnEnc_Educação = new global::System.Data.DataColumn("Enc_Educação", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnc_Educação);
+                this.columnObservações = new global::System.Data.DataColumn("Observações", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnObservações);
+                this.columnTestemunhas = new global::System.Data.DataColumn("Testemunhas", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestemunhas);
+                this.columnData = new global::System.Data.DataColumn("Data", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnData);
+                this.columnResultado_Final = new global::System.Data.DataColumn("Resultado_Final", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnResultado_Final);
+                this.columnAluno.MaxLength = 255;
+                this.columnProfessor.MaxLength = 255;
+                this.columnDiretor_Turma.MaxLength = 255;
+                this.columnEnc_Educação.MaxLength = 255;
+                this.columnObservações.MaxLength = 255;
+                this.columnTestemunhas.MaxLength = 255;
+                this.columnResultado_Final.MaxLength = 255;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableAluno_Ocorrência");
+                this.ExtendedProperties.Add("Generator_UserTableName", "Aluno/Ocorrência");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _Aluno_OcorrênciaRow New_Aluno_OcorrênciaRow() {
+                return ((_Aluno_OcorrênciaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _Aluno_OcorrênciaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_Aluno_OcorrênciaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._Aluno_OcorrênciaRowChanged != null)) {
+                    this._Aluno_OcorrênciaRowChanged(this, new _Aluno_OcorrênciaRowChangeEvent(((_Aluno_OcorrênciaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._Aluno_OcorrênciaRowChanging != null)) {
+                    this._Aluno_OcorrênciaRowChanging(this, new _Aluno_OcorrênciaRowChangeEvent(((_Aluno_OcorrênciaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._Aluno_OcorrênciaRowDeleted != null)) {
+                    this._Aluno_OcorrênciaRowDeleted(this, new _Aluno_OcorrênciaRowChangeEvent(((_Aluno_OcorrênciaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._Aluno_OcorrênciaRowDeleting != null)) {
+                    this._Aluno_OcorrênciaRowDeleting(this, new _Aluno_OcorrênciaRowChangeEvent(((_Aluno_OcorrênciaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_Aluno_OcorrênciaRow(_Aluno_OcorrênciaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                BaseDadosDataSet ds = new BaseDadosDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_Aluno_OcorrênciaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class AlunosRow : global::System.Data.DataRow {
@@ -3839,6 +4232,245 @@ namespace M17 {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _Aluno_OcorrênciaRow : global::System.Data.DataRow {
+            
+            private _Aluno_OcorrênciaDataTable _tableAluno_Ocorrência;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _Aluno_OcorrênciaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableAluno_Ocorrência = ((_Aluno_OcorrênciaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Aluno {
+                get {
+                    try {
+                        return ((string)(this[this._tableAluno_Ocorrência.AlunoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Aluno\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.AlunoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Professor {
+                get {
+                    try {
+                        return ((string)(this[this._tableAluno_Ocorrência.ProfessorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Professor\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.ProfessorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Diretor_Turma {
+                get {
+                    try {
+                        return ((string)(this[this._tableAluno_Ocorrência.Diretor_TurmaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Diretor_Turma\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Enc_Educação {
+                get {
+                    try {
+                        return ((string)(this[this._tableAluno_Ocorrência.Enc_EducaçãoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Enc_Educação\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.Enc_EducaçãoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Observações {
+                get {
+                    try {
+                        return ((string)(this[this._tableAluno_Ocorrência.ObservaçõesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Observações\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.ObservaçõesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Testemunhas {
+                get {
+                    try {
+                        return ((string)(this[this._tableAluno_Ocorrência.TestemunhasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Testemunhas\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.TestemunhasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Data {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this._tableAluno_Ocorrência.DataColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Data\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.DataColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Resultado_Final {
+                get {
+                    try {
+                        return ((string)(this[this._tableAluno_Ocorrência.Resultado_FinalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Resultado_Final\' in table \'Aluno/Ocorrência\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAluno_Ocorrência.Resultado_FinalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAlunoNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.AlunoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAlunoNull() {
+                this[this._tableAluno_Ocorrência.AlunoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProfessorNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.ProfessorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProfessorNull() {
+                this[this._tableAluno_Ocorrência.ProfessorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDiretor_TurmaNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.Diretor_TurmaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDiretor_TurmaNull() {
+                this[this._tableAluno_Ocorrência.Diretor_TurmaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEnc_EducaçãoNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.Enc_EducaçãoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEnc_EducaçãoNull() {
+                this[this._tableAluno_Ocorrência.Enc_EducaçãoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsObservaçõesNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.ObservaçõesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetObservaçõesNull() {
+                this[this._tableAluno_Ocorrência.ObservaçõesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTestemunhasNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.TestemunhasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTestemunhasNull() {
+                this[this._tableAluno_Ocorrência.TestemunhasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDataNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.DataColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDataNull() {
+                this[this._tableAluno_Ocorrência.DataColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsResultado_FinalNull() {
+                return this.IsNull(this._tableAluno_Ocorrência.Resultado_FinalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetResultado_FinalNull() {
+                this[this._tableAluno_Ocorrência.Resultado_FinalColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4096,6 +4728,40 @@ namespace M17 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public _Turma_DiretorTurmaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _Aluno_OcorrênciaRowChangeEvent : global::System.EventArgs {
+            
+            private _Aluno_OcorrênciaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _Aluno_OcorrênciaRowChangeEvent(_Aluno_OcorrênciaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _Aluno_OcorrênciaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6733,6 +7399,187 @@ namespace M17.BaseDadosDataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Aluno_OcorrênciaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Aluno_OcorrênciaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Aluno/Ocorrência";
+            tableMapping.ColumnMappings.Add("Aluno", "Aluno");
+            tableMapping.ColumnMappings.Add("Professor", "Professor");
+            tableMapping.ColumnMappings.Add("Diretor_Turma", "Diretor_Turma");
+            tableMapping.ColumnMappings.Add("Enc_Educação", "Enc_Educação");
+            tableMapping.ColumnMappings.Add("Observações", "Observações");
+            tableMapping.ColumnMappings.Add("Testemunhas", "Testemunhas");
+            tableMapping.ColumnMappings.Add("Data", "Data");
+            tableMapping.ColumnMappings.Add("Resultado_Final", "Resultado_Final");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::M17.Properties.Settings.Default.BaseDadosConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Alunos.Aluno, Professores.Nome_Professor AS Professor, [Diretor Turma].Nome_DiretorTurma AS Diretor_Turma, 
+                         [Identificação_EE].[Identificação_EE] AS Enc_Educação, Ocorrência.Observações, Ocorrência.Testemunhas, Ocorrência.Data, 
+                         Ocorrência.Resultado_Final
+FROM            ((((Alunos INNER JOIN
+                         Ocorrência ON Alunos.ID = Ocorrência.ID_Aluno) INNER JOIN
+                         [Diretor Turma] ON Ocorrência.ID_DiretorTurma = [Diretor Turma].ID) INNER JOIN
+                         [Identificação_EE] ON Ocorrência.[Identificação_EE] = [Identificação_EE].ID) INNER JOIN
+                         Professores ON Ocorrência.ID_Professor = Professores.ID)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillOcorrência(BaseDadosDataSet._Aluno_OcorrênciaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual BaseDadosDataSet._Aluno_OcorrênciaDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            BaseDadosDataSet._Aluno_OcorrênciaDataTable dataTable = new BaseDadosDataSet._Aluno_OcorrênciaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6958,12 +7805,12 @@ namespace M17.BaseDadosDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._alunosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Alunos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._identificação_EETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Identificação_EE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._alunosTableAdapter.Update(updatedRows));
+                    result = (result + this._identificação_EETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6976,12 +7823,12 @@ namespace M17.BaseDadosDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._identificação_EETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Identificação_EE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._alunosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Alunos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._identificação_EETableAdapter.Update(updatedRows));
+                    result = (result + this._alunosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7020,11 +7867,11 @@ namespace M17.BaseDadosDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._alunosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Alunos.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._identificação_EETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Identificação_EE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._alunosTableAdapter.Update(addedRows));
+                    result = (result + this._identificação_EETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7036,11 +7883,11 @@ namespace M17.BaseDadosDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._identificação_EETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Identificação_EE.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._alunosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Alunos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._identificação_EETableAdapter.Update(addedRows));
+                    result = (result + this._alunosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7070,11 +7917,11 @@ namespace M17.BaseDadosDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._identificação_EETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Identificação_EE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._alunosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Alunos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._identificação_EETableAdapter.Update(deletedRows));
+                    result = (result + this._alunosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7086,11 +7933,11 @@ namespace M17.BaseDadosDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._alunosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Alunos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._identificação_EETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Identificação_EE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._alunosTableAdapter.Update(deletedRows));
+                    result = (result + this._identificação_EETableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
