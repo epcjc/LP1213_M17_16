@@ -19,10 +19,23 @@ namespace M17
         private void Form3_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baseDadosDataSet.Encarregado_Educação' table. You can move, or remove it, as needed.
-            this.encarregado_EducaçãoTableAdapter.FillEncEducação(this.baseDadosDataSet.Encarregado_Educação);
-            // TODO: This line of code loads data into the 'baseDadosDataSet.Encarregado_Educação' table. You can move, or remove it, as needed.
+            //this.encarregado_EducaçãoTableAdapter.FillEncEducação(this.baseDadosDataSet.Encarregado_Educação);
+            // TODO: This line of code loads data into the 'baseDadosDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.baseDadosDataSet.Alunos);
+            
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             this.encarregado_EducaçãoTableAdapter.FillEncEducação(this.baseDadosDataSet.Encarregado_Educação);
             
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

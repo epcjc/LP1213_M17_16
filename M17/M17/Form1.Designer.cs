@@ -30,26 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.turmaDiretorTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.baseDadosDataSet = new M17.BaseDadosDataSet();
-            this.turma_DiretorTurmaTableAdapter = new M17.BaseDadosDataSetTableAdapters.Turma_DiretorTurmaTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.baseDadosDataSet = new M17.BaseDadosDataSet();
             this.turmasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.turmasTableAdapter = new M17.BaseDadosDataSetTableAdapters.TurmasTableAdapter();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.turmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diretorTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.turmasDiretorTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diretor_TurmaTableAdapter = new M17.BaseDadosDataSetTableAdapters.Diretor_TurmaTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDiretorTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmaDiretorTurmaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turmasDiretorTurmaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,28 +58,15 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.turmaDataGridViewTextBoxColumn,
-            this.diretorTurmaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.turmaDiretorTurmaBindingSource;
+            this.iDDataGridViewTextBoxColumn,
+            this.nomeDiretorTurmaDataGridViewTextBoxColumn,
+            this.iDTurmaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.turmasDiretorTurmaBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(584, 206);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // turmaDiretorTurmaBindingSource
-            // 
-            this.turmaDiretorTurmaBindingSource.DataMember = "Turma/DiretorTurma";
-            this.turmaDiretorTurmaBindingSource.DataSource = this.baseDadosDataSet;
-            // 
-            // baseDadosDataSet
-            // 
-            this.baseDadosDataSet.DataSetName = "BaseDadosDataSet";
-            this.baseDadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // turma_DiretorTurmaTableAdapter
-            // 
-            this.turma_DiretorTurmaTableAdapter.ClearBeforeFill = true;
             // 
             // comboBox1
             // 
@@ -108,6 +96,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Pesquisar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -117,15 +106,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // turmasBindingSource
-            // 
-            this.turmasBindingSource.DataMember = "Turmas";
-            this.turmasBindingSource.DataSource = this.baseDadosDataSet;
-            // 
-            // turmasTableAdapter
-            // 
-            this.turmasTableAdapter.ClearBeforeFill = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // splitContainer1
             // 
@@ -148,18 +129,48 @@
             this.splitContainer1.SplitterDistance = 85;
             this.splitContainer1.TabIndex = 5;
             // 
-            // turmaDataGridViewTextBoxColumn
+            // baseDadosDataSet
             // 
-            this.turmaDataGridViewTextBoxColumn.DataPropertyName = "Turma";
-            this.turmaDataGridViewTextBoxColumn.HeaderText = "Turma";
-            this.turmaDataGridViewTextBoxColumn.Name = "turmaDataGridViewTextBoxColumn";
-            this.turmaDataGridViewTextBoxColumn.Visible = false;
+            this.baseDadosDataSet.DataSetName = "BaseDadosDataSet";
+            this.baseDadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // diretorTurmaDataGridViewTextBoxColumn
+            // turmasBindingSource
             // 
-            this.diretorTurmaDataGridViewTextBoxColumn.DataPropertyName = "Diretor_Turma";
-            this.diretorTurmaDataGridViewTextBoxColumn.HeaderText = "Diretor_Turma";
-            this.diretorTurmaDataGridViewTextBoxColumn.Name = "diretorTurmaDataGridViewTextBoxColumn";
+            this.turmasBindingSource.DataMember = "Turmas";
+            this.turmasBindingSource.DataSource = this.baseDadosDataSet;
+            // 
+            // turmasTableAdapter
+            // 
+            this.turmasTableAdapter.ClearBeforeFill = true;
+            // 
+            // turmasDiretorTurmaBindingSource
+            // 
+            this.turmasDiretorTurmaBindingSource.DataMember = "TurmasDiretor Turma";
+            this.turmasDiretorTurmaBindingSource.DataSource = this.turmasBindingSource;
+            // 
+            // diretor_TurmaTableAdapter
+            // 
+            this.diretor_TurmaTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nomeDiretorTurmaDataGridViewTextBoxColumn
+            // 
+            this.nomeDiretorTurmaDataGridViewTextBoxColumn.DataPropertyName = "Nome_DiretorTurma";
+            this.nomeDiretorTurmaDataGridViewTextBoxColumn.HeaderText = "Nome_DiretorTurma";
+            this.nomeDiretorTurmaDataGridViewTextBoxColumn.Name = "nomeDiretorTurmaDataGridViewTextBoxColumn";
+            // 
+            // iDTurmaDataGridViewTextBoxColumn
+            // 
+            this.iDTurmaDataGridViewTextBoxColumn.DataPropertyName = "ID_Turma";
+            this.iDTurmaDataGridViewTextBoxColumn.HeaderText = "ID_Turma";
+            this.iDTurmaDataGridViewTextBoxColumn.Name = "iDTurmaDataGridViewTextBoxColumn";
+            this.iDTurmaDataGridViewTextBoxColumn.Visible = false;
             // 
             // Form1
             // 
@@ -171,14 +182,14 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmaDiretorTurmaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turmasDiretorTurmaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -186,18 +197,19 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private BaseDadosDataSet baseDadosDataSet;
-        private System.Windows.Forms.BindingSource turmaDiretorTurmaBindingSource;
-        private BaseDadosDataSetTableAdapters.Turma_DiretorTurmaTableAdapter turma_DiretorTurmaTableAdapter;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private BaseDadosDataSet baseDadosDataSet;
         private System.Windows.Forms.BindingSource turmasBindingSource;
         private BaseDadosDataSetTableAdapters.TurmasTableAdapter turmasTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn turmaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diretorTurmaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.BindingSource turmasDiretorTurmaBindingSource;
+        private BaseDadosDataSetTableAdapters.Diretor_TurmaTableAdapter diretor_TurmaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDiretorTurmaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDTurmaDataGridViewTextBoxColumn;
 
 
 

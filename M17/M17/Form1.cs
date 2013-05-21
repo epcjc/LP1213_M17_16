@@ -18,12 +18,23 @@ namespace M17
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosDataSet.Diretor_Turma' table. You can move, or remove it, as needed.
+            //this.diretor_TurmaTableAdapter.Fill(this.baseDadosDataSet.Diretor_Turma);
             // TODO: This line of code loads data into the 'baseDadosDataSet.Turmas' table. You can move, or remove it, as needed.
             this.turmasTableAdapter.Fill(this.baseDadosDataSet.Turmas);
-            // TODO: This line of code loads data into the 'baseDadosDataSet._Turma_DiretorTurma' table. You can move, or remove it, as needed.
-            this.turma_DiretorTurmaTableAdapter.FillDiretorTurma(this.baseDadosDataSet._Turma_DiretorTurma);
-        
+            
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.diretor_TurmaTableAdapter.Fill(this.baseDadosDataSet.Diretor_Turma);
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         

@@ -35,8 +35,11 @@
             this.alunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet = new M17.BaseDadosDataSet();
             this.label1 = new System.Windows.Forms.Label();
-            this.alunosTableAdapter = new M17.BaseDadosDataSetTableAdapters.AlunosTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.alunosTableAdapter = new M17.BaseDadosDataSetTableAdapters.AlunosTableAdapter();
+            this.alunosAlunoOcorrênciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aluno_OcorrênciaTableAdapter = new M17.BaseDadosDataSetTableAdapters.Aluno_OcorrênciaTableAdapter();
             this.alunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.professorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diretorTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,20 +48,16 @@
             this.testemunhasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadoFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alunoOcorrênciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alunosOcorrênciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ocorrênciaTableAdapter = new M17.BaseDadosDataSetTableAdapters.OcorrênciaTableAdapter();
-            this.aluno_OcorrênciaTableAdapter = new M17.BaseDadosDataSetTableAdapters.Aluno_OcorrênciaTableAdapter();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.iDAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDOcorrenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoOcorrênciaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosOcorrênciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosAlunoOcorrênciaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -111,10 +110,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Aluno";
             // 
-            // alunosTableAdapter
-            // 
-            this.alunosTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -127,13 +122,49 @@
             this.observaçõesDataGridViewTextBoxColumn,
             this.testemunhasDataGridViewTextBoxColumn,
             this.dataDataGridViewTextBoxColumn,
-            this.resultadoFinalDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.alunoOcorrênciaBindingSource;
+            this.resultadoFinalDataGridViewTextBoxColumn,
+            this.iDAlunoDataGridViewTextBoxColumn,
+            this.iDOcorrenciaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.alunosAlunoOcorrênciaBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(658, 182);
+            this.dataGridView1.Size = new System.Drawing.Size(659, 182);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Size = new System.Drawing.Size(659, 261);
+            this.splitContainer1.SplitterDistance = 75;
+            this.splitContainer1.TabIndex = 5;
+            // 
+            // alunosTableAdapter
+            // 
+            this.alunosTableAdapter.ClearBeforeFill = true;
+            // 
+            // alunosAlunoOcorrênciaBindingSource
+            // 
+            this.alunosAlunoOcorrênciaBindingSource.DataMember = "Alunos_Aluno_Ocorrência";
+            this.alunosAlunoOcorrênciaBindingSource.DataSource = this.alunosBindingSource;
+            // 
+            // aluno_OcorrênciaTableAdapter
+            // 
+            this.aluno_OcorrênciaTableAdapter.ClearBeforeFill = true;
             // 
             // alunoDataGridViewTextBoxColumn
             // 
@@ -183,61 +214,33 @@
             this.resultadoFinalDataGridViewTextBoxColumn.HeaderText = "Resultado_Final";
             this.resultadoFinalDataGridViewTextBoxColumn.Name = "resultadoFinalDataGridViewTextBoxColumn";
             // 
-            // alunoOcorrênciaBindingSource
+            // iDAlunoDataGridViewTextBoxColumn
             // 
-            this.alunoOcorrênciaBindingSource.DataMember = "Aluno/Ocorrência";
-            this.alunoOcorrênciaBindingSource.DataSource = this.baseDadosDataSet;
+            this.iDAlunoDataGridViewTextBoxColumn.DataPropertyName = "ID_Aluno";
+            this.iDAlunoDataGridViewTextBoxColumn.HeaderText = "ID_Aluno";
+            this.iDAlunoDataGridViewTextBoxColumn.Name = "iDAlunoDataGridViewTextBoxColumn";
             // 
-            // alunosOcorrênciaBindingSource
+            // iDOcorrenciaDataGridViewTextBoxColumn
             // 
-            this.alunosOcorrênciaBindingSource.DataMember = "AlunosOcorrência";
-            this.alunosOcorrênciaBindingSource.DataSource = this.alunosBindingSource;
-            // 
-            // ocorrênciaTableAdapter
-            // 
-            this.ocorrênciaTableAdapter.ClearBeforeFill = true;
-            // 
-            // aluno_OcorrênciaTableAdapter
-            // 
-            this.aluno_OcorrênciaTableAdapter.ClearBeforeFill = true;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(658, 261);
-            this.splitContainer1.SplitterDistance = 75;
-            this.splitContainer1.TabIndex = 5;
+            this.iDOcorrenciaDataGridViewTextBoxColumn.DataPropertyName = "ID_Ocorrencia";
+            this.iDOcorrenciaDataGridViewTextBoxColumn.HeaderText = "ID_Ocorrencia";
+            this.iDOcorrenciaDataGridViewTextBoxColumn.Name = "iDOcorrenciaDataGridViewTextBoxColumn";
             // 
             // Form4
             // 
-            this.ClientSize = new System.Drawing.Size(658, 261);
+            this.ClientSize = new System.Drawing.Size(659, 261);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoOcorrênciaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosOcorrênciaBindingSource)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.alunosAlunoOcorrênciaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,13 +251,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
         private BaseDadosDataSet baseDadosDataSet;
         private System.Windows.Forms.BindingSource alunosBindingSource;
         private BaseDadosDataSetTableAdapters.AlunosTableAdapter alunosTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource alunosOcorrênciaBindingSource;
-        private BaseDadosDataSetTableAdapters.OcorrênciaTableAdapter ocorrênciaTableAdapter;
-        private System.Windows.Forms.BindingSource alunoOcorrênciaBindingSource;
+        private System.Windows.Forms.BindingSource alunosAlunoOcorrênciaBindingSource;
         private BaseDadosDataSetTableAdapters.Aluno_OcorrênciaTableAdapter aluno_OcorrênciaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn alunoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn professorDataGridViewTextBoxColumn;
@@ -264,7 +266,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn testemunhasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn resultadoFinalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDAlunoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDOcorrenciaDataGridViewTextBoxColumn;
 
 
     }

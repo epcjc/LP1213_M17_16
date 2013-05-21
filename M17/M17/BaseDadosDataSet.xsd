@@ -365,7 +365,8 @@
               <DbSource ConnectionRef="BaseDadosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillEncEducação" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillEncEducação" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillEncEducação">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Alunos.Aluno, [Identificação_EE].[Identificação_EE] AS Enc_Educação, [Identificação_EE].Contato
+                    <CommandText>SELECT        Alunos.Aluno, [Identificação_EE].[Identificação_EE] AS Enc_Educação, [Identificação_EE].Contato, Alunos.ID AS ID_Aluno, 
+                         [Identificação_EE].ID AS ID_EncEd
 FROM            (Alunos INNER JOIN
                          [Identificação_EE] ON Alunos.ID = [Identificação_EE].ID)</CommandText>
                     <Parameters />
@@ -377,15 +378,17 @@ FROM            (Alunos INNER JOIN
               <Mapping SourceColumn="Aluno" DataSetColumn="Aluno" />
               <Mapping SourceColumn="Enc_Educação" DataSetColumn="Enc_Educação" />
               <Mapping SourceColumn="Contato" DataSetColumn="Contato" />
+              <Mapping SourceColumn="ID_Aluno" DataSetColumn="ID_Aluno" />
+              <Mapping SourceColumn="ID_EncEd" DataSetColumn="ID_EncEd" />
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Turma/DiretorTurmaTableAdapter" GeneratorDataComponentClassName="Turma_DiretorTurmaTableAdapter" Name="Turma/DiretorTurma" UserDataComponentName="Turma/DiretorTurmaTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Turma_DiretorTurmaTableAdapter" GeneratorDataComponentClassName="Turma_DiretorTurmaTableAdapter" Name="Turma_DiretorTurma" UserDataComponentName="Turma_DiretorTurmaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BaseDadosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillDiretorTurma" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillDiretorTurma" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillDiretorTurma">
+              <DbSource ConnectionRef="BaseDadosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillDiretorTurma" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillDiretorTurma" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillDiretorTurma">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Turmas.Turma, [Diretor Turma].Nome_DiretorTurma AS Diretor_Turma
+                    <CommandText>SELECT        Turmas.ID, Turmas.Turma, [Diretor Turma].Nome_DiretorTurma AS Diretor_Turma, [Diretor Turma].ID AS ID_DiretorTurma
 FROM            ([Diretor Turma] INNER JOIN
                          Turmas ON [Diretor Turma].ID_Turma = Turmas.ID)
 ORDER BY Turmas.Turma</CommandText>
@@ -397,17 +400,19 @@ ORDER BY Turmas.Turma</CommandText>
             <Mappings>
               <Mapping SourceColumn="Turma" DataSetColumn="Turma" />
               <Mapping SourceColumn="Diretor_Turma" DataSetColumn="Diretor_Turma" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="ID_DiretorTurma" DataSetColumn="ID_DiretorTurma" />
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Aluno/OcorrênciaTableAdapter" GeneratorDataComponentClassName="Aluno_OcorrênciaTableAdapter" Name="Aluno/Ocorrência" UserDataComponentName="Aluno/OcorrênciaTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Aluno_OcorrênciaTableAdapter" GeneratorDataComponentClassName="Aluno_OcorrênciaTableAdapter" Name="Aluno_Ocorrência" UserDataComponentName="Aluno_OcorrênciaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BaseDadosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillOcorrência" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillOcorrência" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillOcorrência">
+              <DbSource ConnectionRef="BaseDadosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillOcorrência" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillOcorrência" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillOcorrência">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Alunos.Aluno, Professores.Nome_Professor AS Professor, [Diretor Turma].Nome_DiretorTurma AS Diretor_Turma, 
-                         [Identificação_EE].[Identificação_EE] AS Enc_Educação, Ocorrência.Observações, Ocorrência.Testemunhas, Ocorrência.Data, 
-                         Ocorrência.Resultado_Final
+                    <CommandText>SELECT        Alunos.ID AS ID_Aluno, Ocorrência.ID AS ID_Ocorrencia, Alunos.Aluno, Professores.Nome_Professor AS Professor, 
+                         [Diretor Turma].Nome_DiretorTurma AS Diretor_Turma, [Identificação_EE].[Identificação_EE] AS Enc_Educação, Ocorrência.Observações, 
+                         Ocorrência.Testemunhas, Ocorrência.Data, Ocorrência.Resultado_Final
 FROM            ((((Alunos INNER JOIN
                          Ocorrência ON Alunos.ID = Ocorrência.ID_Aluno) INNER JOIN
                          [Diretor Turma] ON Ocorrência.ID_DiretorTurma = [Diretor Turma].ID) INNER JOIN
@@ -427,6 +432,8 @@ FROM            ((((Alunos INNER JOIN
               <Mapping SourceColumn="Testemunhas" DataSetColumn="Testemunhas" />
               <Mapping SourceColumn="Data" DataSetColumn="Data" />
               <Mapping SourceColumn="Resultado_Final" DataSetColumn="Resultado_Final" />
+              <Mapping SourceColumn="ID_Aluno" DataSetColumn="ID_Aluno" />
+              <Mapping SourceColumn="ID_Ocorrencia" DataSetColumn="ID_Ocorrencia" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -438,7 +445,7 @@ FROM            ((((Alunos INNER JOIN
   <xs:element name="BaseDadosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BaseDadosDataSet" msprop:Generator_UserDSName="BaseDadosDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Alunos" msprop:Generator_TableClassName="AlunosDataTable" msprop:Generator_TableVarName="tableAlunos" msprop:Generator_TablePropName="Alunos" msprop:Generator_RowDeletingName="AlunosRowDeleting" msprop:Generator_RowChangingName="AlunosRowChanging" msprop:Generator_RowEvHandlerName="AlunosRowChangeEventHandler" msprop:Generator_RowDeletedName="AlunosRowDeleted" msprop:Generator_UserTableName="Alunos" msprop:Generator_RowChangedName="AlunosRowChanged" msprop:Generator_RowEvArgName="AlunosRowChangeEvent" msprop:Generator_RowClassName="AlunosRow">
+        <xs:element name="Alunos" msprop:Generator_TableClassName="AlunosDataTable" msprop:Generator_TableVarName="tableAlunos" msprop:Generator_RowChangedName="AlunosRowChanged" msprop:Generator_TablePropName="Alunos" msprop:Generator_RowDeletingName="AlunosRowDeleting" msprop:Generator_RowChangingName="AlunosRowChanging" msprop:Generator_RowEvHandlerName="AlunosRowChangeEventHandler" msprop:Generator_RowDeletedName="AlunosRowDeleted" msprop:Generator_RowClassName="AlunosRow" msprop:Generator_UserTableName="Alunos" msprop:Generator_RowEvArgName="AlunosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -452,7 +459,7 @@ FROM            ((((Alunos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Diretor_x0020_Turma" msprop:Generator_TableClassName="Diretor_TurmaDataTable" msprop:Generator_TableVarName="tableDiretor_Turma" msprop:Generator_TablePropName="Diretor_Turma" msprop:Generator_RowDeletingName="Diretor_TurmaRowDeleting" msprop:Generator_RowChangingName="Diretor_TurmaRowChanging" msprop:Generator_RowEvHandlerName="Diretor_TurmaRowChangeEventHandler" msprop:Generator_RowDeletedName="Diretor_TurmaRowDeleted" msprop:Generator_UserTableName="Diretor Turma" msprop:Generator_RowChangedName="Diretor_TurmaRowChanged" msprop:Generator_RowEvArgName="Diretor_TurmaRowChangeEvent" msprop:Generator_RowClassName="Diretor_TurmaRow">
+        <xs:element name="Diretor_x0020_Turma" msprop:Generator_TableClassName="Diretor_TurmaDataTable" msprop:Generator_TableVarName="tableDiretor_Turma" msprop:Generator_RowChangedName="Diretor_TurmaRowChanged" msprop:Generator_TablePropName="Diretor_Turma" msprop:Generator_RowDeletingName="Diretor_TurmaRowDeleting" msprop:Generator_RowChangingName="Diretor_TurmaRowChanging" msprop:Generator_RowEvHandlerName="Diretor_TurmaRowChangeEventHandler" msprop:Generator_RowDeletedName="Diretor_TurmaRowDeleted" msprop:Generator_RowClassName="Diretor_TurmaRow" msprop:Generator_UserTableName="Diretor Turma" msprop:Generator_RowEvArgName="Diretor_TurmaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -467,7 +474,7 @@ FROM            ((((Alunos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Identificação_EE" msprop:Generator_TableClassName="Identificação_EEDataTable" msprop:Generator_TableVarName="tableIdentificação_EE" msprop:Generator_TablePropName="Identificação_EE" msprop:Generator_RowDeletingName="Identificação_EERowDeleting" msprop:Generator_RowChangingName="Identificação_EERowChanging" msprop:Generator_RowEvHandlerName="Identificação_EERowChangeEventHandler" msprop:Generator_RowDeletedName="Identificação_EERowDeleted" msprop:Generator_UserTableName="Identificação_EE" msprop:Generator_RowChangedName="Identificação_EERowChanged" msprop:Generator_RowEvArgName="Identificação_EERowChangeEvent" msprop:Generator_RowClassName="Identificação_EERow">
+        <xs:element name="Identificação_EE" msprop:Generator_TableClassName="Identificação_EEDataTable" msprop:Generator_TableVarName="tableIdentificação_EE" msprop:Generator_RowChangedName="Identificação_EERowChanged" msprop:Generator_TablePropName="Identificação_EE" msprop:Generator_RowDeletingName="Identificação_EERowDeleting" msprop:Generator_RowChangingName="Identificação_EERowChanging" msprop:Generator_RowEvHandlerName="Identificação_EERowChangeEventHandler" msprop:Generator_RowDeletedName="Identificação_EERowDeleted" msprop:Generator_RowClassName="Identificação_EERow" msprop:Generator_UserTableName="Identificação_EE" msprop:Generator_RowEvArgName="Identificação_EERowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -490,7 +497,7 @@ FROM            ((((Alunos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ocorrência" msprop:Generator_TableClassName="OcorrênciaDataTable" msprop:Generator_TableVarName="tableOcorrência" msprop:Generator_TablePropName="Ocorrência" msprop:Generator_RowDeletingName="OcorrênciaRowDeleting" msprop:Generator_RowChangingName="OcorrênciaRowChanging" msprop:Generator_RowEvHandlerName="OcorrênciaRowChangeEventHandler" msprop:Generator_RowDeletedName="OcorrênciaRowDeleted" msprop:Generator_UserTableName="Ocorrência" msprop:Generator_RowChangedName="OcorrênciaRowChanged" msprop:Generator_RowEvArgName="OcorrênciaRowChangeEvent" msprop:Generator_RowClassName="OcorrênciaRow">
+        <xs:element name="Ocorrência" msprop:Generator_TableClassName="OcorrênciaDataTable" msprop:Generator_TableVarName="tableOcorrência" msprop:Generator_RowChangedName="OcorrênciaRowChanged" msprop:Generator_TablePropName="Ocorrência" msprop:Generator_RowDeletingName="OcorrênciaRowDeleting" msprop:Generator_RowChangingName="OcorrênciaRowChanging" msprop:Generator_RowEvHandlerName="OcorrênciaRowChangeEventHandler" msprop:Generator_RowDeletedName="OcorrênciaRowDeleted" msprop:Generator_RowClassName="OcorrênciaRow" msprop:Generator_UserTableName="Ocorrência" msprop:Generator_RowEvArgName="OcorrênciaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -523,7 +530,7 @@ FROM            ((((Alunos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Professores" msprop:Generator_TableClassName="ProfessoresDataTable" msprop:Generator_TableVarName="tableProfessores" msprop:Generator_TablePropName="Professores" msprop:Generator_RowDeletingName="ProfessoresRowDeleting" msprop:Generator_RowChangingName="ProfessoresRowChanging" msprop:Generator_RowEvHandlerName="ProfessoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfessoresRowDeleted" msprop:Generator_UserTableName="Professores" msprop:Generator_RowChangedName="ProfessoresRowChanged" msprop:Generator_RowEvArgName="ProfessoresRowChangeEvent" msprop:Generator_RowClassName="ProfessoresRow">
+        <xs:element name="Professores" msprop:Generator_TableClassName="ProfessoresDataTable" msprop:Generator_TableVarName="tableProfessores" msprop:Generator_RowChangedName="ProfessoresRowChanged" msprop:Generator_TablePropName="Professores" msprop:Generator_RowDeletingName="ProfessoresRowDeleting" msprop:Generator_RowChangingName="ProfessoresRowChanging" msprop:Generator_RowEvHandlerName="ProfessoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfessoresRowDeleted" msprop:Generator_RowClassName="ProfessoresRow" msprop:Generator_UserTableName="Professores" msprop:Generator_RowEvArgName="ProfessoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -537,7 +544,7 @@ FROM            ((((Alunos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Turmas" msprop:Generator_TableClassName="TurmasDataTable" msprop:Generator_TableVarName="tableTurmas" msprop:Generator_TablePropName="Turmas" msprop:Generator_RowDeletingName="TurmasRowDeleting" msprop:Generator_RowChangingName="TurmasRowChanging" msprop:Generator_RowEvHandlerName="TurmasRowChangeEventHandler" msprop:Generator_RowDeletedName="TurmasRowDeleted" msprop:Generator_UserTableName="Turmas" msprop:Generator_RowChangedName="TurmasRowChanged" msprop:Generator_RowEvArgName="TurmasRowChangeEvent" msprop:Generator_RowClassName="TurmasRow">
+        <xs:element name="Turmas" msprop:Generator_TableClassName="TurmasDataTable" msprop:Generator_TableVarName="tableTurmas" msprop:Generator_RowChangedName="TurmasRowChanged" msprop:Generator_TablePropName="Turmas" msprop:Generator_RowDeletingName="TurmasRowDeleting" msprop:Generator_RowChangingName="TurmasRowChanging" msprop:Generator_RowEvHandlerName="TurmasRowChangeEventHandler" msprop:Generator_RowDeletedName="TurmasRowDeleted" msprop:Generator_RowClassName="TurmasRow" msprop:Generator_UserTableName="Turmas" msprop:Generator_RowEvArgName="TurmasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -551,7 +558,7 @@ FROM            ((((Alunos INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Encarregado_Educação" msprop:Generator_TableClassName="Encarregado_EducaçãoDataTable" msprop:Generator_TableVarName="tableEncarregado_Educação" msprop:Generator_RowChangedName="Encarregado_EducaçãoRowChanged" msprop:Generator_TablePropName="Encarregado_Educação" msprop:Generator_RowDeletingName="Encarregado_EducaçãoRowDeleting" msprop:Generator_RowChangingName="Encarregado_EducaçãoRowChanging" msprop:Generator_RowEvHandlerName="Encarregado_EducaçãoRowChangeEventHandler" msprop:Generator_RowDeletedName="Encarregado_EducaçãoRowDeleted" msprop:Generator_RowClassName="Encarregado_EducaçãoRow" msprop:Generator_UserTableName="Encarregado_Educação" msprop:Generator_RowEvArgName="Encarregado_EducaçãoRowChangeEvent">
+        <xs:element name="Encarregado_Educação" msprop:Generator_TableClassName="Encarregado_EducaçãoDataTable" msprop:Generator_TableVarName="tableEncarregado_Educação" msprop:Generator_TablePropName="Encarregado_Educação" msprop:Generator_RowDeletingName="Encarregado_EducaçãoRowDeleting" msprop:Generator_RowChangingName="Encarregado_EducaçãoRowChanging" msprop:Generator_RowEvHandlerName="Encarregado_EducaçãoRowChangeEventHandler" msprop:Generator_RowDeletedName="Encarregado_EducaçãoRowDeleted" msprop:Generator_UserTableName="Encarregado_Educação" msprop:Generator_RowChangedName="Encarregado_EducaçãoRowChanged" msprop:Generator_RowEvArgName="Encarregado_EducaçãoRowChangeEvent" msprop:Generator_RowClassName="Encarregado_EducaçãoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Aluno" msprop:Generator_ColumnVarNameInTable="columnAluno" msprop:Generator_ColumnPropNameInRow="Aluno" msprop:Generator_ColumnPropNameInTable="AlunoColumn" msprop:Generator_UserColumnName="Aluno" minOccurs="0">
@@ -569,10 +576,12 @@ FROM            ((((Alunos INNER JOIN
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Contato" msprop:Generator_ColumnVarNameInTable="columnContato" msprop:Generator_ColumnPropNameInRow="Contato" msprop:Generator_ColumnPropNameInTable="ContatoColumn" msprop:Generator_UserColumnName="Contato" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_Aluno" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_Aluno" msprop:Generator_ColumnPropNameInRow="ID_Aluno" msprop:Generator_ColumnPropNameInTable="ID_AlunoColumn" msprop:Generator_UserColumnName="ID_Aluno" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_EncEd" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_EncEd" msprop:Generator_ColumnPropNameInRow="ID_EncEd" msprop:Generator_ColumnPropNameInTable="ID_EncEdColumn" msprop:Generator_UserColumnName="ID_EncEd" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Turma_x002F_DiretorTurma" msprop:Generator_TableClassName="_Turma_DiretorTurmaDataTable" msprop:Generator_TableVarName="_tableTurma_DiretorTurma" msprop:Generator_RowChangedName="_Turma_DiretorTurmaRowChanged" msprop:Generator_TablePropName="_Turma_DiretorTurma" msprop:Generator_RowDeletingName="_Turma_DiretorTurmaRowDeleting" msprop:Generator_RowChangingName="_Turma_DiretorTurmaRowChanging" msprop:Generator_RowEvHandlerName="_Turma_DiretorTurmaRowChangeEventHandler" msprop:Generator_RowDeletedName="_Turma_DiretorTurmaRowDeleted" msprop:Generator_RowClassName="_Turma_DiretorTurmaRow" msprop:Generator_UserTableName="Turma/DiretorTurma" msprop:Generator_RowEvArgName="_Turma_DiretorTurmaRowChangeEvent">
+        <xs:element name="Turma_DiretorTurma" msprop:Generator_TableClassName="Turma_DiretorTurmaDataTable" msprop:Generator_TableVarName="tableTurma_DiretorTurma" msprop:Generator_TablePropName="Turma_DiretorTurma" msprop:Generator_RowDeletingName="Turma_DiretorTurmaRowDeleting" msprop:Generator_RowChangingName="Turma_DiretorTurmaRowChanging" msprop:Generator_RowEvHandlerName="Turma_DiretorTurmaRowChangeEventHandler" msprop:Generator_RowDeletedName="Turma_DiretorTurmaRowDeleted" msprop:Generator_UserTableName="Turma_DiretorTurma" msprop:Generator_RowChangedName="Turma_DiretorTurmaRowChanged" msprop:Generator_RowEvArgName="Turma_DiretorTurmaRowChangeEvent" msprop:Generator_RowClassName="Turma_DiretorTurmaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" minOccurs="0">
@@ -589,10 +598,12 @@ FROM            ((((Alunos INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_DiretorTurma" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_DiretorTurma" msprop:Generator_ColumnPropNameInRow="ID_DiretorTurma" msprop:Generator_ColumnPropNameInTable="ID_DiretorTurmaColumn" msprop:Generator_UserColumnName="ID_DiretorTurma" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Aluno_x002F_Ocorrência" msprop:Generator_TableClassName="_Aluno_OcorrênciaDataTable" msprop:Generator_TableVarName="_tableAluno_Ocorrência" msprop:Generator_TablePropName="_Aluno_Ocorrência" msprop:Generator_RowDeletingName="_Aluno_OcorrênciaRowDeleting" msprop:Generator_RowChangingName="_Aluno_OcorrênciaRowChanging" msprop:Generator_RowEvHandlerName="_Aluno_OcorrênciaRowChangeEventHandler" msprop:Generator_RowDeletedName="_Aluno_OcorrênciaRowDeleted" msprop:Generator_UserTableName="Aluno/Ocorrência" msprop:Generator_RowChangedName="_Aluno_OcorrênciaRowChanged" msprop:Generator_RowEvArgName="_Aluno_OcorrênciaRowChangeEvent" msprop:Generator_RowClassName="_Aluno_OcorrênciaRow">
+        <xs:element name="Aluno_Ocorrência" msprop:Generator_TableClassName="Aluno_OcorrênciaDataTable" msprop:Generator_TableVarName="tableAluno_Ocorrência" msprop:Generator_RowChangedName="Aluno_OcorrênciaRowChanged" msprop:Generator_TablePropName="Aluno_Ocorrência" msprop:Generator_RowDeletingName="Aluno_OcorrênciaRowDeleting" msprop:Generator_RowChangingName="Aluno_OcorrênciaRowChanging" msprop:Generator_RowEvHandlerName="Aluno_OcorrênciaRowChangeEventHandler" msprop:Generator_RowDeletedName="Aluno_OcorrênciaRowDeleted" msprop:Generator_RowClassName="Aluno_OcorrênciaRow" msprop:Generator_UserTableName="Aluno_Ocorrência" msprop:Generator_RowEvArgName="Aluno_OcorrênciaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Aluno" msprop:Generator_ColumnVarNameInTable="columnAluno" msprop:Generator_ColumnPropNameInRow="Aluno" msprop:Generator_ColumnPropNameInTable="AlunoColumn" msprop:Generator_UserColumnName="Aluno" minOccurs="0">
@@ -645,6 +656,8 @@ FROM            ((((Alunos INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ID_Aluno" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_Aluno" msprop:Generator_ColumnPropNameInRow="ID_Aluno" msprop:Generator_ColumnPropNameInTable="ID_AlunoColumn" msprop:Generator_UserColumnName="ID_Aluno" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_Ocorrencia" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_Ocorrencia" msprop:Generator_ColumnPropNameInRow="ID_Ocorrencia" msprop:Generator_ColumnPropNameInTable="ID_OcorrenciaColumn" msprop:Generator_UserColumnName="ID_Ocorrencia" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -674,14 +687,23 @@ FROM            ((((Alunos INNER JOIN
       <xs:selector xpath=".//mstns:Turmas" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
+    <xs:unique name="Aluno_OcorrênciaKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Aluno_Ocorrência" />
+      <xs:field xpath="mstns:ID_Ocorrencia" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="TurmasDiretor_x0020_Turma" msdata:parent="Turmas" msdata:child="Diretor_x0020_Turma" msdata:parentkey="ID" msdata:childkey="ID_Turma" msprop:Generator_UserChildTable="Diretor Turma" msprop:Generator_ChildPropName="GetDiretor_TurmaRows" msprop:Generator_UserRelationName="TurmasDiretor Turma" msprop:Generator_RelationVarName="relationTurmasDiretor_Turma" msprop:Generator_UserParentTable="Turmas" msprop:Generator_ParentPropName="TurmasRow" />
-      <msdata:Relationship name="AlunosOcorrência" msdata:parent="Alunos" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_Aluno" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="AlunosOcorrência" msprop:Generator_ParentPropName="AlunosRow" msprop:Generator_RelationVarName="relationAlunosOcorrência" msprop:Generator_UserParentTable="Alunos" />
-      <msdata:Relationship name="Diretor_x0020_TurmaOcorrência" msdata:parent="Diretor_x0020_Turma" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_DiretorTurma" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="Diretor TurmaOcorrência" msprop:Generator_ParentPropName="Diretor_TurmaRow" msprop:Generator_RelationVarName="relationDiretor_TurmaOcorrência" msprop:Generator_UserParentTable="Diretor Turma" />
-      <msdata:Relationship name="Identificação_EEOcorrência" msdata:parent="Identificação_EE" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="Identificação_EE" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="Identificação_EEOcorrência" msprop:Generator_ParentPropName="Identificação_EERow" msprop:Generator_RelationVarName="relationIdentificação_EEOcorrência" msprop:Generator_UserParentTable="Identificação_EE" />
-      <msdata:Relationship name="ProfessoresOcorrência" msdata:parent="Professores" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_Professor" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="ProfessoresOcorrência" msprop:Generator_RelationVarName="relationProfessoresOcorrência" msprop:Generator_UserParentTable="Professores" msprop:Generator_ParentPropName="ProfessoresRow" />
+      <msdata:Relationship name="TurmasDiretor_x0020_Turma" msdata:parent="Turmas" msdata:child="Diretor_x0020_Turma" msdata:parentkey="ID" msdata:childkey="ID_Turma" msprop:Generator_UserChildTable="Diretor Turma" msprop:Generator_ChildPropName="GetDiretor_TurmaRows" msprop:Generator_UserRelationName="TurmasDiretor Turma" msprop:Generator_ParentPropName="TurmasRow" msprop:Generator_RelationVarName="relationTurmasDiretor_Turma" msprop:Generator_UserParentTable="Turmas" />
+      <msdata:Relationship name="AlunosOcorrência" msdata:parent="Alunos" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_Aluno" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="AlunosOcorrência" msprop:Generator_RelationVarName="relationAlunosOcorrência" msprop:Generator_UserParentTable="Alunos" msprop:Generator_ParentPropName="AlunosRow" />
+      <msdata:Relationship name="Diretor_x0020_TurmaOcorrência" msdata:parent="Diretor_x0020_Turma" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_DiretorTurma" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="Diretor TurmaOcorrência" msprop:Generator_RelationVarName="relationDiretor_TurmaOcorrência" msprop:Generator_UserParentTable="Diretor Turma" msprop:Generator_ParentPropName="Diretor_TurmaRow" />
+      <msdata:Relationship name="Identificação_EEOcorrência" msdata:parent="Identificação_EE" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="Identificação_EE" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="Identificação_EEOcorrência" msprop:Generator_RelationVarName="relationIdentificação_EEOcorrência" msprop:Generator_UserParentTable="Identificação_EE" msprop:Generator_ParentPropName="Identificação_EERow" />
+      <msdata:Relationship name="ProfessoresOcorrência" msdata:parent="Professores" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_Professor" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="ProfessoresOcorrência" msprop:Generator_ParentPropName="ProfessoresRow" msprop:Generator_RelationVarName="relationProfessoresOcorrência" msprop:Generator_UserParentTable="Professores" />
+      <msdata:Relationship name="Alunos_Aluno_Ocorrência" msdata:parent="Alunos" msdata:child="Aluno_Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_Aluno" msprop:Generator_UserChildTable="Aluno_Ocorrência" msprop:Generator_ChildPropName="GetAluno_OcorrênciaRows" msprop:Generator_UserRelationName="Alunos_Aluno_Ocorrência" msprop:Generator_RelationVarName="relationAlunos_Aluno_Ocorrência" msprop:Generator_UserParentTable="Alunos" msprop:Generator_ParentPropName="AlunosRow" />
+      <msdata:Relationship name="Diretor_x0020_TurmaOcorrência1" msdata:parent="Turma_DiretorTurma" msdata:child="Ocorrência" msdata:parentkey="ID" msdata:childkey="ID_DiretorTurma" msprop:Generator_UserChildTable="Ocorrência" msprop:Generator_ChildPropName="GetOcorrênciaRows" msprop:Generator_UserRelationName="Diretor TurmaOcorrência1" msprop:Generator_RelationVarName="relationDiretor_TurmaOcorrência1" msprop:Generator_UserParentTable="Turma_DiretorTurma" msprop:Generator_ParentPropName="Turma_DiretorTurmaRow" />
+      <msdata:Relationship name="Diretor_x0020_Turma_Turma_DiretorTurma" msdata:parent="Diretor_x0020_Turma" msdata:child="Turma_DiretorTurma" msdata:parentkey="ID" msdata:childkey="ID_DiretorTurma" msprop:Generator_UserChildTable="Turma_DiretorTurma" msprop:Generator_ChildPropName="GetTurma_DiretorTurmaRows" msprop:Generator_UserRelationName="Diretor Turma_Turma_DiretorTurma" msprop:Generator_ParentPropName="Diretor_TurmaRow" msprop:Generator_RelationVarName="relationDiretor_Turma_Turma_DiretorTurma" msprop:Generator_UserParentTable="Diretor Turma" />
+      <msdata:Relationship name="Alunos_Encarregado_Educação" msdata:parent="Alunos" msdata:child="Encarregado_Educação" msdata:parentkey="ID" msdata:childkey="ID_Aluno" msprop:Generator_UserChildTable="Encarregado_Educação" msprop:Generator_ChildPropName="GetEncarregado_EducaçãoRows" msprop:Generator_UserRelationName="Alunos_Encarregado_Educação" msprop:Generator_ParentPropName="AlunosRow" msprop:Generator_RelationVarName="relationAlunos_Encarregado_Educação" msprop:Generator_UserParentTable="Alunos" />
+      <msdata:Relationship name="Identificação_EE_Encarregado_Educação" msdata:parent="Identificação_EE" msdata:child="Encarregado_Educação" msdata:parentkey="ID" msdata:childkey="ID_EncEd" msprop:Generator_UserChildTable="Encarregado_Educação" msprop:Generator_ChildPropName="GetEncarregado_EducaçãoRows" msprop:Generator_UserRelationName="Identificação_EE_Encarregado_Educação" msprop:Generator_ParentPropName="Identificação_EERow" msprop:Generator_RelationVarName="relationIdentificação_EE_Encarregado_Educação" msprop:Generator_UserParentTable="Identificação_EE" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
