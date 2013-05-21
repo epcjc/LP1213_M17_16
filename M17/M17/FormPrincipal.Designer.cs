@@ -41,7 +41,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
+            this.button1.Size = new System.Drawing.Size(133, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Professores";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(12, 67);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 23);
+            this.button2.Size = new System.Drawing.Size(133, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Diretor Turma";
             this.button2.UseVisualStyleBackColor = true;
@@ -69,9 +69,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(379, 181);
+            this.button4.Location = new System.Drawing.Point(386, 181);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(68, 23);
             this.button4.TabIndex = 4;
             this.button4.Text = "Sair";
             this.button4.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             // 
             this.button7.Location = new System.Drawing.Point(12, 113);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(87, 23);
+            this.button7.Size = new System.Drawing.Size(133, 23);
             this.button7.TabIndex = 7;
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
