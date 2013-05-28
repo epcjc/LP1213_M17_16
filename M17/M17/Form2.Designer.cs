@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.baseDadosDataSet = new M17.BaseDadosDataSet();
-            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.professoresTableAdapter = new M17.BaseDadosDataSetTableAdapters.ProfessoresTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProfessorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSet = new M17.BaseDadosDataSet();
+            this.professoresTableAdapter = new M17.BaseDadosDataSetTableAdapters.ProfessoresTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -51,22 +51,8 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(284, 261);
+            this.dataGridView1.Size = new System.Drawing.Size(533, 261);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // baseDadosDataSet
-            // 
-            this.baseDadosDataSet.DataSetName = "BaseDadosDataSet";
-            this.baseDadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // professoresBindingSource
-            // 
-            this.professoresBindingSource.DataMember = "Professores";
-            this.professoresBindingSource.DataSource = this.baseDadosDataSet;
-            // 
-            // professoresTableAdapter
-            // 
-            this.professoresTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -81,18 +67,32 @@
             this.nomeProfessorDataGridViewTextBoxColumn.HeaderText = "Professor";
             this.nomeProfessorDataGridViewTextBoxColumn.Name = "nomeProfessorDataGridViewTextBoxColumn";
             // 
+            // professoresBindingSource
+            // 
+            this.professoresBindingSource.DataMember = "Professores";
+            this.professoresBindingSource.DataSource = this.baseDadosDataSet;
+            // 
+            // baseDadosDataSet
+            // 
+            this.baseDadosDataSet.DataSetName = "BaseDadosDataSet";
+            this.baseDadosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // professoresTableAdapter
+            // 
+            this.professoresTableAdapter.ClearBeforeFill = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(533, 261);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
