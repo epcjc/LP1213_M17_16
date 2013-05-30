@@ -18,12 +18,11 @@ namespace Projeto_PAP
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet1.Enc_Educação' table. You can move, or remove it, as needed.
-            this.enc_EducaçãoTableAdapter.FillEncEducação(this.database1DataSet1.Enc_Educação);
             // TODO: This line of code loads data into the 'database1DataSet.Enc_Educação' table. You can move, or remove it, as needed.
-            // this.enc_EducaçãoTableAdapter.FillEncEducação(this.database1DataSet.Enc_Educação);
+            this.enc_EducaçãoTableAdapter.FillEncEducação(this.database1DataSet.Enc_Educação);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
             this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            
 
         }
 
@@ -38,6 +37,7 @@ namespace Projeto_PAP
             this.Close();
         }
 
+  
 
     }
 }

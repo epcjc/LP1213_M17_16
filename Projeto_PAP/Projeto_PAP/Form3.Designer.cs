@@ -33,12 +33,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.database1DataSet = new Projeto_PAP.Database1DataSet();
+            this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
-            this.database1DataSet1 = new Projeto_PAP.Database1DataSet();
             this.encEducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
             this.iDAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +49,9 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.encEducaçãoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,16 +107,6 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "ID_Aluno";
             // 
-            // alunoBindingSource
-            // 
-            this.alunoBindingSource.DataMember = "Aluno";
-            this.alunoBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -144,20 +132,26 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(565, 186);
             this.dataGridView1.TabIndex = 0;
+            //this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // alunoBindingSource
+            // 
+            this.alunoBindingSource.DataMember = "Aluno";
+            this.alunoBindingSource.DataSource = this.database1DataSet;
             // 
             // alunoTableAdapter
             // 
             this.alunoTableAdapter.ClearBeforeFill = true;
             // 
-            // database1DataSet1
-            // 
-            this.database1DataSet1.DataSetName = "Database1DataSet";
-            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // encEducaçãoBindingSource
             // 
             this.encEducaçãoBindingSource.DataMember = "Enc_Educação";
-            this.encEducaçãoBindingSource.DataSource = this.database1DataSet1;
+            this.encEducaçãoBindingSource.DataSource = this.database1DataSet;
             // 
             // enc_EducaçãoTableAdapter
             // 
@@ -212,10 +206,9 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.encEducaçãoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -232,7 +225,6 @@
         private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource alunoBindingSource;
         private Database1DataSetTableAdapters.AlunoTableAdapter alunoTableAdapter;
-        private Database1DataSet database1DataSet1;
         private System.Windows.Forms.BindingSource encEducaçãoBindingSource;
         private Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter enc_EducaçãoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDAlunoDataGridViewTextBoxColumn;
