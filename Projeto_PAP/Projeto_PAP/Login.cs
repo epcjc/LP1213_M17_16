@@ -18,20 +18,11 @@ namespace Projeto_PAP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int res;
-         
-            //res = (int)this.LoginTableAdapter.checkLogin(this.textBox1.Text, this.textBox2.Text);   
-
-            //if (res != 1)
-            {
-                MessageBox.Show("Acesso negado", "Erro a fazer login", MessageBoxButtons.OK);
-            }
-            //else
-            {
-                FormPrincipal frm = new FormPrincipal();
-                frm.Show();
-            }
+            
         }
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -15,5 +15,22 @@ namespace Projeto_PAP
         {
             InitializeComponent();
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
+            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
