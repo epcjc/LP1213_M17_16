@@ -37,7 +37,6 @@
             this.dataTable2TableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.DataTable2TableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.dataTable2BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -65,7 +64,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(221, 65);
+            this.label5.Location = new System.Drawing.Point(210, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 24;
@@ -74,7 +73,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(14, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(462, 24);
@@ -109,7 +108,7 @@
             // 
             // dataTable2BindingNavigator
             // 
-            this.dataTable2BindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.dataTable2BindingNavigator.AddNewItem = null;
             this.dataTable2BindingNavigator.BindingSource = this.dataTable2BindingSource;
             this.dataTable2BindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.dataTable2BindingNavigator.DeleteItem = null;
@@ -123,7 +122,6 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
             this.dataTable2BindingNavigatorSaveItem});
             this.dataTable2BindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.dataTable2BindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -135,15 +133,6 @@
             this.dataTable2BindingNavigator.Size = new System.Drawing.Size(482, 25);
             this.dataTable2BindingNavigator.TabIndex = 25;
             this.dataTable2BindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
@@ -215,7 +204,6 @@
             // dataTable2BindingNavigatorSaveItem
             // 
             this.dataTable2BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.dataTable2BindingNavigatorSaveItem.Enabled = false;
             this.dataTable2BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("dataTable2BindingNavigatorSaveItem.Image")));
             this.dataTable2BindingNavigatorSaveItem.Name = "dataTable2BindingNavigatorSaveItem";
             this.dataTable2BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
@@ -266,9 +254,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(401, 289);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(401, 284);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.Size = new System.Drawing.Size(75, 35);
             this.button1.TabIndex = 26;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -307,7 +296,6 @@
         private Database1DataSetTableAdapters.DataTable2TableAdapter dataTable2TableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator dataTable2BindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;

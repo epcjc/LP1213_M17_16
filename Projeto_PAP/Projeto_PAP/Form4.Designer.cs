@@ -37,8 +37,6 @@
             this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
             this.ocorrenciaDataGridView = new System.Windows.Forms.DataGridView();
-            this.alunoOcorrenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aluno_OcorrenciaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_OcorrenciaTableAdapter();
             this.iDOcorrenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +50,8 @@
             this.diretorTurmaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadoFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alunoOcorrenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aluno_OcorrenciaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_OcorrenciaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaDataGridView)).BeginInit();
@@ -62,7 +62,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(415, 45);
+            this.label9.Location = new System.Drawing.Point(415, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 20);
             this.label9.TabIndex = 24;
@@ -71,8 +71,8 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(205, 9);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(196, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(525, 25);
             this.label10.TabIndex = 23;
@@ -90,6 +90,7 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(93, 73);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 23);
@@ -135,15 +136,6 @@
             this.ocorrenciaDataGridView.Name = "ocorrenciaDataGridView";
             this.ocorrenciaDataGridView.Size = new System.Drawing.Size(903, 220);
             this.ocorrenciaDataGridView.TabIndex = 26;
-            // 
-            // alunoOcorrenciaBindingSource
-            // 
-            this.alunoOcorrenciaBindingSource.DataMember = "Aluno_Ocorrencia";
-            this.alunoOcorrenciaBindingSource.DataSource = this.database1DataSet;
-            // 
-            // aluno_OcorrenciaTableAdapter
-            // 
-            this.aluno_OcorrenciaTableAdapter.ClearBeforeFill = true;
             // 
             // iDOcorrenciaDataGridViewTextBoxColumn
             // 
@@ -232,6 +224,15 @@
             this.resultadoFinalDataGridViewTextBoxColumn.DataPropertyName = "Resultado_Final";
             this.resultadoFinalDataGridViewTextBoxColumn.HeaderText = "Resultado_Final";
             this.resultadoFinalDataGridViewTextBoxColumn.Name = "resultadoFinalDataGridViewTextBoxColumn";
+            // 
+            // alunoOcorrenciaBindingSource
+            // 
+            this.alunoOcorrenciaBindingSource.DataMember = "Aluno_Ocorrencia";
+            this.alunoOcorrenciaBindingSource.DataSource = this.database1DataSet;
+            // 
+            // aluno_OcorrenciaTableAdapter
+            // 
+            this.aluno_OcorrenciaTableAdapter.ClearBeforeFill = true;
             // 
             // Form4
             // 

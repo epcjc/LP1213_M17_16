@@ -16,25 +16,26 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void diretor_TurmaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+                private void Form7_Load(object sender, EventArgs e)
         {
-            this.Validate();
-            this.diretor_TurmaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
-
-        private void Form7_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'database1DataSet.Diretor_Turma' table. You can move, or remove it, as needed.
-            this.diretor_TurmaTableAdapter.Fill(this.database1DataSet.Diretor_Turma);
+            // TODO: This line of code loads data into the 'database1DataSet.Turma_DiretorTurma' table. You can move, or remove it, as needed.
+            this.turma_DiretorTurmaTableAdapter.FillDiretorTurma(this.database1DataSet.Turma_DiretorTurma);
+            
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.diretor_TurmaTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text);
-            MessageBox.Show("Inserido com Sucesso");
+            try
+            {
+                //this.turma_DiretorTurmaTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text);
+                MessageBox.Show("Inserido com Sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
         private void button2_Click(object sender, EventArgs e)
         {

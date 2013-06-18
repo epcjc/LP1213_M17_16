@@ -39,9 +39,15 @@ namespace Projeto_PAP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.alunoTableAdapter.Insert(this.textBox1.Text);
-            MessageBox.Show("Inserido com Sucesso");
-
+            try
+            {
+                //this.alunoTableAdapter.Insert(this.textBox1.Text);
+                MessageBox.Show("Inserido com Sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         

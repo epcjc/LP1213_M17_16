@@ -38,7 +38,6 @@
             this.encarregado_EducacaoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Encarregado_EducacaoTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.encarregado_EducacaoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -75,7 +74,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(525, 25);
@@ -84,9 +83,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(527, 306);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(518, 296);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.Size = new System.Drawing.Size(68, 35);
             this.button1.TabIndex = 14;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             // 
             // encarregado_EducacaoBindingNavigator
             // 
-            this.encarregado_EducacaoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.encarregado_EducacaoBindingNavigator.AddNewItem = null;
             this.encarregado_EducacaoBindingNavigator.BindingSource = this.encarregado_EducacaoBindingSource;
             this.encarregado_EducacaoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.encarregado_EducacaoBindingNavigator.DeleteItem = null;
@@ -133,7 +133,6 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
             this.encarregado_EducacaoBindingNavigatorSaveItem});
             this.encarregado_EducacaoBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.encarregado_EducacaoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -142,18 +141,9 @@
             this.encarregado_EducacaoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.encarregado_EducacaoBindingNavigator.Name = "encarregado_EducacaoBindingNavigator";
             this.encarregado_EducacaoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.encarregado_EducacaoBindingNavigator.Size = new System.Drawing.Size(606, 25);
+            this.encarregado_EducacaoBindingNavigator.Size = new System.Drawing.Size(591, 25);
             this.encarregado_EducacaoBindingNavigator.TabIndex = 15;
             this.encarregado_EducacaoBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
@@ -244,7 +234,7 @@
             this.encarregado_EducacaoDataGridView.DataSource = this.encarregado_EducacaoBindingSource;
             this.encarregado_EducacaoDataGridView.Location = new System.Drawing.Point(12, 102);
             this.encarregado_EducacaoDataGridView.Name = "encarregado_EducacaoDataGridView";
-            this.encarregado_EducacaoDataGridView.Size = new System.Drawing.Size(509, 229);
+            this.encarregado_EducacaoDataGridView.Size = new System.Drawing.Size(500, 229);
             this.encarregado_EducacaoDataGridView.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn1
@@ -283,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 337);
+            this.ClientSize = new System.Drawing.Size(591, 337);
             this.Controls.Add(this.encarregado_EducacaoDataGridView);
             this.Controls.Add(this.encarregado_EducacaoBindingNavigator);
             this.Controls.Add(this.button1);
@@ -313,7 +303,6 @@
         private Database1DataSetTableAdapters.Encarregado_EducacaoTableAdapter encarregado_EducacaoTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator encarregado_EducacaoBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
