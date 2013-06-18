@@ -18,22 +18,34 @@ namespace Projeto_PAP
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Diretor_Turma' table. You can move, or remove it, as needed.
-            // this.diretor_TurmaTableAdapter.Fill(this.database1DataSet.Diretor_Turma);
-            // TODO: This line of code loads data into the 'database1DataSet.Turmas' table. You can move, or remove it, as needed.
-            this.turmasTableAdapter.Fill(this.database1DataSet.Turmas);
+            // TODO: This line of code loads data into the 'database1DataSet.DataTable1' table. You can move, or remove it, as needed.
+            this.dataTable1TableAdapter.FillDT_Turma(this.database1DataSet.DataTable1);
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.diretor_TurmaTableAdapter.Fill(this.database1DataSet.Diretor_Turma);
-
+            Form7 frm = new Form7();
+            frm.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form10 frm = new Form10();
+            frm.ShowDialog();
         }
+
+       
+
+       
+
+        
+
+        
     }
 }

@@ -22,5 +22,22 @@ namespace Projeto_PAP
             this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form14 frm = new Form14();
+            frm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form15 frm = new Form15();
+            frm.ShowDialog();
+        }
     }
 }

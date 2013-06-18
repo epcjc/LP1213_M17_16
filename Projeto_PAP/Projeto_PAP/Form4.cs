@@ -18,19 +18,25 @@ namespace Projeto_PAP
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.Aluno_Ocorrencia' table. You can move, or remove it, as needed.
+            //this.aluno_OcorrenciaTableAdapter.FillOcorrencia(this.database1DataSet.Aluno_Ocorrencia);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
             this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+         }
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.aluno_OcorrenciaTableAdapter.FillOcorrencia(this.database1DataSet.Aluno_Ocorrencia);
+
+        }
+
+       
+       
     }
 }
