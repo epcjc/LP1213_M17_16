@@ -61,6 +61,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apagar Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apagar Aluno.Designer.cs">
+      <DependentUpon>Apagar Aluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apagar DiretorTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apagar DiretorTurma.Designer.cs">
+      <DependentUpon>Apagar DiretorTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apagar EncEducação.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apagar EncEducação.Designer.cs">
+      <DependentUpon>Apagar EncEducação.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apagar Professor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apagar Professor.Designer.cs">
+      <DependentUpon>Apagar Professor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database1DataSet.cs">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -174,6 +198,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Apagar Aluno.resx">
+      <DependentUpon>Apagar Aluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apagar DiretorTurma.resx">
+      <DependentUpon>Apagar DiretorTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apagar EncEducação.resx">
+      <DependentUpon>Apagar EncEducação.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apagar Professor.resx">
+      <DependentUpon>Apagar Professor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

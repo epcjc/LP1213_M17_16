@@ -39,5 +39,11 @@ namespace Projeto_PAP
             Form15 frm = new Form15();
             frm.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Apagar_Professor frm = new Apagar_Professor();
+            frm.ShowDialog();
+        }
     }
 }

@@ -109,11 +109,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(219, 42);
+            this.label5.Location = new System.Drawing.Point(190, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.Size = new System.Drawing.Size(98, 20);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Alunos";
+            this.label5.Text = "Inserir Aluno";
             // 
             // label6
             // 

@@ -55,6 +55,12 @@ namespace Projeto_PAP
             frm.ShowDialog();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Apagar_EncEducação frm = new Apagar_EncEducação();
+            frm.ShowDialog();
+        }
+
         
 
         

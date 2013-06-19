@@ -40,6 +40,12 @@ namespace Projeto_PAP
             frm.ShowDialog();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Apagar_DiretorTurma frm = new Apagar_DiretorTurma();
+            frm.ShowDialog();
+        }
+
        
 
        

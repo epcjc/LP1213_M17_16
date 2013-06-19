@@ -41,5 +41,11 @@ namespace Projeto_PAP
             Form13 frm = new Form13();
             frm.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Apagar_Aluno frm = new Apagar_Aluno();
+            frm.ShowDialog();
+        }
     }
 }
