@@ -39,6 +39,7 @@
             this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.professoresTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.ProfessoresTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -54,8 +55,10 @@
             // 
             // textBox1
             // 
+            this.helpProvider1.SetHelpString(this.textBox1, "Introduza o nome");
             this.textBox1.Location = new System.Drawing.Point(72, 95);
             this.textBox1.Name = "textBox1";
+            this.helpProvider1.SetShowHelp(this.textBox1, true);
             this.textBox1.Size = new System.Drawing.Size(167, 20);
             this.textBox1.TabIndex = 13;
             // 
@@ -129,13 +132,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 131);
+            this.ClientSize = new System.Drawing.Size(491, 136);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form14";
             this.Text = "Form14";
             this.Load += new System.EventHandler(this.Form14_Load);
@@ -158,5 +164,6 @@
         private System.Windows.Forms.BindingSource professoresBindingSource;
         private Database1DataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

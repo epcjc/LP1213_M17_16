@@ -44,23 +44,23 @@
             this.ocorrenciaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.OcorrenciaTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.alunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
-            this.diretor_TurmaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Diretor_TurmaTableAdapter();
-            this.encarregado_EducacaoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Encarregado_EducacaoTableAdapter();
             this.professoresTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.ProfessoresTableAdapter();
-            this.resultado_FinalTextBox = new System.Windows.Forms.TextBox();
-            this.testemunhasTextBox = new System.Windows.Forms.TextBox();
-            this.observacoesTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.encarregado_EducacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.diretor_TurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enc_EducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
+            this.dataTable3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable3TableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.DataTable3TableAdapter();
             testemunhasLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
             resultado_FinalLabel = new System.Windows.Forms.Label();
@@ -73,8 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.encarregado_EducacaoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enc_EducaçãoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable3BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // testemunhasLabel
@@ -89,7 +89,7 @@
             // dataLabel
             // 
             dataLabel.AutoSize = true;
-            dataLabel.Location = new System.Drawing.Point(313, 176);
+            dataLabel.Location = new System.Drawing.Point(313, 177);
             dataLabel.Name = "dataLabel";
             dataLabel.Size = new System.Drawing.Size(33, 13);
             dataLabel.TabIndex = 35;
@@ -187,8 +187,8 @@
             // 
             this.tableAdapterManager.AlunoTableAdapter = this.alunoTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Diretor_TurmaTableAdapter = this.diretor_TurmaTableAdapter;
-            this.tableAdapterManager.Encarregado_EducacaoTableAdapter = this.encarregado_EducacaoTableAdapter;
+            this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
+            this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
             this.tableAdapterManager.OcorrenciaTableAdapter = this.ocorrenciaTableAdapter;
             this.tableAdapterManager.ProfessoresTableAdapter = this.professoresTableAdapter;
             this.tableAdapterManager.TurmasTableAdapter = null;
@@ -198,47 +198,13 @@
             // 
             this.alunoTableAdapter.ClearBeforeFill = true;
             // 
-            // diretor_TurmaTableAdapter
-            // 
-            this.diretor_TurmaTableAdapter.ClearBeforeFill = true;
-            // 
-            // encarregado_EducacaoTableAdapter
-            // 
-            this.encarregado_EducacaoTableAdapter.ClearBeforeFill = true;
-            // 
             // professoresTableAdapter
             // 
             this.professoresTableAdapter.ClearBeforeFill = true;
             // 
-            // resultado_FinalTextBox
-            // 
-            this.resultado_FinalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ocorrenciaBindingSource, "Resultado_Final", true));
-            this.resultado_FinalTextBox.Location = new System.Drawing.Point(425, 223);
-            this.resultado_FinalTextBox.Name = "resultado_FinalTextBox";
-            this.resultado_FinalTextBox.Size = new System.Drawing.Size(150, 20);
-            this.resultado_FinalTextBox.TabIndex = 38;
-            // 
-            // testemunhasTextBox
-            // 
-            this.testemunhasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ocorrenciaBindingSource, "Testemunhas", true));
-            this.testemunhasTextBox.Location = new System.Drawing.Point(128, 226);
-            this.testemunhasTextBox.Multiline = true;
-            this.testemunhasTextBox.Name = "testemunhasTextBox";
-            this.testemunhasTextBox.Size = new System.Drawing.Size(150, 41);
-            this.testemunhasTextBox.TabIndex = 30;
-            // 
-            // observacoesTextBox
-            // 
-            this.observacoesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ocorrenciaBindingSource, "Observacoes", true));
-            this.observacoesTextBox.Location = new System.Drawing.Point(128, 161);
-            this.observacoesTextBox.Multiline = true;
-            this.observacoesTextBox.Name = "observacoesTextBox";
-            this.observacoesTextBox.Size = new System.Drawing.Size(150, 48);
-            this.observacoesTextBox.TabIndex = 28;
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(425, 176);
+            this.textBox1.Location = new System.Drawing.Point(425, 177);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 20);
             this.textBox1.TabIndex = 39;
@@ -275,37 +241,32 @@
             this.comboBox2.TabIndex = 45;
             this.comboBox2.ValueMember = "ID_Professor";
             // 
-            // encarregado_EducacaoBindingSource
-            // 
-            this.encarregado_EducacaoBindingSource.DataMember = "Encarregado_Educacao";
-            this.encarregado_EducacaoBindingSource.DataSource = this.database1DataSet;
-            // 
             // comboBox3
             // 
-            this.comboBox3.DataSource = this.encarregado_EducacaoBindingSource;
+            this.comboBox3.DataSource = this.enc_EducaçãoBindingSource;
             this.comboBox3.DisplayMember = "Encarregado_Educacao";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(425, 86);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(150, 21);
             this.comboBox3.TabIndex = 48;
-            this.comboBox3.ValueMember = "ID_EE";
+            this.comboBox3.ValueMember = "ID_Aluno";
             // 
-            // diretor_TurmaBindingSource
+            // enc_EducaçãoBindingSource
             // 
-            this.diretor_TurmaBindingSource.DataMember = "Diretor_Turma";
-            this.diretor_TurmaBindingSource.DataSource = this.database1DataSet;
+            this.enc_EducaçãoBindingSource.DataMember = "Enc_Educação";
+            this.enc_EducaçãoBindingSource.DataSource = this.database1DataSet;
             // 
             // comboBox4
             // 
-            this.comboBox4.DataSource = this.diretor_TurmaBindingSource;
+            this.comboBox4.DataSource = this.dataTable3BindingSource;
             this.comboBox4.DisplayMember = "Diretor_Turma";
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(425, 131);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(150, 21);
             this.comboBox4.TabIndex = 51;
-            this.comboBox4.ValueMember = "ID_Diretor_Turma";
+            this.comboBox4.ValueMember = "ID_Aluno";
             // 
             // button1
             // 
@@ -326,12 +287,52 @@
             this.button2.TabIndex = 53;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(128, 158);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(150, 48);
+            this.textBox2.TabIndex = 54;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(128, 223);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(150, 47);
+            this.textBox3.TabIndex = 55;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(425, 223);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(150, 20);
+            this.textBox4.TabIndex = 56;
+            // 
+            // enc_EducaçãoTableAdapter
+            // 
+            this.enc_EducaçãoTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataTable3BindingSource
+            // 
+            this.dataTable3BindingSource.DataMember = "DataTable3";
+            this.dataTable3BindingSource.DataSource = this.database1DataSet;
+            // 
+            // dataTable3TableAdapter
+            // 
+            this.dataTable3TableAdapter.ClearBeforeFill = true;
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 314);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox4);
@@ -344,12 +345,9 @@
             this.Controls.Add(alunoLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(observacoesLabel);
-            this.Controls.Add(this.observacoesTextBox);
             this.Controls.Add(testemunhasLabel);
-            this.Controls.Add(this.testemunhasTextBox);
             this.Controls.Add(dataLabel);
             this.Controls.Add(resultado_FinalLabel);
-            this.Controls.Add(this.resultado_FinalTextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Name = "Form5";
@@ -359,8 +357,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.encarregado_EducacaoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enc_EducaçãoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable3BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,9 +372,6 @@
         private System.Windows.Forms.BindingSource ocorrenciaBindingSource;
         private Database1DataSetTableAdapters.OcorrenciaTableAdapter ocorrenciaTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox resultado_FinalTextBox;
-        private System.Windows.Forms.TextBox testemunhasTextBox;
-        private System.Windows.Forms.TextBox observacoesTextBox;
         private System.Windows.Forms.TextBox textBox1;
         private Database1DataSetTableAdapters.AlunoTableAdapter alunoTableAdapter;
         private System.Windows.Forms.BindingSource alunoBindingSource;
@@ -384,13 +379,16 @@
         private Database1DataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter;
         private System.Windows.Forms.BindingSource professoresBindingSource;
         private System.Windows.Forms.ComboBox comboBox2;
-        private Database1DataSetTableAdapters.Encarregado_EducacaoTableAdapter encarregado_EducacaoTableAdapter;
-        private System.Windows.Forms.BindingSource encarregado_EducacaoBindingSource;
         private System.Windows.Forms.ComboBox comboBox3;
-        private Database1DataSetTableAdapters.Diretor_TurmaTableAdapter diretor_TurmaTableAdapter;
-        private System.Windows.Forms.BindingSource diretor_TurmaBindingSource;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.BindingSource enc_EducaçãoBindingSource;
+        private Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter enc_EducaçãoTableAdapter;
+        private System.Windows.Forms.BindingSource dataTable3BindingSource;
+        private Database1DataSetTableAdapters.DataTable3TableAdapter dataTable3TableAdapter;
     }
 }

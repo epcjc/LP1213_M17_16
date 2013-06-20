@@ -27,6 +27,8 @@ namespace Projeto_PAP
         
         private void Form6_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.Turmas' table. You can move, or remove it, as needed.
+            this.turmasTableAdapter.Fill(this.database1DataSet.Turmas);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
             this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
 
@@ -41,7 +43,7 @@ namespace Projeto_PAP
         {
             try
             {
-                //this.alunoTableAdapter.Insert(this.textBox1.Text);
+                this.alunoTableAdapter.Insert(this.textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue));
                 MessageBox.Show("Inserido com Sucesso");
             }
             catch (Exception ex)

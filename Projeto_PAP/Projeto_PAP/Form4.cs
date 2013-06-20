@@ -36,6 +36,14 @@ namespace Projeto_PAP
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Apagar_Ocorrência frm = new Apagar_Ocorrência();
+            frm.ShowDialog();
+        }
+
+       
+
        
        
     }

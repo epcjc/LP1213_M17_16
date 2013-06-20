@@ -37,13 +37,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.encEducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
             this.iDAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDEEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.encarregadoEducacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.encEducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -121,6 +121,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(495, 165);
             this.dataGridView1.TabIndex = 27;
             // 
+            // encEducaçãoBindingSource
+            // 
+            this.encEducaçãoBindingSource.DataMember = "Enc_Educação";
+            this.encEducaçãoBindingSource.DataSource = this.database1DataSet;
+            // 
+            // enc_EducaçãoTableAdapter
+            // 
+            this.enc_EducaçãoTableAdapter.ClearBeforeFill = true;
+            // 
             // iDAlunoDataGridViewTextBoxColumn
             // 
             this.iDAlunoDataGridViewTextBoxColumn.DataPropertyName = "ID_Aluno";
@@ -134,7 +143,6 @@
             this.alunoDataGridViewTextBoxColumn.DataPropertyName = "Aluno";
             this.alunoDataGridViewTextBoxColumn.HeaderText = "Aluno";
             this.alunoDataGridViewTextBoxColumn.Name = "alunoDataGridViewTextBoxColumn";
-            this.alunoDataGridViewTextBoxColumn.Visible = false;
             // 
             // iDEEDataGridViewTextBoxColumn
             // 
@@ -147,7 +155,7 @@
             // encarregadoEducacaoDataGridViewTextBoxColumn
             // 
             this.encarregadoEducacaoDataGridViewTextBoxColumn.DataPropertyName = "Encarregado_Educacao";
-            this.encarregadoEducacaoDataGridViewTextBoxColumn.HeaderText = "Encarregado_Educacao";
+            this.encarregadoEducacaoDataGridViewTextBoxColumn.HeaderText = "Enc. Educação";
             this.encarregadoEducacaoDataGridViewTextBoxColumn.Name = "encarregadoEducacaoDataGridViewTextBoxColumn";
             // 
             // contactoDataGridViewTextBoxColumn
@@ -155,15 +163,6 @@
             this.contactoDataGridViewTextBoxColumn.DataPropertyName = "Contacto";
             this.contactoDataGridViewTextBoxColumn.HeaderText = "Contacto";
             this.contactoDataGridViewTextBoxColumn.Name = "contactoDataGridViewTextBoxColumn";
-            // 
-            // encEducaçãoBindingSource
-            // 
-            this.encEducaçãoBindingSource.DataMember = "Enc_Educação";
-            this.encEducaçãoBindingSource.DataSource = this.database1DataSet;
-            // 
-            // enc_EducaçãoTableAdapter
-            // 
-            this.enc_EducaçãoTableAdapter.ClearBeforeFill = true;
             // 
             // Form9
             // 

@@ -79,6 +79,12 @@
     <Compile Include="Apagar EncEducação.Designer.cs">
       <DependentUpon>Apagar EncEducação.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apagar Ocorrência.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apagar Ocorrência.Designer.cs">
+      <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apagar Professor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Apagar EncEducação.resx">
       <DependentUpon>Apagar EncEducação.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apagar Ocorrência.resx">
+      <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apagar Professor.resx">
       <DependentUpon>Apagar Professor.cs</DependentUpon>

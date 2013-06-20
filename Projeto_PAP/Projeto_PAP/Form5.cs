@@ -18,11 +18,11 @@ namespace Projeto_PAP
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Diretor_Turma' table. You can move, or remove it, as needed.
-            this.diretor_TurmaTableAdapter.Fill(this.database1DataSet.Diretor_Turma);
-            // TODO: This line of code loads data into the 'database1DataSet.Encarregado_Educacao' table. You can move, or remove it, as needed.
-            this.encarregado_EducacaoTableAdapter.Fill(this.database1DataSet.Encarregado_Educacao);
-            // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'database1DataSet.DataTable3' table. You can move, or remove it, as needed.
+            this.dataTable3TableAdapter.FillAluno_DT(this.database1DataSet.DataTable3);
+            // TODO: This line of code loads data into the 'database1DataSet.Enc_Educação' table. You can move, or remove it, as needed.
+            this.enc_EducaçãoTableAdapter.FillEncEducação(this.database1DataSet.Enc_Educação);
+             // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
             this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
             this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
@@ -41,19 +41,14 @@ namespace Projeto_PAP
 
         }
 
-        private void ocorrenciaBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.ocorrenciaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                //this.ocorrenciaTableAdapter.Insert(Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), Convert.ToInt16(this.observacoesTextBox.Text), Convert.ToInt16(this.testemunhasTextBox.Text), Convert.ToInt16(this.comboBox3.SelectedValue), Convert.ToInt16(this;
+                this.ocorrenciaTableAdapter.Insert(Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), this.textBox2.Text, this.textBox3.Text, Convert.ToInt16(this.comboBox3.SelectedValue), Convert.ToInt16(this.comboBox4.SelectedValue), Convert.ToDateTime(this.textBox1.Text), this.textBox4.Text);
+
                 MessageBox.Show("Inserido com Sucesso");
             }
             catch (Exception ex)
@@ -62,7 +57,11 @@ namespace Projeto_PAP
             }
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+   
 
        
     }

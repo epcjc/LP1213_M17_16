@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label turmaLabel1;
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,8 +40,13 @@
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.turmasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.turmasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.TurmasTableAdapter();
+            turmaLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +67,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(333, 88);
+            this.button1.Location = new System.Drawing.Point(333, 98);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 23);
             this.button1.TabIndex = 2;
@@ -72,7 +78,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(333, 117);
+            this.button2.Location = new System.Drawing.Point(333, 127);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 23);
             this.button2.TabIndex = 3;
@@ -125,11 +131,42 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Escola Profissional Centro Juvenil de Campanhã";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.turmasBindingSource;
+            this.comboBox1.DisplayMember = "Turma";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(69, 129);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 27;
+            this.comboBox1.ValueMember = "ID_Turma";
+            // 
+            // turmasBindingSource
+            // 
+            this.turmasBindingSource.DataMember = "Turmas";
+            this.turmasBindingSource.DataSource = this.database1DataSet;
+            // 
+            // turmasTableAdapter
+            // 
+            this.turmasTableAdapter.ClearBeforeFill = true;
+            // 
+            // turmaLabel1
+            // 
+            turmaLabel1.AutoSize = true;
+            turmaLabel1.Location = new System.Drawing.Point(13, 132);
+            turmaLabel1.Name = "turmaLabel1";
+            turmaLabel1.Size = new System.Drawing.Size(40, 13);
+            turmaLabel1.TabIndex = 29;
+            turmaLabel1.Text = "Turma:";
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 146);
+            this.ClientSize = new System.Drawing.Size(486, 167);
+            this.Controls.Add(turmaLabel1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -141,6 +178,7 @@
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +196,8 @@
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource turmasBindingSource;
+        private Database1DataSetTableAdapters.TurmasTableAdapter turmasTableAdapter;
     }
 }

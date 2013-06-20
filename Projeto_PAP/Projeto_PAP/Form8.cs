@@ -16,7 +16,8 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void encarregado_EducacaoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+
+        private void encarregado_EducacaoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             this.Validate();
             this.encarregado_EducacaoBindingSource.EndEdit();
@@ -28,9 +29,10 @@ namespace Projeto_PAP
         {
             // TODO: This line of code loads data into the 'database1DataSet.Encarregado_Educacao' table. You can move, or remove it, as needed.
             this.encarregado_EducacaoTableAdapter.Fill(this.database1DataSet.Encarregado_Educacao);
-
+            
         }
 
+       
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -38,17 +40,28 @@ namespace Projeto_PAP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //this.encarregado_EducacaoTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text, this.textBox3.Text, this.monthCalendar1.SelectionStart.Date);
-                MessageBox.Show("Inserido com Sucesso");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+           //try
+           // {
+           //    //this.encarregado_EducacaoTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text);
+           //     MessageBox.Show("Inserido com Sucesso");
+           // }
+           // catch (Exception ex)
+           // {
+           //     MessageBox.Show(ex.ToString());
+           // }
         }
 
+        private void encarregado_EducacaoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.encarregado_EducacaoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+
+        }
+
+      
+
+        
         
     }
 }
