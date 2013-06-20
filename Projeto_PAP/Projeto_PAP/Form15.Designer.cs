@@ -51,6 +51,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingNavigator)).BeginInit();
@@ -255,7 +256,12 @@
             this.Controls.Add(this.professoresBindingNavigator);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpString(this, "Para alterar algum campo é necessário clicar duas vezes em cima");
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form15";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Form15";
             this.Load += new System.EventHandler(this.Form15_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
@@ -292,5 +298,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

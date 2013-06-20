@@ -53,6 +53,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dataTable1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.dataTable1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).BeginInit();
@@ -272,7 +273,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpString(this, "Para alterar algum campo é necessário clicar duas vezes em cima");
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form10";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Form10";
             this.Load += new System.EventHandler(this.Form10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
@@ -311,5 +317,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton dataTable1BindingNavigatorSaveItem;
         private System.Windows.Forms.BindingNavigator dataTable1BindingNavigator;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

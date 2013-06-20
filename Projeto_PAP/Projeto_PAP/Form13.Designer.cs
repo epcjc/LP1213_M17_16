@@ -53,6 +53,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingNavigator)).BeginInit();
@@ -130,7 +131,7 @@
             this.dataTable2BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.dataTable2BindingNavigator.Name = "dataTable2BindingNavigator";
             this.dataTable2BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.dataTable2BindingNavigator.Size = new System.Drawing.Size(482, 25);
+            this.dataTable2BindingNavigator.Size = new System.Drawing.Size(492, 25);
             this.dataTable2BindingNavigator.TabIndex = 25;
             this.dataTable2BindingNavigator.Text = "bindingNavigator1";
             // 
@@ -267,13 +268,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 323);
+            this.ClientSize = new System.Drawing.Size(492, 323);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataTable2DataGridView);
             this.Controls.Add(this.dataTable2BindingNavigator);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
+            this.HelpButton = true;
+            this.helpProvider1.SetHelpString(this, "Para alterar algum campo é necessário clicar duas vezes em cima");
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form13";
+            this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Form13";
             this.Load += new System.EventHandler(this.Form13_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
@@ -312,5 +318,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
