@@ -53,13 +53,13 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.enc_EducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.dataTable3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
-            this.dataTable3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable3TableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.DataTable3TableAdapter();
             testemunhasLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
@@ -153,17 +153,17 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(229, 43);
+            this.label9.Location = new System.Drawing.Point(255, 38);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.Size = new System.Drawing.Size(123, 20);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Ocorrências";
+            this.label9.Text = "Criar Ocorrência";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(14, 9);
+            this.label10.Location = new System.Drawing.Point(34, 9);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(525, 25);
             this.label10.TabIndex = 19;
@@ -268,6 +268,11 @@
             this.comboBox4.TabIndex = 51;
             this.comboBox4.ValueMember = "ID_Aluno";
             // 
+            // dataTable3BindingSource
+            // 
+            this.dataTable3BindingSource.DataMember = "DataTable3";
+            this.dataTable3BindingSource.DataSource = this.database1DataSet;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(407, 279);
@@ -315,11 +320,6 @@
             // enc_EducaçãoTableAdapter
             // 
             this.enc_EducaçãoTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataTable3BindingSource
-            // 
-            this.dataTable3BindingSource.DataMember = "DataTable3";
-            this.dataTable3BindingSource.DataSource = this.database1DataSet;
             // 
             // dataTable3TableAdapter
             // 

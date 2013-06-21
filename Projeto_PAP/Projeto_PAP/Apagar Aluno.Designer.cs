@@ -68,7 +68,7 @@
             this.comboBox1.DataSource = this.alunoBindingSource;
             this.comboBox1.DisplayMember = "Aluno";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(94, 99);
+            this.comboBox1.Location = new System.Drawing.Point(94, 91);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(145, 21);
             this.comboBox1.TabIndex = 28;
@@ -88,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 99);
+            this.label1.Location = new System.Drawing.Point(11, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 27;
@@ -97,7 +97,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(390, 99);
+            this.button2.Location = new System.Drawing.Point(390, 91);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 26;
@@ -107,7 +107,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(309, 99);
+            this.button1.Location = new System.Drawing.Point(309, 91);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 25;
@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 134);
+            this.ClientSize = new System.Drawing.Size(479, 125);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox1);

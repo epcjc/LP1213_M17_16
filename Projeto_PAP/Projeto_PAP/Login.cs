@@ -30,6 +30,7 @@ namespace Projeto_PAP
             if (logar())
             {
                 FormPrincipal frm = new FormPrincipal();
+                this.Hide();
                 frm.Show();
             }
             else

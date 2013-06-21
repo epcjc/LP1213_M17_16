@@ -58,7 +58,8 @@
             this.textBox2.Location = new System.Drawing.Point(104, 72);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(105, 20);
-            this.textBox2.TabIndex = 2;
+            this.textBox2.TabIndex = 1;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // label2
             // 

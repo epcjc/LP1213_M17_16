@@ -37,23 +37,44 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.turmasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.diretor_TurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diretor_TurmaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Diretor_TurmaTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
-            this.turmasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.turmasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.TurmasTableAdapter();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             diretor_TurmaLabel = new System.Windows.Forms.Label();
             turmaLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // diretor_TurmaLabel
+            // 
+            diretor_TurmaLabel.AutoSize = true;
+            diretor_TurmaLabel.Location = new System.Drawing.Point(18, 88);
+            diretor_TurmaLabel.Name = "diretor_TurmaLabel";
+            diretor_TurmaLabel.Size = new System.Drawing.Size(74, 13);
+            diretor_TurmaLabel.TabIndex = 26;
+            diretor_TurmaLabel.Text = "Diretor Turma:";
+            // 
+            // turmaLabel
+            // 
+            turmaLabel.AutoSize = true;
+            turmaLabel.Location = new System.Drawing.Point(18, 121);
+            turmaLabel.Name = "turmaLabel";
+            turmaLabel.Size = new System.Drawing.Size(40, 13);
+            turmaLabel.TabIndex = 28;
+            turmaLabel.Text = "Turma:";
             // 
             // textBox1
             // 
+            this.helpProvider1.SetHelpString(this.textBox1, "Introduzir Diretor Turma");
             this.textBox1.Location = new System.Drawing.Point(111, 88);
             this.textBox1.Name = "textBox1";
+            this.helpProvider1.SetShowHelp(this.textBox1, true);
             this.textBox1.Size = new System.Drawing.Size(184, 20);
             this.textBox1.TabIndex = 2;
             // 
@@ -82,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(193, 43);
+            this.label5.Location = new System.Drawing.Point(200, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 20);
             this.label5.TabIndex = 20;
@@ -103,11 +124,18 @@
             this.comboBox1.DataSource = this.turmasBindingSource;
             this.comboBox1.DisplayMember = "Turma";
             this.comboBox1.FormattingEnabled = true;
+            this.helpProvider1.SetHelpString(this.comboBox1, "Escolher a turma");
             this.comboBox1.Location = new System.Drawing.Point(111, 118);
             this.comboBox1.Name = "comboBox1";
+            this.helpProvider1.SetShowHelp(this.comboBox1, true);
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 23;
             this.comboBox1.ValueMember = "ID_Turma";
+            // 
+            // turmasBindingSource
+            // 
+            this.turmasBindingSource.DataMember = "Turmas";
+            this.turmasBindingSource.DataSource = this.database1DataSet;
             // 
             // database1DataSet
             // 
@@ -134,32 +162,9 @@
             this.tableAdapterManager.TurmasTableAdapter = this.turmasTableAdapter;
             this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // diretor_TurmaLabel
-            // 
-            diretor_TurmaLabel.AutoSize = true;
-            diretor_TurmaLabel.Location = new System.Drawing.Point(18, 88);
-            diretor_TurmaLabel.Name = "diretor_TurmaLabel";
-            diretor_TurmaLabel.Size = new System.Drawing.Size(74, 13);
-            diretor_TurmaLabel.TabIndex = 26;
-            diretor_TurmaLabel.Text = "Diretor Turma:";
-            // 
-            // turmasBindingSource
-            // 
-            this.turmasBindingSource.DataMember = "Turmas";
-            this.turmasBindingSource.DataSource = this.database1DataSet;
-            // 
             // turmasTableAdapter
             // 
             this.turmasTableAdapter.ClearBeforeFill = true;
-            // 
-            // turmaLabel
-            // 
-            turmaLabel.AutoSize = true;
-            turmaLabel.Location = new System.Drawing.Point(18, 121);
-            turmaLabel.Name = "turmaLabel";
-            turmaLabel.Size = new System.Drawing.Size(40, 13);
-            turmaLabel.TabIndex = 28;
-            turmaLabel.Text = "Turma:";
             // 
             // Form7
             // 
@@ -174,12 +179,15 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form7";
             this.Text = "Form7";
             this.Load += new System.EventHandler(this.Form7_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +207,6 @@
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private Database1DataSetTableAdapters.TurmasTableAdapter turmasTableAdapter;
         private System.Windows.Forms.BindingSource turmasBindingSource;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
