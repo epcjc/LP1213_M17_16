@@ -49,8 +49,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,10 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apagar Aluno.cs">
+    <Compile Include="Alunos\Apagar Aluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apagar Aluno.Designer.cs">
+    <Compile Include="Alunos\Apagar Aluno.Designer.cs">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
     </Compile>
     <Compile Include="Apagar DiretorTurma.cs">
@@ -85,10 +88,10 @@
     <Compile Include="Apagar Ocorrência.Designer.cs">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apagar Professor.cs">
+    <Compile Include="Professores\Apagar Professor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apagar Professor.Designer.cs">
+    <Compile Include="Professores\Apagar Professor.Designer.cs">
       <DependentUpon>Apagar Professor.cs</DependentUpon>
     </Compile>
     <Compile Include="Database1DataSet.cs">
@@ -100,10 +103,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Professores\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Professores\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Form10.cs">
@@ -204,7 +207,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Apagar Aluno.resx">
+    <Compile Include="RelAlunoEnc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelAlunoEnc.Designer.cs">
+      <DependentUpon>RelAlunoEnc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\RelatAlunoTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\RelatAlunoTurma.Designer.cs">
+      <DependentUpon>RelatAlunoTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios.Designer.cs">
+      <DependentUpon>Relatórios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\RelOcorrencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\RelOcorrencias.Designer.cs">
+      <DependentUpon>RelOcorrencias.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alunos\Apagar Aluno.resx">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apagar DiretorTurma.resx">
@@ -216,10 +243,10 @@
     <EmbeddedResource Include="Apagar Ocorrência.resx">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apagar Professor.resx">
+    <EmbeddedResource Include="Professores\Apagar Professor.resx">
       <DependentUpon>Apagar Professor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Professores\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form10.resx">
@@ -279,6 +306,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RelAlunoEnc.resx">
+      <DependentUpon>RelAlunoEnc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\RelatAlunoTurma.resx">
+      <DependentUpon>RelatAlunoTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios.resx">
+      <DependentUpon>Relatórios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\Report1.rdlc" />
+    <EmbeddedResource Include="Relatórios\Report2.rdlc" />
+    <EmbeddedResource Include="Relatórios\RelOcorrencias.resx">
+      <DependentUpon>RelOcorrencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\Report3.rdlc" />
     <None Include="app.config" />
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
@@ -348,6 +390,9 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Diretor de Turma\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

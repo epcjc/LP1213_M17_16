@@ -40,8 +40,10 @@
             this.professoresTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.ProfessoresTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -61,6 +63,7 @@
             this.helpProvider1.SetShowHelp(this.textBox1, true);
             this.textBox1.Size = new System.Drawing.Size(167, 20);
             this.textBox1.TabIndex = 13;
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // button1
             // 
@@ -128,6 +131,10 @@
             this.tableAdapterManager.TurmasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +154,7 @@
             this.Load += new System.EventHandler(this.Form14_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +173,6 @@
         private Database1DataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

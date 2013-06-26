@@ -21,17 +21,14 @@ namespace Projeto_PAP
             this.Validate();
             this.alunoBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
         }
 
-        
         private void Form6_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'database1DataSet.Turmas' table. You can move, or remove it, as needed.
             this.turmasTableAdapter.Fill(this.database1DataSet.Turmas);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
             this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,10 +45,21 @@ namespace Projeto_PAP
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Erro");
             }
         }
 
-        
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                errorProvider1.SetError(textBox1, "Preencher Aluno");
+            }
+            else
+            {
+                errorProvider1.Dispose();
+                MessageBox.Show("Inserido com Sucesso");
+            }
+        }        
     }
 }

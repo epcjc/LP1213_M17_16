@@ -31,8 +31,6 @@ namespace Projeto_PAP
             
         }
 
-      
-
         private void ocorrenciaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -41,19 +39,16 @@ namespace Projeto_PAP
 
         }
 
-       
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 this.ocorrenciaTableAdapter.Insert(Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), this.textBox2.Text, this.textBox3.Text, Convert.ToInt16(this.comboBox3.SelectedValue), Convert.ToInt16(this.comboBox4.SelectedValue), Convert.ToDateTime(this.textBox1.Text), this.textBox4.Text);
-
                 MessageBox.Show("Inserido com Sucesso");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Erro");
             }
         }
 
@@ -61,8 +56,5 @@ namespace Projeto_PAP
         {
             this.Close();
         }
-   
-
-       
     }
 }

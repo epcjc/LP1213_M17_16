@@ -44,10 +44,12 @@
             this.turmasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.turmasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.TurmasTableAdapter();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             turmaLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // turmaLabel1
@@ -76,6 +78,7 @@
             this.helpProvider1.SetShowHelp(this.textBox1, true);
             this.textBox1.Size = new System.Drawing.Size(186, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // button1
             // 
@@ -165,6 +168,10 @@
             // 
             this.turmasTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +216,6 @@
         private System.Windows.Forms.BindingSource turmasBindingSource;
         private Database1DataSetTableAdapters.TurmasTableAdapter turmasTableAdapter;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

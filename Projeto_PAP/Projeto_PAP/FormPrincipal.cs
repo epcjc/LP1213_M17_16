@@ -63,6 +63,12 @@ namespace Projeto_PAP
             frm.ShowDialog();
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Relatórios frm = new Relatórios();
+            frm.ShowDialog();
+        }
+
         
     }
 }

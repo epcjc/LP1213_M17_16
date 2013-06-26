@@ -61,6 +61,14 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
             this.dataTable3TableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.DataTable3TableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             testemunhasLabel = new System.Windows.Forms.Label();
             dataLabel = new System.Windows.Forms.Label();
             resultado_FinalLabel = new System.Windows.Forms.Label();
@@ -75,6 +83,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enc_EducaçãoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
             this.SuspendLayout();
             // 
             // testemunhasLabel
@@ -325,6 +341,38 @@
             // 
             this.dataTable3TableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,6 +407,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enc_EducaçãoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,5 +446,13 @@
         private Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter enc_EducaçãoTableAdapter;
         private System.Windows.Forms.BindingSource dataTable3BindingSource;
         private Database1DataSetTableAdapters.DataTable3TableAdapter dataTable3TableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
     }
 }

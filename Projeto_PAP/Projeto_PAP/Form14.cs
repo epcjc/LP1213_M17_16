@@ -20,12 +20,12 @@ namespace Projeto_PAP
         {
             try
             {
-                this.professoresTableAdapter.Insert(this.textBox1.Text);
+                this.professoresTableAdapter.Insert(this.textBox1.Text);       
                 MessageBox.Show("Inserido com Sucesso");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Erro");
             }
         }
 
@@ -47,6 +47,19 @@ namespace Projeto_PAP
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                errorProvider1.SetError(textBox1, "Preencher Professor");
+            }
+            else
+            {
+                errorProvider1.Dispose();
+                MessageBox.Show("Inserido com Sucesso");
+            }
         }
     }
 }

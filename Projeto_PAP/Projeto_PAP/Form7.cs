@@ -35,7 +35,7 @@ namespace Projeto_PAP
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Erro");
             }
 
         }
@@ -58,6 +58,19 @@ namespace Projeto_PAP
             this.diretor_TurmaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
 
+        }
+
+        private void textBox1_Validated(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                errorProvider1.SetError(textBox1, "Preencher Diretor de Turma");
+            }
+            else
+            {
+                errorProvider1.Dispose();
+                MessageBox.Show("Inserido com Sucesso");
+            }
         }
 
         
