@@ -70,5 +70,17 @@ namespace Projeto_PAP
         }
 
         
+        private void FormPrincipal_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Help.ShowHelp(this, "Ajuda.chm");
+        }
+
+        
+
+        
+        
+        
+
+        
     }
 }

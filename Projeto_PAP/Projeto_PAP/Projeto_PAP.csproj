@@ -64,28 +64,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ajuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajuda.Designer.cs">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alunos\Apagar Aluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Alunos\Apagar Aluno.Designer.cs">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apagar DiretorTurma.cs">
+    <Compile Include="Diretor de Turma\Apagar DiretorTurma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apagar DiretorTurma.Designer.cs">
+    <Compile Include="Diretor de Turma\Apagar DiretorTurma.Designer.cs">
       <DependentUpon>Apagar DiretorTurma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apagar EncEducação.cs">
+    <Compile Include="Encarregado Educação\Apagar EncEducação.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apagar EncEducação.Designer.cs">
+    <Compile Include="Encarregado Educação\Apagar EncEducação.Designer.cs">
       <DependentUpon>Apagar EncEducação.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apagar Ocorrência.cs">
+    <Compile Include="Ocorrências\Apagar Ocorrência.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apagar Ocorrência.Designer.cs">
+    <Compile Include="Ocorrências\Apagar Ocorrência.Designer.cs">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
     </Compile>
     <Compile Include="Professores\Apagar Professor.cs">
@@ -109,88 +115,88 @@
     <Compile Include="Professores\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form10.cs">
+    <Compile Include="Diretor de Turma\Form10.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form10.Designer.cs">
+    <Compile Include="Diretor de Turma\Form10.Designer.cs">
       <DependentUpon>Form10.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form11.cs">
+    <Compile Include="Encarregado Educação\Form11.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form11.Designer.cs">
+    <Compile Include="Encarregado Educação\Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form12.cs">
+    <Compile Include="Alunos\Form12.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form12.Designer.cs">
+    <Compile Include="Alunos\Form12.Designer.cs">
       <DependentUpon>Form12.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form13.cs">
+    <Compile Include="Alunos\Form13.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form13.Designer.cs">
+    <Compile Include="Alunos\Form13.Designer.cs">
       <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form14.cs">
+    <Compile Include="Professores\Form14.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form14.Designer.cs">
+    <Compile Include="Professores\Form14.Designer.cs">
       <DependentUpon>Form14.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form15.cs">
+    <Compile Include="Professores\Form15.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form15.Designer.cs">
+    <Compile Include="Professores\Form15.Designer.cs">
       <DependentUpon>Form15.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Diretor de Turma\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
+    <Compile Include="Diretor de Turma\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Encarregado Educação\Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
+    <Compile Include="Encarregado Educação\Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="Ocorrências\Form4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
+    <Compile Include="Ocorrências\Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="Ocorrências\Form5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
+    <Compile Include="Ocorrências\Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="Alunos\Form6.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
+    <Compile Include="Alunos\Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
+    <Compile Include="Diretor de Turma\Form7.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.cs">
+    <Compile Include="Diretor de Turma\Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8.cs">
+    <Compile Include="Encarregado Educação\Form8.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.cs">
+    <Compile Include="Encarregado Educação\Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form9.cs">
+    <Compile Include="Alunos\Form9.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form9.Designer.cs">
+    <Compile Include="Alunos\Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
@@ -207,10 +213,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelAlunoEnc.cs">
+    <Compile Include="Relatórios\RelAlunoEnc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RelAlunoEnc.Designer.cs">
+    <Compile Include="Relatórios\RelAlunoEnc.Designer.cs">
       <DependentUpon>RelAlunoEnc.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatórios\RelatAlunoTurma.cs">
@@ -219,10 +225,10 @@
     <Compile Include="Relatórios\RelatAlunoTurma.Designer.cs">
       <DependentUpon>RelatAlunoTurma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Relatórios.cs">
+    <Compile Include="Relatórios\Relatórios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Relatórios.Designer.cs">
+    <Compile Include="Relatórios\Relatórios.Designer.cs">
       <DependentUpon>Relatórios.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatórios\RelOcorrencias.cs">
@@ -231,16 +237,19 @@
     <Compile Include="Relatórios\RelOcorrencias.Designer.cs">
       <DependentUpon>RelOcorrencias.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ajuda.resx">
+      <DependentUpon>Ajuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alunos\Apagar Aluno.resx">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apagar DiretorTurma.resx">
+    <EmbeddedResource Include="Diretor de Turma\Apagar DiretorTurma.resx">
       <DependentUpon>Apagar DiretorTurma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apagar EncEducação.resx">
+    <EmbeddedResource Include="Encarregado Educação\Apagar EncEducação.resx">
       <DependentUpon>Apagar EncEducação.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apagar Ocorrência.resx">
+    <EmbeddedResource Include="Ocorrências\Apagar Ocorrência.resx">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Professores\Apagar Professor.resx">
@@ -249,46 +258,46 @@
     <EmbeddedResource Include="Professores\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
+    <EmbeddedResource Include="Diretor de Turma\Form10.resx">
       <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form11.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form12.resx">
+    <EmbeddedResource Include="Alunos\Form12.resx">
       <DependentUpon>Form12.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form13.resx">
+    <EmbeddedResource Include="Alunos\Form13.resx">
       <DependentUpon>Form13.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form14.resx">
+    <EmbeddedResource Include="Professores\Form14.resx">
       <DependentUpon>Form14.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form15.resx">
+    <EmbeddedResource Include="Professores\Form15.resx">
       <DependentUpon>Form15.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
+    <EmbeddedResource Include="Diretor de Turma\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
+    <EmbeddedResource Include="Ocorrências\Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
+    <EmbeddedResource Include="Ocorrências\Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
+    <EmbeddedResource Include="Alunos\Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
+    <EmbeddedResource Include="Diretor de Turma\Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
+    <EmbeddedResource Include="Alunos\Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
@@ -306,13 +315,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RelAlunoEnc.resx">
+    <EmbeddedResource Include="Relatórios\RelAlunoEnc.resx">
       <DependentUpon>RelAlunoEnc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatórios\RelatAlunoTurma.resx">
       <DependentUpon>RelatAlunoTurma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatórios.resx">
+    <EmbeddedResource Include="Relatórios\Relatórios.resx">
       <DependentUpon>Relatórios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatórios\Report1.rdlc" />
@@ -321,6 +330,9 @@
       <DependentUpon>RelOcorrencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatórios\Report3.rdlc" />
+    <None Include="Ajuda.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="app.config" />
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
@@ -391,9 +403,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Diretor de Turma\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
