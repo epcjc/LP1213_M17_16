@@ -11,6 +11,17 @@ namespace Projeto_PAP
 {
     public partial class Form2 : Form
     {
+        public void atualizarDataGrid()
+        {
+            this.dataTable1TableAdapter.FillDT_Turma(this.database1DataSet.DataTable1);
+            this.dataGridView1.Refresh();
+
+        }
+
+
+        
+        
+        
         public Form2()
         {
             InitializeComponent();
@@ -32,18 +43,21 @@ namespace Projeto_PAP
         {
             Form7 frm = new Form7();
             frm.ShowDialog();
+            atualizarDataGrid();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form10 frm = new Form10();
             frm.ShowDialog();
+            atualizarDataGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Apagar_DiretorTurma frm = new Apagar_DiretorTurma();
             frm.ShowDialog();
+            atualizarDataGrid();
         }
 
        

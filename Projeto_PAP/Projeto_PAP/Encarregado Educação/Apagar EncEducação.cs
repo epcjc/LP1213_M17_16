@@ -37,6 +37,7 @@ namespace Projeto_PAP
             {
                 this.encarregado_EducacaoTableAdapter.DeleteEncEducação(Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Eliminado com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {

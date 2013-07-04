@@ -11,6 +11,15 @@ namespace Projeto_PAP
 {
     public partial class Form4 : Form
     {
+        public void atualizarDataGrid()
+        {
+            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            this.ocorrenciaDataGridView.Refresh();
+
+        }
+        
+        
+        
         public Form4()
         {
             InitializeComponent();
@@ -33,14 +42,18 @@ namespace Projeto_PAP
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.aluno_OcorrenciaTableAdapter.FillOcorrencia(this.database1DataSet.Aluno_Ocorrencia);
-
+            atualizarDataGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Apagar_Ocorrência frm = new Apagar_Ocorrência();
             frm.ShowDialog();
+            atualizarDataGrid();
+            
         }
+
+        
 
        
 

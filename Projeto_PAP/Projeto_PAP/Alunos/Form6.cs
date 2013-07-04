@@ -42,6 +42,7 @@ namespace Projeto_PAP
             {
                 this.alunoTableAdapter.Insert(this.textBox1.Text, Convert.ToInt16(comboBox1.SelectedValue));
                 MessageBox.Show("Inserido com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {

@@ -37,6 +37,7 @@ namespace Projeto_PAP
             {
                 this.alunoTableAdapter.DeleteAluno(Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Eliminado com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {

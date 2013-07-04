@@ -22,6 +22,7 @@ namespace Projeto_PAP
             {
                 this.diretor_TurmaTableAdapter.DeleteDiretorTurma(Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Eliminado com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {

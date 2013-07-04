@@ -37,13 +37,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.encEducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
             this.iDAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDEEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.encarregadoEducacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contactoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.encEducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -101,7 +101,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 28);
             this.button2.TabIndex = 26;
-            this.button2.Text = "Cancelar";
+            this.button2.Text = "Voltar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -120,15 +120,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(495, 165);
             this.dataGridView1.TabIndex = 27;
-            // 
-            // encEducaçãoBindingSource
-            // 
-            this.encEducaçãoBindingSource.DataMember = "Enc_Educação";
-            this.encEducaçãoBindingSource.DataSource = this.database1DataSet;
-            // 
-            // enc_EducaçãoTableAdapter
-            // 
-            this.enc_EducaçãoTableAdapter.ClearBeforeFill = true;
             // 
             // iDAlunoDataGridViewTextBoxColumn
             // 
@@ -163,6 +154,15 @@
             this.contactoDataGridViewTextBoxColumn.DataPropertyName = "Contacto";
             this.contactoDataGridViewTextBoxColumn.HeaderText = "Contacto";
             this.contactoDataGridViewTextBoxColumn.Name = "contactoDataGridViewTextBoxColumn";
+            // 
+            // encEducaçãoBindingSource
+            // 
+            this.encEducaçãoBindingSource.DataMember = "Enc_Educação";
+            this.encEducaçãoBindingSource.DataSource = this.database1DataSet;
+            // 
+            // enc_EducaçãoTableAdapter
+            // 
+            this.enc_EducaçãoTableAdapter.ClearBeforeFill = true;
             // 
             // Form9
             // 

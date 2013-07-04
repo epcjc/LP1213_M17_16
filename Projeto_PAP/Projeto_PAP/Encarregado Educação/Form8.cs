@@ -44,6 +44,7 @@ namespace Projeto_PAP
            // {
            //    //this.encarregado_EducacaoTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text);
            //     MessageBox.Show("Inserido com Sucesso");
+           //      this.Close();
            // }
            // catch (Exception ex)
            // {

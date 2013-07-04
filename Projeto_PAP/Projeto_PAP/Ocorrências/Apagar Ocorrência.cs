@@ -37,11 +37,14 @@ namespace Projeto_PAP
             {
                 this.ocorrenciaTableAdapter.DeleteOcorrência(Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Eliminado com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+
             }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

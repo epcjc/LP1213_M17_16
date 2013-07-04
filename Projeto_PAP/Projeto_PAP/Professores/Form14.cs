@@ -22,6 +22,7 @@ namespace Projeto_PAP
             {
                 this.professoresTableAdapter.Insert(this.textBox1.Text);       
                 MessageBox.Show("Inserido com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {

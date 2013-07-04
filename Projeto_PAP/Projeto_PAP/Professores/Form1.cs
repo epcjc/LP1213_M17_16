@@ -11,6 +11,15 @@ namespace Projeto_PAP
 {
     public partial class Form1 : Form
     {
+        public void atualizarDataGrid()
+        {
+            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
+            this.dataGridView1.Refresh();
+
+        }
+        
+        
+        
         public Form1()
         {
             InitializeComponent();
@@ -32,18 +41,21 @@ namespace Projeto_PAP
         {
             Form14 frm = new Form14();
             frm.ShowDialog();
+            atualizarDataGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Form15 frm = new Form15();
             frm.ShowDialog();
+            atualizarDataGrid();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Apagar_Professor frm = new Apagar_Professor();
             frm.ShowDialog();
+            atualizarDataGrid();
         }
     }
 }

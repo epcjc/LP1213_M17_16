@@ -45,6 +45,7 @@ namespace Projeto_PAP
             {
                 this.ocorrenciaTableAdapter.Insert(Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), this.textBox2.Text, this.textBox3.Text, Convert.ToInt16(this.comboBox3.SelectedValue), Convert.ToInt16(this.comboBox4.SelectedValue), Convert.ToDateTime(this.textBox1.Text), this.textBox4.Text);
                 MessageBox.Show("Inserido com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {

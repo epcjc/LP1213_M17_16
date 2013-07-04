@@ -32,6 +32,7 @@ namespace Projeto_PAP
             {
                 this.diretor_TurmaTableAdapter.Insert(this.textBox1.Text, Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Inserido com Sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {
