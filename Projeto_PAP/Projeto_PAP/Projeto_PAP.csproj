@@ -88,6 +88,30 @@
     <Compile Include="Ocorrências\Apagar Ocorrência.Designer.cs">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alunos\Pesquisa_Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alunos\Pesquisa_Aluno.Designer.cs">
+      <DependentUpon>Pesquisa_Aluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diretor de Turma\Pesquisa_DiretorTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diretor de Turma\Pesquisa_DiretorTurma.Designer.cs">
+      <DependentUpon>Pesquisa_DiretorTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Professores\Pesquisar_Professor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professores\Pesquisar_Professor.Designer.cs">
+      <DependentUpon>Pesquisar_Professor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encarregado Educação\Pesquisa_EncEduc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encarregado Educação\Pesquisa_EncEduc.Designer.cs">
+      <DependentUpon>Pesquisa_EncEduc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Professores\Apagar Professor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +266,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ocorrências\Apagar Ocorrência.resx">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alunos\Pesquisa_Aluno.resx">
+      <DependentUpon>Pesquisa_Aluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diretor de Turma\Pesquisa_DiretorTurma.resx">
+      <DependentUpon>Pesquisa_DiretorTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professores\Pesquisar_Professor.resx">
+      <DependentUpon>Pesquisar_Professor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encarregado Educação\Pesquisa_EncEduc.resx">
+      <DependentUpon>Pesquisa_EncEduc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Professores\Apagar Professor.resx">
       <DependentUpon>Apagar Professor.cs</DependentUpon>

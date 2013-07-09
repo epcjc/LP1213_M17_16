@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.database1DataSet = new Projeto_PAP.Database1DataSet();
@@ -55,39 +54,44 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.encarregado_EducacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.encarregado_EducacaoBindingNavigator)).BeginInit();
             this.encarregado_EducacaoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.encarregado_EducacaoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(180, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Encarregados de Educação";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 27);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(525, 25);
+            this.label1.Size = new System.Drawing.Size(772, 59);
             this.label1.TabIndex = 12;
             this.label1.Text = "Escola Profissional Centro Juvenil de Campanhã";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button1
             // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(518, 296);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 35);
+            this.button1.Size = new System.Drawing.Size(73, 26);
             this.button1.TabIndex = 14;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = true;
@@ -142,7 +146,7 @@
             this.encarregado_EducacaoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.encarregado_EducacaoBindingNavigator.Name = "encarregado_EducacaoBindingNavigator";
             this.encarregado_EducacaoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.encarregado_EducacaoBindingNavigator.Size = new System.Drawing.Size(591, 25);
+            this.encarregado_EducacaoBindingNavigator.Size = new System.Drawing.Size(772, 25);
             this.encarregado_EducacaoBindingNavigator.TabIndex = 15;
             this.encarregado_EducacaoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -233,9 +237,10 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.encarregado_EducacaoDataGridView.DataSource = this.encarregado_EducacaoBindingSource;
-            this.encarregado_EducacaoDataGridView.Location = new System.Drawing.Point(12, 102);
+            this.encarregado_EducacaoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.encarregado_EducacaoDataGridView.Location = new System.Drawing.Point(0, 0);
             this.encarregado_EducacaoDataGridView.Name = "encarregado_EducacaoDataGridView";
-            this.encarregado_EducacaoDataGridView.Size = new System.Drawing.Size(500, 229);
+            this.encarregado_EducacaoDataGridView.Size = new System.Drawing.Size(772, 189);
             this.encarregado_EducacaoDataGridView.TabIndex = 15;
             // 
             // dataGridViewTextBoxColumn1
@@ -270,23 +275,74 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Data_Aviso";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(772, 312);
+            this.splitContainer1.SplitterDistance = 59;
+            this.splitContainer1.TabIndex = 16;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.encarregado_EducacaoDataGridView);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
+            this.splitContainer2.Size = new System.Drawing.Size(772, 249);
+            this.splitContainer2.SplitterDistance = 189;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 34);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(772, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(772, 34);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
             // Form11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 337);
-            this.Controls.Add(this.encarregado_EducacaoDataGridView);
+            this.ClientSize = new System.Drawing.Size(772, 337);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.encarregado_EducacaoBindingNavigator);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.HelpButton = true;
             this.helpProvider1.SetHelpString(this, "Para alterar algum campo é necessário clicar duas vezes em cima");
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form11";
             this.helpProvider1.SetShowHelp(this, true);
-            this.Text = "Form11";
+            this.Text = "Alterar Enc. Educação";
             this.Load += new System.EventHandler(this.Form11_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.encarregado_EducacaoBindingSource)).EndInit();
@@ -294,6 +350,16 @@
             this.encarregado_EducacaoBindingNavigator.ResumeLayout(false);
             this.encarregado_EducacaoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.encarregado_EducacaoDataGridView)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,7 +367,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private Database1DataSet database1DataSet;
@@ -326,5 +391,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

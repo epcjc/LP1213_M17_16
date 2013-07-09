@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form15));
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,32 +51,36 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingNavigator)).BeginInit();
             this.professoresBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.professoresDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(214, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 20);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Professores";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 36);
+            this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(462, 24);
+            this.label6.Size = new System.Drawing.Size(724, 44);
             this.label6.TabIndex = 23;
             this.label6.Text = "Escola Profissional Centro Juvenil de Campanhã";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // database1DataSet
             // 
@@ -128,7 +131,7 @@
             this.professoresBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.professoresBindingNavigator.Name = "professoresBindingNavigator";
             this.professoresBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.professoresBindingNavigator.Size = new System.Drawing.Size(511, 25);
+            this.professoresBindingNavigator.Size = new System.Drawing.Size(724, 25);
             this.professoresBindingNavigator.TabIndex = 25;
             this.professoresBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -216,9 +219,10 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.professoresDataGridView.DataSource = this.professoresBindingSource;
-            this.professoresDataGridView.Location = new System.Drawing.Point(12, 108);
+            this.professoresDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.professoresDataGridView.Location = new System.Drawing.Point(0, 0);
             this.professoresDataGridView.Name = "professoresDataGridView";
-            this.professoresDataGridView.Size = new System.Drawing.Size(396, 220);
+            this.professoresDataGridView.Size = new System.Drawing.Size(724, 173);
             this.professoresDataGridView.TabIndex = 25;
             // 
             // dataGridViewTextBoxColumn1
@@ -237,8 +241,9 @@
             // 
             // button1
             // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(423, 297);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 31);
             this.button1.TabIndex = 26;
@@ -246,23 +251,74 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label6);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(724, 285);
+            this.splitContainer1.SplitterDistance = 44;
+            this.splitContainer1.TabIndex = 27;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.professoresDataGridView);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
+            this.splitContainer2.Size = new System.Drawing.Size(724, 237);
+            this.splitContainer2.SplitterDistance = 173;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(724, 38);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 38);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(724, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // Form15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 342);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.professoresDataGridView);
+            this.ClientSize = new System.Drawing.Size(724, 310);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.professoresBindingNavigator);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
             this.HelpButton = true;
             this.helpProvider1.SetHelpString(this, "Para alterar algum campo é necessário clicar duas vezes em cima");
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form15";
             this.helpProvider1.SetShowHelp(this, true);
-            this.Text = "Form15";
+            this.Text = "Alterar Professor";
             this.Load += new System.EventHandler(this.Form15_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
@@ -270,6 +326,16 @@
             this.professoresBindingNavigator.ResumeLayout(false);
             this.professoresBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.professoresDataGridView)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +343,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource professoresBindingSource;
@@ -299,5 +364,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

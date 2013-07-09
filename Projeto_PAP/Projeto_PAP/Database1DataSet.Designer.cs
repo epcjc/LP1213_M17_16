@@ -7270,7 +7270,7 @@ SELECT ID_EE, Encarregado_Educacao, Contacto, Via_Contacto, Data_Aviso FROM Enca
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID_EE, Encarregado_Educacao, Contacto, Via_Contacto, Data_Aviso FROM dbo.E" +
@@ -7281,6 +7281,12 @@ SELECT ID_EE, Encarregado_Educacao, Contacto, Via_Contacto, Data_Aviso FROM Enca
             this._commandCollection[1].CommandText = "DELETE FROM Encarregado_Educacao\r\nWHERE     (ID_EE = @Original_ID_EE)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_EE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_EE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT     Encarregado_Educacao, Contacto, Via_Contacto, Data_Aviso\r\nFROM        " +
+                " Encarregado_Educacao\r\nWHERE     (Encarregado_Educacao LIKE \'%\' + @nome + \'%\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Encarregado_Educacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7302,6 +7308,42 @@ SELECT ID_EE, Encarregado_Educacao, Contacto, Via_Contacto, Data_Aviso FROM Enca
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Database1DataSet.Encarregado_EducacaoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.Encarregado_EducacaoDataTable dataTable = new Database1DataSet.Encarregado_EducacaoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesEncEduc(Database1DataSet.Encarregado_EducacaoDataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Database1DataSet.Encarregado_EducacaoDataTable GetDataBy1(string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
             Database1DataSet.Encarregado_EducacaoDataTable dataTable = new Database1DataSet.Encarregado_EducacaoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8134,7 +8176,7 @@ SELECT ID_Ocorrencia, ID_Aluno, ID_Professor, Observacoes, Testemunhas, ID_Encar
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID_Professor, Professor FROM dbo.Professores";
@@ -8144,6 +8186,12 @@ SELECT ID_Ocorrencia, ID_Aluno, ID_Professor, Observacoes, Testemunhas, ID_Encar
             this._commandCollection[1].CommandText = "DELETE FROM Professores\r\nWHERE     (ID_Professor = @Original_ID_Professor)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Professor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Professor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT     Professor\r\nFROM         Professores\r\nWHERE     (Professor LIKE \'%\' + @" +
+                "nome + \'%\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Professor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8165,6 +8213,42 @@ SELECT ID_Ocorrencia, ID_Aluno, ID_Professor, Observacoes, Testemunhas, ID_Encar
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Database1DataSet.ProfessoresDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.ProfessoresDataTable dataTable = new Database1DataSet.ProfessoresDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesProf(Database1DataSet.ProfessoresDataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Database1DataSet.ProfessoresDataTable GetDataBy1(string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
             Database1DataSet.ProfessoresDataTable dataTable = new Database1DataSet.ProfessoresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -8778,13 +8862,20 @@ SELECT ID_Ocorrencia, ID_Aluno, ID_Professor, Observacoes, Testemunhas, ID_Encar
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Turmas.ID_Turma, Turmas.Turma, Diretor_Turma.ID_Diretor_Turma, Dire" +
                 "tor_Turma.Diretor_Turma\r\nFROM            Diretor_Turma INNER JOIN\r\n             " +
                 "            Turmas ON Diretor_Turma.ID_Turma = Turmas.ID_Turma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT     Diretor_Turma.Diretor_Turma, Turmas.Turma\r\nFROM         Diretor_Turma " +
+                "INNER JOIN\r\n                      Turmas ON Diretor_Turma.ID_Turma = Turmas.ID_T" +
+                "urma\r\nWHERE     (Diretor_Turma.Diretor_Turma LIKE \'%\' + @nome + \'%\')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8806,6 +8897,42 @@ SELECT ID_Ocorrencia, ID_Aluno, ID_Professor, Observacoes, Testemunhas, ID_Encar
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Database1DataSet.Turma_DiretorTurmaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.Turma_DiretorTurmaDataTable dataTable = new Database1DataSet.Turma_DiretorTurmaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesDT(Database1DataSet.Turma_DiretorTurmaDataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Database1DataSet.Turma_DiretorTurmaDataTable GetDataBy(string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
             Database1DataSet.Turma_DiretorTurmaDataTable dataTable = new Database1DataSet.Turma_DiretorTurmaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -9132,7 +9259,7 @@ FROM            Aluno INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Ocorrencia.ID_Ocorrencia, Aluno.ID_Aluno, Aluno.Aluno, Professores.ID_Professor, Professores.Professor, Ocorrencia.Observacoes, 
@@ -9144,6 +9271,18 @@ FROM            Aluno INNER JOIN
                          Encarregado_Educacao ON Ocorrencia.ID_Encarregado_Educacao = Encarregado_Educacao.ID_EE INNER JOIN
                          Professores ON Ocorrencia.ID_Professor = Professores.ID_Professor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT     Aluno.Aluno, Professores.Professor, Ocorrencia.Observacoes, Ocorrencia.Testemunhas, Encarregado_Educacao.Encarregado_Educacao, 
+                      Diretor_Turma.Diretor_Turma, Ocorrencia.Data, Ocorrencia.Resultado_Final
+FROM         Aluno INNER JOIN
+                      Ocorrencia ON Aluno.ID_Aluno = Ocorrencia.ID_Aluno INNER JOIN
+                      Diretor_Turma ON Ocorrencia.ID_Diretor_Turma = Diretor_Turma.ID_Diretor_Turma INNER JOIN
+                      Encarregado_Educacao ON Ocorrencia.ID_Encarregado_Educacao = Encarregado_Educacao.ID_EE INNER JOIN
+                      Professores ON Ocorrencia.ID_Professor = Professores.ID_Professor
+WHERE     (Aluno.Aluno LIKE '%' + @nome + '%')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Aluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9165,6 +9304,42 @@ FROM            Aluno INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Database1DataSet.Aluno_OcorrenciaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.Aluno_OcorrenciaDataTable dataTable = new Database1DataSet.Aluno_OcorrenciaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesAlunoOcorrência(Database1DataSet.Aluno_OcorrenciaDataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Database1DataSet.Aluno_OcorrenciaDataTable GetDataBy(string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
             Database1DataSet.Aluno_OcorrenciaDataTable dataTable = new Database1DataSet.Aluno_OcorrenciaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -9481,13 +9656,20 @@ FROM            Aluno INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT     Aluno.ID_Aluno, Aluno.Aluno, Turmas.ID_Turma, Turmas.Turma\r\nFROM      " +
                 "   Aluno INNER JOIN\r\n                      Turmas ON Aluno.ID_Turma = Turmas.ID_" +
                 "Turma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT     Aluno.Aluno, Turmas.Turma\r\nFROM         Aluno INNER JOIN\r\n            " +
+                "          Turmas ON Aluno.ID_Turma = Turmas.ID_Turma\r\nWHERE     (Aluno.Aluno LIK" +
+                "E \'%\' + @nome + \'%\')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Aluno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9509,6 +9691,42 @@ FROM            Aluno INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Database1DataSet.DataTable2DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.DataTable2DataTable dataTable = new Database1DataSet.DataTable2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesAluno(Database1DataSet.DataTable2DataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Database1DataSet.DataTable2DataTable GetDataBy(string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
             Database1DataSet.DataTable2DataTable dataTable = new Database1DataSet.DataTable2DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

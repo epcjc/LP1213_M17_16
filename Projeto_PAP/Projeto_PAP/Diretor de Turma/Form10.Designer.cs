@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form10));
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.database1DataSet = new Projeto_PAP.Database1DataSet();
@@ -54,39 +53,44 @@
             this.dataTable1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.dataTable1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingNavigator)).BeginInit();
             this.dataTable1BindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(222, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Diretores de Turma";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 28);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(525, 25);
+            this.label1.Size = new System.Drawing.Size(751, 53);
             this.label1.TabIndex = 12;
             this.label1.Text = "Escola Profissional Centro Juvenil de Campanhã";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button1
             // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(527, 273);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 42);
+            this.button1.Size = new System.Drawing.Size(93, 25);
             this.button1.TabIndex = 15;
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = true;
@@ -128,9 +132,10 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataTable1DataGridView.DataSource = this.dataTable1BindingSource;
-            this.dataTable1DataGridView.Location = new System.Drawing.Point(12, 95);
+            this.dataTable1DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataTable1DataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataTable1DataGridView.Name = "dataTable1DataGridView";
-            this.dataTable1DataGridView.Size = new System.Drawing.Size(509, 220);
+            this.dataTable1DataGridView.Size = new System.Drawing.Size(751, 161);
             this.dataTable1DataGridView.TabIndex = 16;
             // 
             // dataGridViewTextBoxColumn1
@@ -259,27 +264,78 @@
             this.dataTable1BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.dataTable1BindingNavigator.Name = "dataTable1BindingNavigator";
             this.dataTable1BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.dataTable1BindingNavigator.Size = new System.Drawing.Size(609, 25);
+            this.dataTable1BindingNavigator.Size = new System.Drawing.Size(751, 25);
             this.dataTable1BindingNavigator.TabIndex = 16;
             this.dataTable1BindingNavigator.Text = "bindingNavigator1";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(751, 286);
+            this.splitContainer1.SplitterDistance = 53;
+            this.splitContainer1.TabIndex = 17;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.dataTable1DataGridView);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
+            this.splitContainer2.Size = new System.Drawing.Size(751, 229);
+            this.splitContainer2.SplitterDistance = 161;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(751, 42);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 42);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(751, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 327);
-            this.Controls.Add(this.dataTable1DataGridView);
+            this.ClientSize = new System.Drawing.Size(751, 311);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dataTable1BindingNavigator);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.HelpButton = true;
             this.helpProvider1.SetHelpString(this, "Para alterar algum campo é necessário clicar duas vezes em cima");
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form10";
             this.helpProvider1.SetShowHelp(this, true);
-            this.Text = "Form10";
+            this.Text = "Alterar Diretor Turma";
             this.Load += new System.EventHandler(this.Form10_Load);
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
@@ -287,6 +343,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingNavigator)).EndInit();
             this.dataTable1BindingNavigator.ResumeLayout(false);
             this.dataTable1BindingNavigator.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,7 +360,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private Database1DataSet database1DataSet;
@@ -318,5 +383,9 @@
         private System.Windows.Forms.ToolStripButton dataTable1BindingNavigatorSaveItem;
         private System.Windows.Forms.BindingNavigator dataTable1BindingNavigator;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

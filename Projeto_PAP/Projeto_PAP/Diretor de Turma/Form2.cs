@@ -60,6 +60,13 @@ namespace Projeto_PAP
             atualizarDataGrid();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Pesquisa_DiretorTurma frm = new Pesquisa_DiretorTurma();
+            frm.ShowDialog();
+            atualizarDataGrid();
+        }
+
        
 
        

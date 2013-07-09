@@ -69,8 +69,7 @@ namespace Projeto_PAP
             frm.ShowDialog();
         }
 
-        
-        private void FormPrincipal_HelpButtonClicked(object sender, CancelEventArgs e)
+         private void button9_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "Ajuda.chm");
         }

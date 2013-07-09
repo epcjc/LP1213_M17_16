@@ -30,20 +30,39 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.Enc_EducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
-            this.Enc_EducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.Enc_EducaçãoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Enc_EducaçãoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Enc_EducaçãoBindingSource
+            // 
+            this.Enc_EducaçãoBindingSource.DataMember = "Enc_Educação";
+            this.Enc_EducaçãoBindingSource.DataSource = this.Database1DataSet;
+            // 
+            // Database1DataSet
+            // 
+            this.Database1DataSet.DataSetName = "Database1DataSet";
+            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // splitContainer1
             // 
@@ -59,30 +78,50 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.reportViewer1);
-            this.splitContainer1.Size = new System.Drawing.Size(598, 272);
-            this.splitContainer1.SplitterDistance = 76;
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(598, 217);
+            this.splitContainer1.SplitterDistance = 39;
             this.splitContainer1.TabIndex = 0;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 12);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(462, 24);
+            this.label2.Size = new System.Drawing.Size(598, 39);
             this.label2.TabIndex = 16;
             this.label2.Text = "Escola Profissional Centro Juvenil de Campanhã";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(175, 46);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 20);
+            this.label1.Size = new System.Drawing.Size(598, 39);
             this.label1.TabIndex = 15;
             this.label1.Text = "Relatório: Alunos/Enc. Educação";
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.reportViewer1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
+            this.splitContainer2.Size = new System.Drawing.Size(598, 174);
+            this.splitContainer2.SplitterDistance = 118;
+            this.splitContainer2.TabIndex = 1;
             // 
             // reportViewer1
             // 
@@ -93,18 +132,37 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Relatórios.Report3.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(598, 192);
+            this.reportViewer1.Size = new System.Drawing.Size(598, 118);
             this.reportViewer1.TabIndex = 0;
             // 
-            // Database1DataSet
+            // flowLayoutPanel1
             // 
-            this.Database1DataSet.DataSetName = "Database1DataSet";
-            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(598, 30);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // Enc_EducaçãoBindingSource
+            // button1
             // 
-            this.Enc_EducaçãoBindingSource.DataMember = "Enc_Educação";
-            this.Enc_EducaçãoBindingSource.DataSource = this.Database1DataSet;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Voltar ao Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 30);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(598, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // Enc_EducaçãoTableAdapter
             // 
@@ -114,18 +172,25 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 272);
+            this.ClientSize = new System.Drawing.Size(598, 217);
             this.Controls.Add(this.splitContainer1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RelAlunoEnc";
-            this.Text = "RelAlunoEnc";
+            this.Text = "Relatório Aluno/ Enc. Educação";
             this.Load += new System.EventHandler(this.RelAlunoEnc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Enc_EducaçãoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Enc_EducaçãoBindingSource)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -139,5 +204,9 @@
         private System.Windows.Forms.BindingSource Enc_EducaçãoBindingSource;
         private Database1DataSet Database1DataSet;
         private Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter Enc_EducaçãoTableAdapter;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

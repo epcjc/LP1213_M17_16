@@ -57,5 +57,12 @@ namespace Projeto_PAP
             frm.ShowDialog();
             atualizarDataGrid();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Pesquisar_Professor frm = new Pesquisar_Professor();
+            frm.ShowDialog();
+            atualizarDataGrid();
+        }
     }
 }

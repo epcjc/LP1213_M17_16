@@ -74,6 +74,13 @@ namespace Projeto_PAP
             atualizarDataGrid();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Pesquisa_EncEduc frm = new Pesquisa_EncEduc();
+            frm.ShowDialog();
+            atualizarDataGrid();
+        }
+
         
 
         

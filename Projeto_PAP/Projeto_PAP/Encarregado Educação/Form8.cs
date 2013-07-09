@@ -40,16 +40,17 @@ namespace Projeto_PAP
 
         private void button1_Click(object sender, EventArgs e)
         {
-           //try
-           // {
-           //    //this.encarregado_EducacaoTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text);
-           //     MessageBox.Show("Inserido com Sucesso");
-           //      this.Close();
-           // }
-           // catch (Exception ex)
-           // {
-           //     MessageBox.Show(ex.ToString());
-           // }
+            try
+            {
+                //this.encarregado_EducacaoTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text);
+                
+                MessageBox.Show("Inserido com Sucesso");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void encarregado_EducacaoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
