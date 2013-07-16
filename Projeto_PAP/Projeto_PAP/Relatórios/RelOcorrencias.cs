@@ -16,17 +16,19 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void RelOcorrencias_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'Database1DataSet.Aluno_Ocorrencia' table. You can move, or remove it, as needed.
-            this.Aluno_OcorrenciaTableAdapter.FillOcorrencia(this.Database1DataSet.Aluno_Ocorrencia);
-
-            this.reportViewer1.RefreshReport();
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void RelOcorrencias_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'Database1DataSet.Aluno_Ocorrencia' table. You can move, or remove it, as needed.
+            this.Aluno_OcorrenciaTableAdapter.Fill(this.Database1DataSet.Aluno_Ocorrencia);
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

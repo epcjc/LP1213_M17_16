@@ -1,0 +1,6 @@
+utilizador: 	Administrador
+Password: 	123
+
+
+utilizador: 	2013
+Password: 	2013

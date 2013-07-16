@@ -30,19 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.Enc_EducaçãoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelAlunoEnc));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.Enc_EducaçãoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Enc_EducaçãoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
+            this.Aluno_EncBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Aluno_EncTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_EncTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -52,17 +51,9 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aluno_EncBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Enc_EducaçãoBindingSource
-            // 
-            this.Enc_EducaçãoBindingSource.DataMember = "Enc_Educação";
-            this.Enc_EducaçãoBindingSource.DataSource = this.Database1DataSet;
-            // 
-            // Database1DataSet
-            // 
-            this.Database1DataSet.DataSetName = "Database1DataSet";
-            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // splitContainer1
             // 
@@ -123,18 +114,6 @@
             this.splitContainer2.SplitterDistance = 118;
             this.splitContainer2.TabIndex = 1;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Enc_EducaçãoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Relatórios.Report3.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(598, 118);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.button1);
@@ -164,9 +143,31 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // Enc_EducaçãoTableAdapter
+            // reportViewer1
             // 
-            this.Enc_EducaçãoTableAdapter.ClearBeforeFill = true;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.Aluno_EncBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Relatórios.Report3.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(598, 118);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // Database1DataSet
+            // 
+            this.Database1DataSet.DataSetName = "Database1DataSet";
+            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Aluno_EncBindingSource
+            // 
+            this.Aluno_EncBindingSource.DataMember = "Aluno_Enc";
+            this.Aluno_EncBindingSource.DataSource = this.Database1DataSet;
+            // 
+            // Aluno_EncTableAdapter
+            // 
+            this.Aluno_EncTableAdapter.ClearBeforeFill = true;
             // 
             // RelAlunoEnc
             // 
@@ -174,13 +175,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 217);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RelAlunoEnc";
             this.Text = "Relatório Aluno/ Enc. Educação";
             this.Load += new System.EventHandler(this.RelAlunoEnc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Enc_EducaçãoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -191,6 +191,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aluno_EncBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,13 +202,13 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource Enc_EducaçãoBindingSource;
-        private Database1DataSet Database1DataSet;
-        private Database1DataSetTableAdapters.Enc_EducaçãoTableAdapter Enc_EducaçãoTableAdapter;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource Aluno_EncBindingSource;
+        private Database1DataSet Database1DataSet;
+        private Database1DataSetTableAdapters.Aluno_EncTableAdapter Aluno_EncTableAdapter;
     }
 }

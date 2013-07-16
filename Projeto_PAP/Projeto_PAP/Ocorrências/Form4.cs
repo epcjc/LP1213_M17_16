@@ -14,7 +14,7 @@ namespace Projeto_PAP
         public void atualizarDataGrid()
         {
             this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-            this.ocorrenciaDataGridView.Refresh();
+            this.faltasDataGridView.Refresh();
 
         }
         
@@ -27,6 +27,8 @@ namespace Projeto_PAP
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
+            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno_Ocorrencia' table. You can move, or remove it, as needed.
             //this.aluno_OcorrenciaTableAdapter.FillOcorrencia(this.database1DataSet.Aluno_Ocorrencia);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
@@ -39,11 +41,7 @@ namespace Projeto_PAP
             this.Close();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.aluno_OcorrenciaTableAdapter.FillOcorrencia(this.database1DataSet.Aluno_Ocorrencia);
-            atualizarDataGrid();
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {

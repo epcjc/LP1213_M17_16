@@ -11,6 +11,12 @@ namespace Projeto_PAP
 {
     public partial class Form10 : Form
     {
+        public void atualizarDataGrid()
+        {
+            this.dataTable1TableAdapter.FillDT_Turma(this.database1DataSet.DataTable1);
+            this.dataTable1DataGridView.Refresh();
+        }
+        
         public Form10()
         {
             InitializeComponent();
@@ -25,6 +31,7 @@ namespace Projeto_PAP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            atualizarDataGrid();
             this.Close();
         }
 

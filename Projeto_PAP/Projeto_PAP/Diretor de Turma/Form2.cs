@@ -15,7 +15,6 @@ namespace Projeto_PAP
         {
             this.dataTable1TableAdapter.FillDT_Turma(this.database1DataSet.DataTable1);
             this.dataGridView1.Refresh();
-
         }
 
 
@@ -66,6 +65,8 @@ namespace Projeto_PAP
             frm.ShowDialog();
             atualizarDataGrid();
         }
+
+       
 
        
 

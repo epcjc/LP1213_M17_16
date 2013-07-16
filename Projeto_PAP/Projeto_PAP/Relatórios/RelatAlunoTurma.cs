@@ -16,18 +16,20 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void RelatAlunoTurma_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'Database1DataSet.DataTable2' table. You can move, or remove it, as needed.
-            this.DataTable2TableAdapter.FillAlunoTurma(this.Database1DataSet.DataTable2);
-
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void RelatAlunoTurma_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'Database1DataSet.Aluno' table. You can move, or remove it, as needed.
+            this.AlunoTableAdapter.Fill(this.Database1DataSet.Aluno);
+
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
     }
 }

@@ -30,18 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.Aluno_OcorrenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelOcorrencias));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
+            this.Aluno_OcorrenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Aluno_OcorrenciaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_OcorrenciaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Aluno_OcorrenciaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -51,17 +50,9 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aluno_OcorrenciaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Aluno_OcorrenciaBindingSource
-            // 
-            this.Aluno_OcorrenciaBindingSource.DataMember = "Aluno_Ocorrencia";
-            this.Aluno_OcorrenciaBindingSource.DataSource = this.Database1DataSet;
-            // 
-            // Database1DataSet
-            // 
-            this.Database1DataSet.DataSetName = "Database1DataSet";
-            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // splitContainer1
             // 
@@ -111,18 +102,6 @@
             this.splitContainer2.SplitterDistance = 154;
             this.splitContainer2.TabIndex = 1;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.Aluno_OcorrenciaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Relatórios.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(736, 154);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.button1);
@@ -152,6 +131,28 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.Aluno_OcorrenciaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Relatórios.Report2.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(736, 154);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // Database1DataSet
+            // 
+            this.Database1DataSet.DataSetName = "Database1DataSet";
+            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Aluno_OcorrenciaBindingSource
+            // 
+            this.Aluno_OcorrenciaBindingSource.DataMember = "Aluno_Ocorrencia";
+            this.Aluno_OcorrenciaBindingSource.DataSource = this.Database1DataSet;
+            // 
             // Aluno_OcorrenciaTableAdapter
             // 
             this.Aluno_OcorrenciaTableAdapter.ClearBeforeFill = true;
@@ -162,13 +163,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 256);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RelOcorrencias";
             this.Text = "Relatório Ocorrências";
             this.Load += new System.EventHandler(this.RelOcorrencias_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Aluno_OcorrenciaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -179,6 +179,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aluno_OcorrenciaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,13 +189,13 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label2;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource Aluno_OcorrenciaBindingSource;
-        private Database1DataSet Database1DataSet;
-        private Database1DataSetTableAdapters.Aluno_OcorrenciaTableAdapter Aluno_OcorrenciaTableAdapter;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource Aluno_OcorrenciaBindingSource;
+        private Database1DataSet Database1DataSet;
+        private Database1DataSetTableAdapters.Aluno_OcorrenciaTableAdapter Aluno_OcorrenciaTableAdapter;
     }
 }

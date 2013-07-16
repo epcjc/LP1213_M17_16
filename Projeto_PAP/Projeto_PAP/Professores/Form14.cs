@@ -20,7 +20,7 @@ namespace Projeto_PAP
         {
             try
             {
-                this.professoresTableAdapter.Insert(this.textBox1.Text);       
+                this.professoresTableAdapter.Insert(this.textBox1.Text);
                 MessageBox.Show("Inserido com Sucesso");
                 this.Close();
             }

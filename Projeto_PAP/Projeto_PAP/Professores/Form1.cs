@@ -15,7 +15,6 @@ namespace Projeto_PAP
         {
             this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
             this.dataGridView1.Refresh();
-
         }
         
         

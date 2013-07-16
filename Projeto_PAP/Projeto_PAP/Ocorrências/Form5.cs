@@ -18,32 +18,37 @@ namespace Projeto_PAP
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.DataTable3' table. You can move, or remove it, as needed.
-            this.dataTable3TableAdapter.FillAluno_DT(this.database1DataSet.DataTable3);
-            // TODO: This line of code loads data into the 'database1DataSet.Enc_Educação' table. You can move, or remove it, as needed.
-            this.enc_EducaçãoTableAdapter.FillEncEducação(this.database1DataSet.Enc_Educação);
-             // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'database1DataSet.TurmaDT' table. You can move, or remove it, as needed.
+            this.turmaDTTableAdapter.FillTurmaDT(this.database1DataSet.TurmaDT);
+            // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
             this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-            // TODO: This line of code loads data into the 'database1DataSet.Ocorrencia' table. You can move, or remove it, as needed.
-            this.ocorrenciaTableAdapter.Fill(this.database1DataSet.Ocorrencia);
+            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
+            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
+            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
+            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
+            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
+            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
+            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
             
         }
 
         private void ocorrenciaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.ocorrenciaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             try
             {
-                this.ocorrenciaTableAdapter.Insert(Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), this.textBox2.Text, this.textBox3.Text, Convert.ToInt16(this.comboBox3.SelectedValue), Convert.ToInt16(this.comboBox4.SelectedValue), Convert.ToDateTime(this.textBox1.Text), this.textBox4.Text);
+                
+                //this.faltasTableAdapter.Insert(this.textBox1.Text, Convert.ToInt16(this.comboBox3.SelectedValue), this.textBox3.Text, this.textBox4.Text, this.textBox5.Text, Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), this.textBox6.Text, this.textBox7.Text, Convert.ToDateTime(this.textBox2.Text), this.textBox8.Text);
                 MessageBox.Show("Inserido com Sucesso");
                 this.Close();
             }
@@ -57,5 +62,7 @@ namespace Projeto_PAP
         {
             this.Close();
         }
+
+        
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Relatórios));
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -56,9 +57,9 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(95, 38);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Sair";
+            this.button4.Text = "Voltar ao Menu";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -68,7 +69,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(627, 44);
+            this.label2.Size = new System.Drawing.Size(627, 54);
             this.label2.TabIndex = 13;
             this.label2.Text = "Escola Profissional Centro Juvenil de Campanhã";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -88,8 +89,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2.Controls.Add(this.statusStrip1);
-            this.splitContainer1.Size = new System.Drawing.Size(627, 179);
-            this.splitContainer1.SplitterDistance = 44;
+            this.splitContainer1.Size = new System.Drawing.Size(627, 223);
+            this.splitContainer1.SplitterDistance = 54;
             this.splitContainer1.TabIndex = 14;
             // 
             // splitContainer2
@@ -106,8 +107,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer2.Size = new System.Drawing.Size(627, 109);
-            this.splitContainer2.SplitterDistance = 74;
+            this.splitContainer2.Size = new System.Drawing.Size(627, 143);
+            this.splitContainer2.SplitterDistance = 93;
             this.splitContainer2.TabIndex = 5;
             // 
             // flowLayoutPanel2
@@ -118,7 +119,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(627, 74);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(627, 93);
             this.flowLayoutPanel2.TabIndex = 3;
             // 
             // button1
@@ -163,12 +164,12 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(627, 31);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(627, 46);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 109);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 143);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(627, 22);
             this.statusStrip1.TabIndex = 4;
@@ -178,8 +179,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 179);
+            this.ClientSize = new System.Drawing.Size(627, 223);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Relatórios";

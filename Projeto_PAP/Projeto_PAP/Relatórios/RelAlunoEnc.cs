@@ -16,17 +16,19 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void RelAlunoEnc_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'Database1DataSet.Enc_Educação' table. You can move, or remove it, as needed.
-            this.Enc_EducaçãoTableAdapter.FillEncEducação(this.Database1DataSet.Enc_Educação);
-
-            this.reportViewer1.RefreshReport();
-        }
+      
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void RelAlunoEnc_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'Database1DataSet.Aluno_Enc' table. You can move, or remove it, as needed.
+            this.Aluno_EncTableAdapter.FillAlunoEncEduc(this.Database1DataSet.Aluno_Enc);
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

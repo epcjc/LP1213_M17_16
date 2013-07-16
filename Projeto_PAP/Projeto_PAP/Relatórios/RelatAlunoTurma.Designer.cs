@@ -30,18 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
-            this.DataTable2TableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.DataTable2TableAdapter();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelatAlunoTurma));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.Database1DataSet = new Projeto_PAP.Database1DataSet();
+            this.AlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AlunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -51,21 +50,9 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DataTable2BindingSource
-            // 
-            this.DataTable2BindingSource.DataMember = "DataTable2";
-            this.DataTable2BindingSource.DataSource = this.Database1DataSet;
-            // 
-            // Database1DataSet
-            // 
-            this.Database1DataSet.DataSetName = "Database1DataSet";
-            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // DataTable2TableAdapter
-            // 
-            this.DataTable2TableAdapter.ClearBeforeFill = true;
             // 
             // splitContainer1
             // 
@@ -115,18 +102,6 @@
             this.splitContainer2.SplitterDistance = 160;
             this.splitContainer2.TabIndex = 1;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable2BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Relatórios.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(741, 160);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.button1);
@@ -156,19 +131,44 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.AlunoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Relatórios.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(741, 160);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // Database1DataSet
+            // 
+            this.Database1DataSet.DataSetName = "Database1DataSet";
+            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // AlunoBindingSource
+            // 
+            this.AlunoBindingSource.DataMember = "Aluno";
+            this.AlunoBindingSource.DataSource = this.Database1DataSet;
+            // 
+            // AlunoTableAdapter
+            // 
+            this.AlunoTableAdapter.ClearBeforeFill = true;
+            // 
             // RelatAlunoTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 272);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RelatAlunoTurma";
             this.Text = "Relatório Aluno/Turma";
             this.Load += new System.EventHandler(this.RelatAlunoTurma_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -179,21 +179,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.BindingSource DataTable2BindingSource;
-        private Database1DataSet Database1DataSet;
-        private Database1DataSetTableAdapters.DataTable2TableAdapter DataTable2TableAdapter;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource AlunoBindingSource;
+        private Database1DataSet Database1DataSet;
+        private Database1DataSetTableAdapters.AlunoTableAdapter AlunoTableAdapter;
     }
 }
