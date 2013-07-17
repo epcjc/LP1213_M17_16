@@ -18,6 +18,14 @@ namespace Projeto_PAP
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet.Medida_Disciplinar' table. You can move, or remove it, as needed.
+            this.medida_DisciplinarTableAdapter.Fill(this.database1DataSet.Medida_Disciplinar);
+            // TODO: This line of code loads data into the 'database1DataSet.Aluno_Enc' table. You can move, or remove it, as needed.
+            this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
+            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
+            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            // TODO: This line of code loads data into the 'database1DataSet.Ocorrencia' table. You can move, or remove it, as needed.
+            this.ocorrenciaTableAdapter.Fill(this.database1DataSet.Ocorrencia);
             // TODO: This line of code loads data into the 'database1DataSet.TurmaDT' table. You can move, or remove it, as needed.
             this.turmaDTTableAdapter.FillTurmaDT(this.database1DataSet.TurmaDT);
             // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
@@ -47,8 +55,8 @@ namespace Projeto_PAP
         {
             try
             {
-                
-                //this.faltasTableAdapter.Insert(this.textBox1.Text, Convert.ToInt16(this.comboBox3.SelectedValue), this.textBox3.Text, this.textBox4.Text, this.textBox5.Text, Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), this.textBox6.Text, this.textBox7.Text, Convert.ToDateTime(this.textBox2.Text), this.textBox8.Text);
+                //this.ocorrenciaTableAdapter.Insert(this.textBox6.Text, this.textBox7.Text, Convert.ToInt16(this.comboBox5.SelectedValue), Convert.ToInt16(this.comboBox2.SelectedValue), this.textBox10.Text, this.textBox1.Text, Convert.ToInt16(this.comboBox4.SelectedValue), Convert.ToDateTime(this.textBox2.Text), Convert.ToDateTime(this.textBox11.Text), this.textBox8.Text, Convert.ToInt16(this.comboBox1.SelectedValue), Convert.ToInt16(this.comboBox6.SelectedValue));
+             
                 MessageBox.Show("Inserido com Sucesso");
                 this.Close();
             }
@@ -62,6 +70,8 @@ namespace Projeto_PAP
         {
             this.Close();
         }
+
+        
 
         
     }

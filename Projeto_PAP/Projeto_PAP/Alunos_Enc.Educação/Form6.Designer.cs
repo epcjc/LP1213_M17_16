@@ -44,10 +44,10 @@
             this.turmasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.turmasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.TurmasTableAdapter();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -178,6 +178,16 @@
             // 
             this.turmasTableAdapter.ClearBeforeFill = true;
             // 
+            // textBox2
+            // 
+            this.helpProvider1.SetHelpString(this.textBox2, "Introduzir Encarregado Educação");
+            this.textBox2.Location = new System.Drawing.Point(83, 50);
+            this.textBox2.Name = "textBox2";
+            this.helpProvider1.SetShowHelp(this.textBox2, true);
+            this.textBox2.Size = new System.Drawing.Size(213, 20);
+            this.textBox2.TabIndex = 31;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -224,16 +234,6 @@
             this.splitContainer2.Size = new System.Drawing.Size(512, 159);
             this.splitContainer2.SplitterDistance = 92;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.helpProvider1.SetHelpString(this.textBox2, "Introduzir Encarregado Educação");
-            this.textBox2.Location = new System.Drawing.Point(83, 50);
-            this.textBox2.Name = "textBox2";
-            this.helpProvider1.SetShowHelp(this.textBox2, true);
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 31;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 

@@ -134,7 +134,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(175, 39);
+            this.label2.Location = new System.Drawing.Point(80, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(315, 24);
             this.label2.TabIndex = 11;
@@ -181,7 +181,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
-            this.Text = "Menu Principal";
+            this.Text = "Gestão de Ocorrências Disciplinares";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
