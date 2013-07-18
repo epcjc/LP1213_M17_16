@@ -54,6 +54,12 @@ namespace Projeto_PAP {
         
         private Medida_DisciplinarDataTable tableMedida_Disciplinar;
         
+        private Diretor_Turma1DataTable tableDiretor_Turma1;
+        
+        private Diretor_Turma2DataTable tableDiretor_Turma2;
+        
+        private Diretor_Turma3DataTable tableDiretor_Turma3;
+        
         private global::System.Data.DataRelation relationFK_Aluno_Turmas;
         
         private global::System.Data.DataRelation relationFK_Diretor_Turma_Turmas;
@@ -85,6 +91,22 @@ namespace Projeto_PAP {
         private global::System.Data.DataRelation relationFK_Ocorrencia_Aluno;
         
         private global::System.Data.DataRelation relationFK_Ocorrencia_Professores3;
+        
+        private global::System.Data.DataRelation relationFK_Ocorrencia_Aluno1;
+        
+        private global::System.Data.DataRelation relationFK_Aluno_Encarregado_Educacao1;
+        
+        private global::System.Data.DataRelation relationFK_Ocorrencia_Diretor_Turma4;
+        
+        private global::System.Data.DataRelation relationFK_Diretor_Turma_Turmas3;
+        
+        private global::System.Data.DataRelation relationFK_Ocorrencia_Diretor_Turma5;
+        
+        private global::System.Data.DataRelation relationFK_Diretor_Turma_Turmas4;
+        
+        private global::System.Data.DataRelation relationFK_Ocorrencia_Diretor_Turma6;
+        
+        private global::System.Data.DataRelation relationFK_Diretor_Turma_Turmas5;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -158,6 +180,15 @@ namespace Projeto_PAP {
                 }
                 if ((ds.Tables["Medida_Disciplinar"] != null)) {
                     base.Tables.Add(new Medida_DisciplinarDataTable(ds.Tables["Medida_Disciplinar"]));
+                }
+                if ((ds.Tables["Diretor_Turma1"] != null)) {
+                    base.Tables.Add(new Diretor_Turma1DataTable(ds.Tables["Diretor_Turma1"]));
+                }
+                if ((ds.Tables["Diretor_Turma2"] != null)) {
+                    base.Tables.Add(new Diretor_Turma2DataTable(ds.Tables["Diretor_Turma2"]));
+                }
+                if ((ds.Tables["Diretor_Turma3"] != null)) {
+                    base.Tables.Add(new Diretor_Turma3DataTable(ds.Tables["Diretor_Turma3"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -329,6 +360,36 @@ namespace Projeto_PAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Diretor_Turma1DataTable Diretor_Turma1 {
+            get {
+                return this.tableDiretor_Turma1;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Diretor_Turma2DataTable Diretor_Turma2 {
+            get {
+                return this.tableDiretor_Turma2;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Diretor_Turma3DataTable Diretor_Turma3 {
+            get {
+                return this.tableDiretor_Turma3;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -438,6 +499,15 @@ namespace Projeto_PAP {
                 }
                 if ((ds.Tables["Medida_Disciplinar"] != null)) {
                     base.Tables.Add(new Medida_DisciplinarDataTable(ds.Tables["Medida_Disciplinar"]));
+                }
+                if ((ds.Tables["Diretor_Turma1"] != null)) {
+                    base.Tables.Add(new Diretor_Turma1DataTable(ds.Tables["Diretor_Turma1"]));
+                }
+                if ((ds.Tables["Diretor_Turma2"] != null)) {
+                    base.Tables.Add(new Diretor_Turma2DataTable(ds.Tables["Diretor_Turma2"]));
+                }
+                if ((ds.Tables["Diretor_Turma3"] != null)) {
+                    base.Tables.Add(new Diretor_Turma3DataTable(ds.Tables["Diretor_Turma3"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -562,6 +632,24 @@ namespace Projeto_PAP {
                     this.tableMedida_Disciplinar.InitVars();
                 }
             }
+            this.tableDiretor_Turma1 = ((Diretor_Turma1DataTable)(base.Tables["Diretor_Turma1"]));
+            if ((initTable == true)) {
+                if ((this.tableDiretor_Turma1 != null)) {
+                    this.tableDiretor_Turma1.InitVars();
+                }
+            }
+            this.tableDiretor_Turma2 = ((Diretor_Turma2DataTable)(base.Tables["Diretor_Turma2"]));
+            if ((initTable == true)) {
+                if ((this.tableDiretor_Turma2 != null)) {
+                    this.tableDiretor_Turma2.InitVars();
+                }
+            }
+            this.tableDiretor_Turma3 = ((Diretor_Turma3DataTable)(base.Tables["Diretor_Turma3"]));
+            if ((initTable == true)) {
+                if ((this.tableDiretor_Turma3 != null)) {
+                    this.tableDiretor_Turma3.InitVars();
+                }
+            }
             this.relationFK_Aluno_Turmas = this.Relations["FK_Aluno_Turmas"];
             this.relationFK_Diretor_Turma_Turmas = this.Relations["FK_Diretor_Turma_Turmas"];
             this.relationFK_Ocorrencia_Diretor_Turma = this.Relations["FK_Ocorrencia_Diretor_Turma"];
@@ -578,6 +666,14 @@ namespace Projeto_PAP {
             this.relationFK_Aluno_Encarregado_Educacao = this.Relations["FK_Aluno_Encarregado_Educacao"];
             this.relationFK_Ocorrencia_Aluno = this.Relations["FK_Ocorrencia_Aluno"];
             this.relationFK_Ocorrencia_Professores3 = this.Relations["FK_Ocorrencia_Professores3"];
+            this.relationFK_Ocorrencia_Aluno1 = this.Relations["FK_Ocorrencia_Aluno1"];
+            this.relationFK_Aluno_Encarregado_Educacao1 = this.Relations["FK_Aluno_Encarregado_Educacao1"];
+            this.relationFK_Ocorrencia_Diretor_Turma4 = this.Relations["FK_Ocorrencia_Diretor_Turma4"];
+            this.relationFK_Diretor_Turma_Turmas3 = this.Relations["FK_Diretor_Turma_Turmas3"];
+            this.relationFK_Ocorrencia_Diretor_Turma5 = this.Relations["FK_Ocorrencia_Diretor_Turma5"];
+            this.relationFK_Diretor_Turma_Turmas4 = this.Relations["FK_Diretor_Turma_Turmas4"];
+            this.relationFK_Ocorrencia_Diretor_Turma6 = this.Relations["FK_Ocorrencia_Diretor_Turma6"];
+            this.relationFK_Diretor_Turma_Turmas5 = this.Relations["FK_Diretor_Turma_Turmas5"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -618,6 +714,12 @@ namespace Projeto_PAP {
             base.Tables.Add(this.tableConsultasFaltas);
             this.tableMedida_Disciplinar = new Medida_DisciplinarDataTable();
             base.Tables.Add(this.tableMedida_Disciplinar);
+            this.tableDiretor_Turma1 = new Diretor_Turma1DataTable();
+            base.Tables.Add(this.tableDiretor_Turma1);
+            this.tableDiretor_Turma2 = new Diretor_Turma2DataTable();
+            base.Tables.Add(this.tableDiretor_Turma2);
+            this.tableDiretor_Turma3 = new Diretor_Turma3DataTable();
+            base.Tables.Add(this.tableDiretor_Turma3);
             this.relationFK_Aluno_Turmas = new global::System.Data.DataRelation("FK_Aluno_Turmas", new global::System.Data.DataColumn[] {
                         this.tableTurmas.ID_TurmaColumn}, new global::System.Data.DataColumn[] {
                         this.tableAluno.ID_TurmaColumn}, false);
@@ -682,6 +784,38 @@ namespace Projeto_PAP {
                         this.tableProfessores.ID_Docente_DiscenteColumn}, new global::System.Data.DataColumn[] {
                         this.tableOcorrencia.ID_OutrosParticipantesColumn}, false);
             this.Relations.Add(this.relationFK_Ocorrencia_Professores3);
+            this.relationFK_Ocorrencia_Aluno1 = new global::System.Data.DataRelation("FK_Ocorrencia_Aluno1", new global::System.Data.DataColumn[] {
+                        this.tableAluno_Enc.ID_AlunoColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOcorrencia.ID_AlunoParticipadoColumn}, false);
+            this.Relations.Add(this.relationFK_Ocorrencia_Aluno1);
+            this.relationFK_Aluno_Encarregado_Educacao1 = new global::System.Data.DataRelation("FK_Aluno_Encarregado_Educacao1", new global::System.Data.DataColumn[] {
+                        this.tableEncarregado_Educacao.ID_EEColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAluno_Enc.ID_EEColumn}, false);
+            this.Relations.Add(this.relationFK_Aluno_Encarregado_Educacao1);
+            this.relationFK_Ocorrencia_Diretor_Turma4 = new global::System.Data.DataRelation("FK_Ocorrencia_Diretor_Turma4", new global::System.Data.DataColumn[] {
+                        this.tableDiretor_Turma1.ID_Diretor_TurmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOcorrencia.ID_Diretor_TurmaColumn}, false);
+            this.Relations.Add(this.relationFK_Ocorrencia_Diretor_Turma4);
+            this.relationFK_Diretor_Turma_Turmas3 = new global::System.Data.DataRelation("FK_Diretor_Turma_Turmas3", new global::System.Data.DataColumn[] {
+                        this.tableTurmas.ID_TurmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDiretor_Turma1.ID_TurmaColumn}, false);
+            this.Relations.Add(this.relationFK_Diretor_Turma_Turmas3);
+            this.relationFK_Ocorrencia_Diretor_Turma5 = new global::System.Data.DataRelation("FK_Ocorrencia_Diretor_Turma5", new global::System.Data.DataColumn[] {
+                        this.tableDiretor_Turma2.ID_Diretor_TurmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOcorrencia.ID_Diretor_TurmaColumn}, false);
+            this.Relations.Add(this.relationFK_Ocorrencia_Diretor_Turma5);
+            this.relationFK_Diretor_Turma_Turmas4 = new global::System.Data.DataRelation("FK_Diretor_Turma_Turmas4", new global::System.Data.DataColumn[] {
+                        this.tableTurmas.ID_TurmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDiretor_Turma2.ID_TurmaColumn}, false);
+            this.Relations.Add(this.relationFK_Diretor_Turma_Turmas4);
+            this.relationFK_Ocorrencia_Diretor_Turma6 = new global::System.Data.DataRelation("FK_Ocorrencia_Diretor_Turma6", new global::System.Data.DataColumn[] {
+                        this.tableDiretor_Turma3.ID_Diretor_TurmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableOcorrencia.ID_Diretor_TurmaColumn}, false);
+            this.Relations.Add(this.relationFK_Ocorrencia_Diretor_Turma6);
+            this.relationFK_Diretor_Turma_Turmas5 = new global::System.Data.DataRelation("FK_Diretor_Turma_Turmas5", new global::System.Data.DataColumn[] {
+                        this.tableTurmas.ID_TurmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDiretor_Turma3.ID_TurmaColumn}, false);
+            this.Relations.Add(this.relationFK_Diretor_Turma_Turmas5);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -771,6 +905,24 @@ namespace Projeto_PAP {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeMedida_Disciplinar() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeDiretor_Turma1() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeDiretor_Turma2() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeDiretor_Turma3() {
             return false;
         }
         
@@ -873,6 +1025,15 @@ namespace Projeto_PAP {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Medida_DisciplinarRowChangeEventHandler(object sender, Medida_DisciplinarRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Diretor_Turma1RowChangeEventHandler(object sender, Diretor_Turma1RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Diretor_Turma2RowChangeEventHandler(object sender, Diretor_Turma2RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Diretor_Turma3RowChangeEventHandler(object sender, Diretor_Turma3RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1230,6 +1391,8 @@ namespace Projeto_PAP {
             
             private global::System.Data.DataColumn columnID_Turma;
             
+            private global::System.Data.DataColumn columnTurma;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Diretor_TurmaDataTable() {
@@ -1289,6 +1452,14 @@ namespace Projeto_PAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TurmaColumn {
+                get {
+                    return this.columnTurma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1324,12 +1495,13 @@ namespace Projeto_PAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Diretor_TurmaRow AddDiretor_TurmaRow(string Diretor_Turma, TurmasRow parentTurmasRowByFK_Diretor_Turma_Turmas) {
+            public Diretor_TurmaRow AddDiretor_TurmaRow(string Diretor_Turma, TurmasRow parentTurmasRowByFK_Diretor_Turma_Turmas, string Turma) {
                 Diretor_TurmaRow rowDiretor_TurmaRow = ((Diretor_TurmaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Diretor_Turma,
-                        null};
+                        null,
+                        Turma};
                 if ((parentTurmasRowByFK_Diretor_Turma_Turmas != null)) {
                     columnValuesArray[2] = parentTurmasRowByFK_Diretor_Turma_Turmas[0];
                 }
@@ -1365,6 +1537,7 @@ namespace Projeto_PAP {
                 this.columnID_Diretor_Turma = base.Columns["ID_Diretor_Turma"];
                 this.columnDiretor_Turma = base.Columns["Diretor_Turma"];
                 this.columnID_Turma = base.Columns["ID_Turma"];
+                this.columnTurma = base.Columns["Turma"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1376,6 +1549,8 @@ namespace Projeto_PAP {
                 base.Columns.Add(this.columnDiretor_Turma);
                 this.columnID_Turma = new global::System.Data.DataColumn("ID_Turma", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Turma);
+                this.columnTurma = new global::System.Data.DataColumn("Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTurma);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Diretor_Turma}, true));
                 this.columnID_Diretor_Turma.AutoIncrement = true;
@@ -1387,6 +1562,7 @@ namespace Projeto_PAP {
                 this.columnDiretor_Turma.AllowDBNull = false;
                 this.columnDiretor_Turma.MaxLength = 50;
                 this.columnID_Turma.AllowDBNull = false;
+                this.columnTurma.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5995,6 +6171,894 @@ namespace Projeto_PAP {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Diretor_Turma1DataTable : global::System.Data.TypedTableBase<Diretor_Turma1Row> {
+            
+            private global::System.Data.DataColumn columnID_Diretor_Turma;
+            
+            private global::System.Data.DataColumn columnDiretor_Turma;
+            
+            private global::System.Data.DataColumn columnID_Turma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1DataTable() {
+                this.TableName = "Diretor_Turma1";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Diretor_Turma1DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Diretor_Turma1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_Diretor_TurmaColumn {
+                get {
+                    return this.columnID_Diretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Diretor_TurmaColumn {
+                get {
+                    return this.columnDiretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_TurmaColumn {
+                get {
+                    return this.columnID_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1Row this[int index] {
+                get {
+                    return ((Diretor_Turma1Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma1RowChangeEventHandler Diretor_Turma1RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma1RowChangeEventHandler Diretor_Turma1RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma1RowChangeEventHandler Diretor_Turma1RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma1RowChangeEventHandler Diretor_Turma1RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddDiretor_Turma1Row(Diretor_Turma1Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1Row AddDiretor_Turma1Row(string Diretor_Turma, TurmasRow parentTurmasRowByFK_Diretor_Turma_Turmas3) {
+                Diretor_Turma1Row rowDiretor_Turma1Row = ((Diretor_Turma1Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Diretor_Turma,
+                        null};
+                if ((parentTurmasRowByFK_Diretor_Turma_Turmas3 != null)) {
+                    columnValuesArray[2] = parentTurmasRowByFK_Diretor_Turma_Turmas3[0];
+                }
+                rowDiretor_Turma1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDiretor_Turma1Row);
+                return rowDiretor_Turma1Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1Row FindByID_Diretor_Turma(int ID_Diretor_Turma) {
+                return ((Diretor_Turma1Row)(this.Rows.Find(new object[] {
+                            ID_Diretor_Turma})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Diretor_Turma1DataTable cln = ((Diretor_Turma1DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Diretor_Turma1DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Diretor_Turma = base.Columns["ID_Diretor_Turma"];
+                this.columnDiretor_Turma = base.Columns["Diretor_Turma"];
+                this.columnID_Turma = base.Columns["ID_Turma"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID_Diretor_Turma = new global::System.Data.DataColumn("ID_Diretor_Turma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Diretor_Turma);
+                this.columnDiretor_Turma = new global::System.Data.DataColumn("Diretor_Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiretor_Turma);
+                this.columnID_Turma = new global::System.Data.DataColumn("ID_Turma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Turma);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Diretor_Turma}, true));
+                this.columnID_Diretor_Turma.AutoIncrement = true;
+                this.columnID_Diretor_Turma.AutoIncrementSeed = -1;
+                this.columnID_Diretor_Turma.AutoIncrementStep = -1;
+                this.columnID_Diretor_Turma.AllowDBNull = false;
+                this.columnID_Diretor_Turma.ReadOnly = true;
+                this.columnID_Diretor_Turma.Unique = true;
+                this.columnDiretor_Turma.AllowDBNull = false;
+                this.columnDiretor_Turma.MaxLength = 50;
+                this.columnID_Turma.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1Row NewDiretor_Turma1Row() {
+                return ((Diretor_Turma1Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Diretor_Turma1Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Diretor_Turma1Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Diretor_Turma1RowChanged != null)) {
+                    this.Diretor_Turma1RowChanged(this, new Diretor_Turma1RowChangeEvent(((Diretor_Turma1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Diretor_Turma1RowChanging != null)) {
+                    this.Diretor_Turma1RowChanging(this, new Diretor_Turma1RowChangeEvent(((Diretor_Turma1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Diretor_Turma1RowDeleted != null)) {
+                    this.Diretor_Turma1RowDeleted(this, new Diretor_Turma1RowChangeEvent(((Diretor_Turma1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Diretor_Turma1RowDeleting != null)) {
+                    this.Diretor_Turma1RowDeleting(this, new Diretor_Turma1RowChangeEvent(((Diretor_Turma1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveDiretor_Turma1Row(Diretor_Turma1Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Database1DataSet ds = new Database1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Diretor_Turma1DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Diretor_Turma2DataTable : global::System.Data.TypedTableBase<Diretor_Turma2Row> {
+            
+            private global::System.Data.DataColumn columnID_Diretor_Turma;
+            
+            private global::System.Data.DataColumn columnDiretor_Turma;
+            
+            private global::System.Data.DataColumn columnID_Turma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2DataTable() {
+                this.TableName = "Diretor_Turma2";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Diretor_Turma2DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Diretor_Turma2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_Diretor_TurmaColumn {
+                get {
+                    return this.columnID_Diretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Diretor_TurmaColumn {
+                get {
+                    return this.columnDiretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_TurmaColumn {
+                get {
+                    return this.columnID_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2Row this[int index] {
+                get {
+                    return ((Diretor_Turma2Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma2RowChangeEventHandler Diretor_Turma2RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma2RowChangeEventHandler Diretor_Turma2RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma2RowChangeEventHandler Diretor_Turma2RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma2RowChangeEventHandler Diretor_Turma2RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddDiretor_Turma2Row(Diretor_Turma2Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2Row AddDiretor_Turma2Row(string Diretor_Turma, TurmasRow parentTurmasRowByFK_Diretor_Turma_Turmas4) {
+                Diretor_Turma2Row rowDiretor_Turma2Row = ((Diretor_Turma2Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Diretor_Turma,
+                        null};
+                if ((parentTurmasRowByFK_Diretor_Turma_Turmas4 != null)) {
+                    columnValuesArray[2] = parentTurmasRowByFK_Diretor_Turma_Turmas4[0];
+                }
+                rowDiretor_Turma2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDiretor_Turma2Row);
+                return rowDiretor_Turma2Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2Row FindByID_Diretor_Turma(int ID_Diretor_Turma) {
+                return ((Diretor_Turma2Row)(this.Rows.Find(new object[] {
+                            ID_Diretor_Turma})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Diretor_Turma2DataTable cln = ((Diretor_Turma2DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Diretor_Turma2DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Diretor_Turma = base.Columns["ID_Diretor_Turma"];
+                this.columnDiretor_Turma = base.Columns["Diretor_Turma"];
+                this.columnID_Turma = base.Columns["ID_Turma"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID_Diretor_Turma = new global::System.Data.DataColumn("ID_Diretor_Turma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Diretor_Turma);
+                this.columnDiretor_Turma = new global::System.Data.DataColumn("Diretor_Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiretor_Turma);
+                this.columnID_Turma = new global::System.Data.DataColumn("ID_Turma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Turma);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Diretor_Turma}, true));
+                this.columnID_Diretor_Turma.AutoIncrement = true;
+                this.columnID_Diretor_Turma.AutoIncrementSeed = -1;
+                this.columnID_Diretor_Turma.AutoIncrementStep = -1;
+                this.columnID_Diretor_Turma.AllowDBNull = false;
+                this.columnID_Diretor_Turma.ReadOnly = true;
+                this.columnID_Diretor_Turma.Unique = true;
+                this.columnDiretor_Turma.AllowDBNull = false;
+                this.columnDiretor_Turma.MaxLength = 50;
+                this.columnID_Turma.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2Row NewDiretor_Turma2Row() {
+                return ((Diretor_Turma2Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Diretor_Turma2Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Diretor_Turma2Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Diretor_Turma2RowChanged != null)) {
+                    this.Diretor_Turma2RowChanged(this, new Diretor_Turma2RowChangeEvent(((Diretor_Turma2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Diretor_Turma2RowChanging != null)) {
+                    this.Diretor_Turma2RowChanging(this, new Diretor_Turma2RowChangeEvent(((Diretor_Turma2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Diretor_Turma2RowDeleted != null)) {
+                    this.Diretor_Turma2RowDeleted(this, new Diretor_Turma2RowChangeEvent(((Diretor_Turma2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Diretor_Turma2RowDeleting != null)) {
+                    this.Diretor_Turma2RowDeleting(this, new Diretor_Turma2RowChangeEvent(((Diretor_Turma2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveDiretor_Turma2Row(Diretor_Turma2Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Database1DataSet ds = new Database1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Diretor_Turma2DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Diretor_Turma3DataTable : global::System.Data.TypedTableBase<Diretor_Turma3Row> {
+            
+            private global::System.Data.DataColumn columnID_Diretor_Turma;
+            
+            private global::System.Data.DataColumn columnDiretor_Turma;
+            
+            private global::System.Data.DataColumn columnID_Turma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3DataTable() {
+                this.TableName = "Diretor_Turma3";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Diretor_Turma3DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Diretor_Turma3DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_Diretor_TurmaColumn {
+                get {
+                    return this.columnID_Diretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Diretor_TurmaColumn {
+                get {
+                    return this.columnDiretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_TurmaColumn {
+                get {
+                    return this.columnID_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3Row this[int index] {
+                get {
+                    return ((Diretor_Turma3Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma3RowChangeEventHandler Diretor_Turma3RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma3RowChangeEventHandler Diretor_Turma3RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma3RowChangeEventHandler Diretor_Turma3RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Diretor_Turma3RowChangeEventHandler Diretor_Turma3RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddDiretor_Turma3Row(Diretor_Turma3Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3Row AddDiretor_Turma3Row(string Diretor_Turma, TurmasRow parentTurmasRowByFK_Diretor_Turma_Turmas5) {
+                Diretor_Turma3Row rowDiretor_Turma3Row = ((Diretor_Turma3Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Diretor_Turma,
+                        null};
+                if ((parentTurmasRowByFK_Diretor_Turma_Turmas5 != null)) {
+                    columnValuesArray[2] = parentTurmasRowByFK_Diretor_Turma_Turmas5[0];
+                }
+                rowDiretor_Turma3Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDiretor_Turma3Row);
+                return rowDiretor_Turma3Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3Row FindByID_Diretor_Turma(int ID_Diretor_Turma) {
+                return ((Diretor_Turma3Row)(this.Rows.Find(new object[] {
+                            ID_Diretor_Turma})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Diretor_Turma3DataTable cln = ((Diretor_Turma3DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Diretor_Turma3DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Diretor_Turma = base.Columns["ID_Diretor_Turma"];
+                this.columnDiretor_Turma = base.Columns["Diretor_Turma"];
+                this.columnID_Turma = base.Columns["ID_Turma"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID_Diretor_Turma = new global::System.Data.DataColumn("ID_Diretor_Turma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Diretor_Turma);
+                this.columnDiretor_Turma = new global::System.Data.DataColumn("Diretor_Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiretor_Turma);
+                this.columnID_Turma = new global::System.Data.DataColumn("ID_Turma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Turma);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Diretor_Turma}, true));
+                this.columnID_Diretor_Turma.AutoIncrement = true;
+                this.columnID_Diretor_Turma.AutoIncrementSeed = -1;
+                this.columnID_Diretor_Turma.AutoIncrementStep = -1;
+                this.columnID_Diretor_Turma.AllowDBNull = false;
+                this.columnID_Diretor_Turma.ReadOnly = true;
+                this.columnID_Diretor_Turma.Unique = true;
+                this.columnDiretor_Turma.AllowDBNull = false;
+                this.columnDiretor_Turma.MaxLength = 50;
+                this.columnID_Turma.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3Row NewDiretor_Turma3Row() {
+                return ((Diretor_Turma3Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Diretor_Turma3Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Diretor_Turma3Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Diretor_Turma3RowChanged != null)) {
+                    this.Diretor_Turma3RowChanged(this, new Diretor_Turma3RowChangeEvent(((Diretor_Turma3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Diretor_Turma3RowChanging != null)) {
+                    this.Diretor_Turma3RowChanging(this, new Diretor_Turma3RowChangeEvent(((Diretor_Turma3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Diretor_Turma3RowDeleted != null)) {
+                    this.Diretor_Turma3RowDeleted(this, new Diretor_Turma3RowChangeEvent(((Diretor_Turma3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Diretor_Turma3RowDeleting != null)) {
+                    this.Diretor_Turma3RowDeleting(this, new Diretor_Turma3RowChangeEvent(((Diretor_Turma3Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveDiretor_Turma3Row(Diretor_Turma3Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Database1DataSet ds = new Database1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Diretor_Turma3DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class AlunoRow : global::System.Data.DataRow {
@@ -6219,6 +7283,22 @@ namespace Projeto_PAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Turma {
+                get {
+                    try {
+                        return ((string)(this[this.tableDiretor_Turma.TurmaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Turma\' in table \'Diretor_Turma\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiretor_Turma.TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TurmasRow TurmasRow {
                 get {
                     return ((TurmasRow)(this.GetParentRow(this.Table.ParentRelations["FK_Diretor_Turma_Turmas"])));
@@ -6226,6 +7306,18 @@ namespace Projeto_PAP {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Diretor_Turma_Turmas"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTurmaNull() {
+                return this.IsNull(this.tableDiretor_Turma.TurmaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTurmaNull() {
+                this[this.tableDiretor_Turma.TurmaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6339,6 +7431,17 @@ namespace Projeto_PAP {
                 }
                 else {
                     return ((AlunoRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Aluno_Encarregado_Educacao"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Aluno_EncRow[] GetAluno_EncRows() {
+                if ((this.Table.ChildRelations["FK_Aluno_Encarregado_Educacao1"] == null)) {
+                    return new Aluno_EncRow[0];
+                }
+                else {
+                    return ((Aluno_EncRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Aluno_Encarregado_Educacao1"])));
                 }
             }
         }
@@ -6615,6 +7718,50 @@ namespace Projeto_PAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Aluno_EncRow Aluno_EncRow {
+                get {
+                    return ((Aluno_EncRow)(this.GetParentRow(this.Table.ParentRelations["FK_Ocorrencia_Aluno1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Ocorrencia_Aluno1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1Row Diretor_Turma1Row {
+                get {
+                    return ((Diretor_Turma1Row)(this.GetParentRow(this.Table.ParentRelations["FK_Ocorrencia_Diretor_Turma4"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Ocorrencia_Diretor_Turma4"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2Row Diretor_Turma2Row {
+                get {
+                    return ((Diretor_Turma2Row)(this.GetParentRow(this.Table.ParentRelations["FK_Ocorrencia_Diretor_Turma5"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Ocorrencia_Diretor_Turma5"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3Row Diretor_Turma3Row {
+                get {
+                    return ((Diretor_Turma3Row)(this.GetParentRow(this.Table.ParentRelations["FK_Ocorrencia_Diretor_Turma6"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Ocorrencia_Diretor_Turma6"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsInstrutorNull() {
                 return this.IsNull(this.tableOcorrencia.InstrutorColumn);
             }
@@ -6810,6 +7957,39 @@ namespace Projeto_PAP {
                 }
                 else {
                     return ((TurmaDTRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Aluno_Turmas2"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1Row[] GetDiretor_Turma1Rows() {
+                if ((this.Table.ChildRelations["FK_Diretor_Turma_Turmas3"] == null)) {
+                    return new Diretor_Turma1Row[0];
+                }
+                else {
+                    return ((Diretor_Turma1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Diretor_Turma_Turmas3"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2Row[] GetDiretor_Turma2Rows() {
+                if ((this.Table.ChildRelations["FK_Diretor_Turma_Turmas4"] == null)) {
+                    return new Diretor_Turma2Row[0];
+                }
+                else {
+                    return ((Diretor_Turma2Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Diretor_Turma_Turmas4"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3Row[] GetDiretor_Turma3Rows() {
+                if ((this.Table.ChildRelations["FK_Diretor_Turma_Turmas5"] == null)) {
+                    return new Diretor_Turma3Row[0];
+                }
+                else {
+                    return ((Diretor_Turma3Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Diretor_Turma_Turmas5"])));
                 }
             }
         }
@@ -7482,6 +8662,28 @@ namespace Projeto_PAP {
                     this[this.tableAluno_Enc.Data_AvisoColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Encarregado_EducacaoRow Encarregado_EducacaoRow {
+                get {
+                    return ((Encarregado_EducacaoRow)(this.GetParentRow(this.Table.ParentRelations["FK_Aluno_Encarregado_Educacao1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Aluno_Encarregado_Educacao1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public OcorrenciaRow[] GetOcorrenciaRows() {
+                if ((this.Table.ChildRelations["FK_Ocorrencia_Aluno1"] == null)) {
+                    return new OcorrenciaRow[0];
+                }
+                else {
+                    return ((OcorrenciaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ocorrencia_Aluno1"])));
+                }
+            }
         }
         
         /// <summary>
@@ -7813,6 +9015,216 @@ namespace Projeto_PAP {
                 }
                 set {
                     this[this.tableMedida_Disciplinar.MedidaColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Diretor_Turma1Row : global::System.Data.DataRow {
+            
+            private Diretor_Turma1DataTable tableDiretor_Turma1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Diretor_Turma1Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDiretor_Turma1 = ((Diretor_Turma1DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Diretor_Turma {
+                get {
+                    return ((int)(this[this.tableDiretor_Turma1.ID_Diretor_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma1.ID_Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Diretor_Turma {
+                get {
+                    return ((string)(this[this.tableDiretor_Turma1.Diretor_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma1.Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Turma {
+                get {
+                    return ((int)(this[this.tableDiretor_Turma1.ID_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma1.ID_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TurmasRow TurmasRow {
+                get {
+                    return ((TurmasRow)(this.GetParentRow(this.Table.ParentRelations["FK_Diretor_Turma_Turmas3"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Diretor_Turma_Turmas3"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public OcorrenciaRow[] GetOcorrenciaRows() {
+                if ((this.Table.ChildRelations["FK_Ocorrencia_Diretor_Turma4"] == null)) {
+                    return new OcorrenciaRow[0];
+                }
+                else {
+                    return ((OcorrenciaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ocorrencia_Diretor_Turma4"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Diretor_Turma2Row : global::System.Data.DataRow {
+            
+            private Diretor_Turma2DataTable tableDiretor_Turma2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Diretor_Turma2Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDiretor_Turma2 = ((Diretor_Turma2DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Diretor_Turma {
+                get {
+                    return ((int)(this[this.tableDiretor_Turma2.ID_Diretor_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma2.ID_Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Diretor_Turma {
+                get {
+                    return ((string)(this[this.tableDiretor_Turma2.Diretor_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma2.Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Turma {
+                get {
+                    return ((int)(this[this.tableDiretor_Turma2.ID_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma2.ID_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TurmasRow TurmasRow {
+                get {
+                    return ((TurmasRow)(this.GetParentRow(this.Table.ParentRelations["FK_Diretor_Turma_Turmas4"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Diretor_Turma_Turmas4"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public OcorrenciaRow[] GetOcorrenciaRows() {
+                if ((this.Table.ChildRelations["FK_Ocorrencia_Diretor_Turma5"] == null)) {
+                    return new OcorrenciaRow[0];
+                }
+                else {
+                    return ((OcorrenciaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ocorrencia_Diretor_Turma5"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Diretor_Turma3Row : global::System.Data.DataRow {
+            
+            private Diretor_Turma3DataTable tableDiretor_Turma3;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Diretor_Turma3Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDiretor_Turma3 = ((Diretor_Turma3DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Diretor_Turma {
+                get {
+                    return ((int)(this[this.tableDiretor_Turma3.ID_Diretor_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma3.ID_Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Diretor_Turma {
+                get {
+                    return ((string)(this[this.tableDiretor_Turma3.Diretor_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma3.Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Turma {
+                get {
+                    return ((int)(this[this.tableDiretor_Turma3.ID_TurmaColumn]));
+                }
+                set {
+                    this[this.tableDiretor_Turma3.ID_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TurmasRow TurmasRow {
+                get {
+                    return ((TurmasRow)(this.GetParentRow(this.Table.ParentRelations["FK_Diretor_Turma_Turmas5"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Diretor_Turma_Turmas5"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public OcorrenciaRow[] GetOcorrenciaRows() {
+                if ((this.Table.ChildRelations["FK_Ocorrencia_Diretor_Turma6"] == null)) {
+                    return new OcorrenciaRow[0];
+                }
+                else {
+                    return ((OcorrenciaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Ocorrencia_Diretor_Turma6"])));
                 }
             }
         }
@@ -8313,6 +9725,108 @@ namespace Projeto_PAP {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Medida_DisciplinarRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Diretor_Turma1RowChangeEvent : global::System.EventArgs {
+            
+            private Diretor_Turma1Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1RowChangeEvent(Diretor_Turma1Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma1Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Diretor_Turma2RowChangeEvent : global::System.EventArgs {
+            
+            private Diretor_Turma2Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2RowChangeEvent(Diretor_Turma2Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma2Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Diretor_Turma3RowChangeEvent : global::System.EventArgs {
+            
+            private Diretor_Turma3Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3RowChangeEvent(Diretor_Turma3Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Diretor_Turma3Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -8960,27 +10474,28 @@ WHERE     (Aluno.Aluno LIKE '%' + @nome + '%')";
             tableMapping.ColumnMappings.Add("ID_Diretor_Turma", "ID_Diretor_Turma");
             tableMapping.ColumnMappings.Add("Diretor_Turma", "Diretor_Turma");
             tableMapping.ColumnMappings.Add("ID_Turma", "ID_Turma");
+            tableMapping.ColumnMappings.Add("Turma", "Turma");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Diretor_Turma] WHERE (([ID_Diretor_Turma] = @Original_ID_Diret" +
-                "or_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Ori" +
-                "ginal_ID_Turma))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Diretor_Turma] WHERE (([ID_Diretor_Turma] = @Original_ID_Diretor_Tur" +
+                "ma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Original_" +
+                "ID_Turma))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Diretor_Turma] ([Diretor_Turma], [ID_Turma]) VALUES (@Diretor_" +
-                "Turma, @ID_Turma);\r\nSELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Direto" +
-                "r_Turma WHERE (ID_Diretor_Turma = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Diretor_Turma] ([Diretor_Turma], [ID_Turma]) VALUES (@Diretor_Turma," +
+                " @ID_Turma);\r\nSELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turm" +
+                "a WHERE (ID_Diretor_Turma = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Diretor_Turma] SET [Diretor_Turma] = @Diretor_Turma, [ID_Turma] = @ID_Turma WHERE (([ID_Diretor_Turma] = @Original_ID_Diretor_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Original_ID_Turma));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Diretor_Turma] SET [Diretor_Turma] = @Diretor_Turma, [ID_Turma] = @ID_Turma WHERE (([ID_Diretor_Turma] = @Original_ID_Diretor_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Original_ID_Turma));
 SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Diretor_Turma = @ID_Diretor_Turma)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9004,7 +10519,7 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM dbo.Diretor_Turma";
+            this._commandCollection[0].CommandText = "SELECT     ID_Diretor_Turma, Diretor_Turma, ID_Turma\r\nFROM         Diretor_Turma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -10465,10 +11980,10 @@ SELECT ID_Docente_Discente, Docente_Discente FROM Professores WHERE (ID_Docente_
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Professor", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Professor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT     Professor\r\nFROM         Professores\r\nWHERE     (Professor LIKE \'%\' + @" +
-                "nome + \'%\')";
+            this._commandCollection[2].CommandText = "SELECT     Docente_Discente\r\nFROM         Professores\r\nWHERE     (Docente_Discent" +
+                "e LIKE \'%\' + @nome + \'%\')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Professor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Docente_Discente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10499,7 +12014,7 @@ SELECT ID_Docente_Discente, Docente_Discente FROM Professores WHERE (ID_Docente_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPesProf(Database1DataSet.ProfessoresDataTable dataTable, string nome) {
+        public virtual int FillByPesDocenteDiscente(Database1DataSet.ProfessoresDataTable dataTable, string nome) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((nome == null)) {
                 throw new global::System.ArgumentNullException("nome");
@@ -11044,9 +12559,9 @@ SELECT ID_Docente_Discente, Docente_Discente FROM Professores WHERE (ID_Docente_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Turmas.ID_Turma, Turmas.Turma, Diretor_Turma.ID_Diretor_Turma, Dire" +
-                "tor_Turma.Diretor_Turma\r\nFROM            Diretor_Turma INNER JOIN\r\n             " +
-                "            Turmas ON Diretor_Turma.ID_Turma = Turmas.ID_Turma";
+            this._commandCollection[0].CommandText = "SELECT     Turmas.ID_Turma, Turmas.Turma, Diretor_Turma.ID_Diretor_Turma, Diretor" +
+                "_Turma.Diretor_Turma\r\nFROM         Diretor_Turma INNER JOIN\r\n                   " +
+                "   Turmas ON Diretor_Turma.ID_Turma = Turmas.ID_Turma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -12768,6 +14283,990 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Diretor_Turma1TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Diretor_Turma1TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Diretor_Turma1";
+            tableMapping.ColumnMappings.Add("ID_Diretor_Turma", "ID_Diretor_Turma");
+            tableMapping.ColumnMappings.Add("Diretor_Turma", "Diretor_Turma");
+            tableMapping.ColumnMappings.Add("ID_Turma", "ID_Turma");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Diretor_Turma] WHERE (([ID_Diretor_Turma] = @Original_ID_Diret" +
+                "or_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Ori" +
+                "ginal_ID_Turma))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Diretor_Turma] ([Diretor_Turma], [ID_Turma]) VALUES (@Diretor_" +
+                "Turma, @ID_Turma);\r\nSELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Direto" +
+                "r_Turma WHERE (ID_Diretor_Turma = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Diretor_Turma] SET [Diretor_Turma] = @Diretor_Turma, [ID_Turma] = @ID_Turma WHERE (([ID_Diretor_Turma] = @Original_ID_Diretor_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Original_ID_Turma));
+SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Diretor_Turma = @ID_Diretor_Turma)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Projeto_PAP.Properties.Settings.Default.Database1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM dbo.Diretor_Turma";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Database1DataSet.Diretor_Turma1DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Database1DataSet.Diretor_Turma1DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.Diretor_Turma1DataTable dataTable = new Database1DataSet.Diretor_Turma1DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet.Diretor_Turma1DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Diretor_Turma1");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Diretor_Turma));
+            if ((Original_Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Original_Diretor_Turma");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Diretor_Turma));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_ID_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Diretor_Turma, int ID_Turma) {
+            if ((Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Diretor_Turma");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Diretor_Turma));
+            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Diretor_Turma, int ID_Turma, int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma, int ID_Diretor_Turma) {
+            if ((Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Diretor_Turma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Diretor_Turma));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_Turma));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_Diretor_Turma));
+            if ((Original_Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Original_Diretor_Turma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Diretor_Turma));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_Turma));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID_Diretor_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Diretor_Turma, int ID_Turma, int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma) {
+            return this.Update(Diretor_Turma, ID_Turma, Original_ID_Diretor_Turma, Original_Diretor_Turma, Original_ID_Turma, Original_ID_Diretor_Turma);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Diretor_Turma2TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Diretor_Turma2TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Diretor_Turma2";
+            tableMapping.ColumnMappings.Add("ID_Diretor_Turma", "ID_Diretor_Turma");
+            tableMapping.ColumnMappings.Add("Diretor_Turma", "Diretor_Turma");
+            tableMapping.ColumnMappings.Add("ID_Turma", "ID_Turma");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Diretor_Turma] WHERE (([ID_Diretor_Turma] = @Original_ID_Diret" +
+                "or_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Ori" +
+                "ginal_ID_Turma))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Diretor_Turma] ([Diretor_Turma], [ID_Turma]) VALUES (@Diretor_" +
+                "Turma, @ID_Turma);\r\nSELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Direto" +
+                "r_Turma WHERE (ID_Diretor_Turma = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Diretor_Turma] SET [Diretor_Turma] = @Diretor_Turma, [ID_Turma] = @ID_Turma WHERE (([ID_Diretor_Turma] = @Original_ID_Diretor_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Original_ID_Turma));
+SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Diretor_Turma = @ID_Diretor_Turma)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Projeto_PAP.Properties.Settings.Default.Database1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM dbo.Diretor_Turma";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Database1DataSet.Diretor_Turma2DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Database1DataSet.Diretor_Turma2DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.Diretor_Turma2DataTable dataTable = new Database1DataSet.Diretor_Turma2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet.Diretor_Turma2DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Diretor_Turma2");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Diretor_Turma));
+            if ((Original_Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Original_Diretor_Turma");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Diretor_Turma));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_ID_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Diretor_Turma, int ID_Turma) {
+            if ((Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Diretor_Turma");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Diretor_Turma));
+            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Diretor_Turma, int ID_Turma, int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma, int ID_Diretor_Turma) {
+            if ((Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Diretor_Turma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Diretor_Turma));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_Turma));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_Diretor_Turma));
+            if ((Original_Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Original_Diretor_Turma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Diretor_Turma));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_Turma));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID_Diretor_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Diretor_Turma, int ID_Turma, int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma) {
+            return this.Update(Diretor_Turma, ID_Turma, Original_ID_Diretor_Turma, Original_Diretor_Turma, Original_ID_Turma, Original_ID_Diretor_Turma);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Diretor_Turma3TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Diretor_Turma3TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Diretor_Turma3";
+            tableMapping.ColumnMappings.Add("ID_Diretor_Turma", "ID_Diretor_Turma");
+            tableMapping.ColumnMappings.Add("Diretor_Turma", "Diretor_Turma");
+            tableMapping.ColumnMappings.Add("ID_Turma", "ID_Turma");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Diretor_Turma] WHERE (([ID_Diretor_Turma] = @Original_ID_Diret" +
+                "or_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Ori" +
+                "ginal_ID_Turma))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Diretor_Turma] ([Diretor_Turma], [ID_Turma]) VALUES (@Diretor_" +
+                "Turma, @ID_Turma);\r\nSELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Direto" +
+                "r_Turma WHERE (ID_Diretor_Turma = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Diretor_Turma] SET [Diretor_Turma] = @Diretor_Turma, [ID_Turma] = @ID_Turma WHERE (([ID_Diretor_Turma] = @Original_ID_Diretor_Turma) AND ([Diretor_Turma] = @Original_Diretor_Turma) AND ([ID_Turma] = @Original_ID_Turma));
+SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Diretor_Turma = @ID_Diretor_Turma)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Diretor_Turma", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Diretor_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Turma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Turma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Diretor_Turma", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Diretor_Turma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Projeto_PAP.Properties.Settings.Default.Database1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM dbo.Diretor_Turma";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Database1DataSet.Diretor_Turma3DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Database1DataSet.Diretor_Turma3DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.Diretor_Turma3DataTable dataTable = new Database1DataSet.Diretor_Turma3DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet.Diretor_Turma3DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Diretor_Turma3");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Diretor_Turma));
+            if ((Original_Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Original_Diretor_Turma");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Diretor_Turma));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_ID_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Diretor_Turma, int ID_Turma) {
+            if ((Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Diretor_Turma");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Diretor_Turma));
+            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Diretor_Turma, int ID_Turma, int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma, int ID_Diretor_Turma) {
+            if ((Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Diretor_Turma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Diretor_Turma));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_Turma));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_Diretor_Turma));
+            if ((Original_Diretor_Turma == null)) {
+                throw new global::System.ArgumentNullException("Original_Diretor_Turma");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Diretor_Turma));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_Turma));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID_Diretor_Turma));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Diretor_Turma, int ID_Turma, int Original_ID_Diretor_Turma, string Original_Diretor_Turma, int Original_ID_Turma) {
+            return this.Update(Diretor_Turma, ID_Turma, Original_ID_Diretor_Turma, Original_Diretor_Turma, Original_ID_Turma, Original_ID_Diretor_Turma);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12792,6 +15291,12 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
         private TurmasTableAdapter _turmasTableAdapter;
         
         private Medida_DisciplinarTableAdapter _medida_DisciplinarTableAdapter;
+        
+        private Diretor_Turma1TableAdapter _diretor_Turma1TableAdapter;
+        
+        private Diretor_Turma2TableAdapter _diretor_Turma2TableAdapter;
+        
+        private Diretor_Turma3TableAdapter _diretor_Turma3TableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -12908,6 +15413,48 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Diretor_Turma1TableAdapter Diretor_Turma1TableAdapter {
+            get {
+                return this._diretor_Turma1TableAdapter;
+            }
+            set {
+                this._diretor_Turma1TableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Diretor_Turma2TableAdapter Diretor_Turma2TableAdapter {
+            get {
+                return this._diretor_Turma2TableAdapter;
+            }
+            set {
+                this._diretor_Turma2TableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Diretor_Turma3TableAdapter Diretor_Turma3TableAdapter {
+            get {
+                return this._diretor_Turma3TableAdapter;
+            }
+            set {
+                this._diretor_Turma3TableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -12953,6 +15500,18 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                             && (this._medida_DisciplinarTableAdapter.Connection != null))) {
                     return this._medida_DisciplinarTableAdapter.Connection;
                 }
+                if (((this._diretor_Turma1TableAdapter != null) 
+                            && (this._diretor_Turma1TableAdapter.Connection != null))) {
+                    return this._diretor_Turma1TableAdapter.Connection;
+                }
+                if (((this._diretor_Turma2TableAdapter != null) 
+                            && (this._diretor_Turma2TableAdapter.Connection != null))) {
+                    return this._diretor_Turma2TableAdapter.Connection;
+                }
+                if (((this._diretor_Turma3TableAdapter != null) 
+                            && (this._diretor_Turma3TableAdapter.Connection != null))) {
+                    return this._diretor_Turma3TableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -12987,6 +15546,15 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                 if ((this._medida_DisciplinarTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._diretor_Turma1TableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._diretor_Turma2TableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._diretor_Turma3TableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -13016,15 +15584,6 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._alunoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._alunoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._diretor_TurmaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -13040,6 +15599,42 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._encarregado_EducacaoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._alunoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._alunoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._diretor_Turma3TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma3.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._diretor_Turma3TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._diretor_Turma2TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma2.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._diretor_Turma2TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._diretor_Turma1TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._diretor_Turma1TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13087,14 +15682,6 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._alunoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._alunoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._diretor_TurmaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -13108,6 +15695,38 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._encarregado_EducacaoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._alunoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._alunoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._diretor_Turma3TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma3.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._diretor_Turma3TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._diretor_Turma2TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma2.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._diretor_Turma2TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._diretor_Turma1TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._diretor_Turma1TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -13153,6 +15772,38 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._diretor_Turma1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._diretor_Turma1TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._diretor_Turma2TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma2.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._diretor_Turma2TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._diretor_Turma3TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma3.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._diretor_Turma3TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._alunoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._alunoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._encarregado_EducacaoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Encarregado_Educacao.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -13166,14 +15817,6 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._diretor_TurmaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._alunoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._alunoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -13264,6 +15907,21 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
             }
             if (((this._medida_DisciplinarTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._medida_DisciplinarTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._diretor_Turma1TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._diretor_Turma1TableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._diretor_Turma2TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._diretor_Turma2TableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._diretor_Turma3TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._diretor_Turma3TableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -13362,6 +16020,33 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._medida_DisciplinarTableAdapter.Adapter);
                     }
                 }
+                if ((this._diretor_Turma1TableAdapter != null)) {
+                    revertConnections.Add(this._diretor_Turma1TableAdapter, this._diretor_Turma1TableAdapter.Connection);
+                    this._diretor_Turma1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._diretor_Turma1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._diretor_Turma1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._diretor_Turma1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._diretor_Turma1TableAdapter.Adapter);
+                    }
+                }
+                if ((this._diretor_Turma2TableAdapter != null)) {
+                    revertConnections.Add(this._diretor_Turma2TableAdapter, this._diretor_Turma2TableAdapter.Connection);
+                    this._diretor_Turma2TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._diretor_Turma2TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._diretor_Turma2TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._diretor_Turma2TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._diretor_Turma2TableAdapter.Adapter);
+                    }
+                }
+                if ((this._diretor_Turma3TableAdapter != null)) {
+                    revertConnections.Add(this._diretor_Turma3TableAdapter, this._diretor_Turma3TableAdapter.Connection);
+                    this._diretor_Turma3TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._diretor_Turma3TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._diretor_Turma3TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._diretor_Turma3TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._diretor_Turma3TableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -13447,6 +16132,18 @@ WHERE     (Encarregado_Educacao.Encarregado_Educacao LIKE '%' + @nome + '%')";
                 if ((this._medida_DisciplinarTableAdapter != null)) {
                     this._medida_DisciplinarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._medida_DisciplinarTableAdapter]));
                     this._medida_DisciplinarTableAdapter.Transaction = null;
+                }
+                if ((this._diretor_Turma1TableAdapter != null)) {
+                    this._diretor_Turma1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._diretor_Turma1TableAdapter]));
+                    this._diretor_Turma1TableAdapter.Transaction = null;
+                }
+                if ((this._diretor_Turma2TableAdapter != null)) {
+                    this._diretor_Turma2TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._diretor_Turma2TableAdapter]));
+                    this._diretor_Turma2TableAdapter.Transaction = null;
+                }
+                if ((this._diretor_Turma3TableAdapter != null)) {
+                    this._diretor_Turma3TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._diretor_Turma3TableAdapter]));
+                    this._diretor_Turma3TableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -32,19 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form11));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.aluno_EncDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aluno_EncBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.aluno_EncTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_EncTableAdapter();
@@ -60,7 +53,13 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.aluno_EncBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,6 +70,7 @@
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aluno_EncDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aluno_EncBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aluno_EncBindingNavigator)).BeginInit();
             this.aluno_EncBindingNavigator.SuspendLayout();
@@ -98,11 +98,6 @@
             this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // splitContainer1
             // 
@@ -161,56 +156,15 @@
             this.aluno_EncDataGridView.Size = new System.Drawing.Size(772, 192);
             this.aluno_EncDataGridView.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Aluno";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID_Aluno";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Aluno";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Aluno";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID_EE";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ID_EE";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Encarregado_Educacao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Encarregado Educação";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contacto";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Contacto";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Via_Contacto";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Via Contacto";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Data_Aviso";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Data Aviso";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
             // aluno_EncBindingSource
             // 
             this.aluno_EncBindingSource.DataMember = "Aluno_Enc";
             this.aluno_EncBindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // flowLayoutPanel1
             // 
@@ -240,6 +194,7 @@
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
             this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
+            this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
             this.tableAdapterManager.OcorrenciaTableAdapter = null;
             this.tableAdapterManager.ProfessoresTableAdapter = null;
             this.tableAdapterManager.TurmasTableAdapter = null;
@@ -347,6 +302,53 @@
             this.aluno_EncBindingNavigatorSaveItem.Name = "aluno_EncBindingNavigatorSaveItem";
             this.aluno_EncBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.aluno_EncBindingNavigatorSaveItem.Text = "Save Data";
+            this.aluno_EncBindingNavigatorSaveItem.Click += new System.EventHandler(this.aluno_EncBindingNavigatorSaveItem_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Aluno";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID_Aluno";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Aluno";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Aluno";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID_EE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ID_EE";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Encarregado_Educacao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Encarregado Educação";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contacto";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Contacto";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Via_Contacto";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Via Contacto";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Data_Aviso";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Data Aviso";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // Form11
             // 
@@ -364,7 +366,6 @@
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Alterar Encarregado Educação";
             this.Load += new System.EventHandler(this.Form11_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -376,6 +377,7 @@
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.aluno_EncDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aluno_EncBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.aluno_EncBindingNavigator)).EndInit();
             this.aluno_EncBindingNavigator.ResumeLayout(false);
@@ -389,12 +391,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private Database1DataSet database1DataSet;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource aluno_EncBindingSource;
         private Database1DataSetTableAdapters.Aluno_EncTableAdapter aluno_EncTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;

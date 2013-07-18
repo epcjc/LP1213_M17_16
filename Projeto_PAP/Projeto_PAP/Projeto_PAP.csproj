@@ -100,10 +100,10 @@
     <Compile Include="Diretor de Turma\Pesquisa_DiretorTurma.Designer.cs">
       <DependentUpon>Pesquisa_DiretorTurma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Professores\Pesquisar_Professor.cs">
+    <Compile Include="Docente_Discente\Pesquisar_Professor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Professores\Pesquisar_Professor.Designer.cs">
+    <Compile Include="Docente_Discente\Pesquisar_Professor.Designer.cs">
       <DependentUpon>Pesquisar_Professor.cs</DependentUpon>
     </Compile>
     <Compile Include="Alunos_Enc.Educação\Pesquisa_EncEduc.cs">
@@ -112,10 +112,10 @@
     <Compile Include="Alunos_Enc.Educação\Pesquisa_EncEduc.Designer.cs">
       <DependentUpon>Pesquisa_EncEduc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Professores\Apagar Professor.cs">
+    <Compile Include="Docente_Discente\Apagar Professor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Professores\Apagar Professor.Designer.cs">
+    <Compile Include="Docente_Discente\Apagar Professor.Designer.cs">
       <DependentUpon>Apagar Professor.cs</DependentUpon>
     </Compile>
     <Compile Include="Database1DataSet.cs">
@@ -127,10 +127,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Professores\Form1.cs">
+    <Compile Include="Docente_Discente\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Professores\Form1.Designer.cs">
+    <Compile Include="Docente_Discente\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Diretor de Turma\Form10.cs">
@@ -157,16 +157,16 @@
     <Compile Include="Alunos_Enc.Educação\Form13.Designer.cs">
       <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Professores\Form14.cs">
+    <Compile Include="Docente_Discente\Form14.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Professores\Form14.Designer.cs">
+    <Compile Include="Docente_Discente\Form14.Designer.cs">
       <DependentUpon>Form14.cs</DependentUpon>
     </Compile>
-    <Compile Include="Professores\Form15.cs">
+    <Compile Include="Docente_Discente\Form15.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Professores\Form15.Designer.cs">
+    <Compile Include="Docente_Discente\Form15.Designer.cs">
       <DependentUpon>Form15.cs</DependentUpon>
     </Compile>
     <Compile Include="Diretor de Turma\Form2.cs">
@@ -273,16 +273,16 @@
     <EmbeddedResource Include="Diretor de Turma\Pesquisa_DiretorTurma.resx">
       <DependentUpon>Pesquisa_DiretorTurma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professores\Pesquisar_Professor.resx">
+    <EmbeddedResource Include="Docente_Discente\Pesquisar_Professor.resx">
       <DependentUpon>Pesquisar_Professor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alunos_Enc.Educação\Pesquisa_EncEduc.resx">
       <DependentUpon>Pesquisa_EncEduc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professores\Apagar Professor.resx">
+    <EmbeddedResource Include="Docente_Discente\Apagar Professor.resx">
       <DependentUpon>Apagar Professor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professores\Form1.resx">
+    <EmbeddedResource Include="Docente_Discente\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diretor de Turma\Form10.resx">
@@ -297,10 +297,10 @@
     <EmbeddedResource Include="Alunos_Enc.Educação\Form13.resx">
       <DependentUpon>Form13.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professores\Form14.resx">
+    <EmbeddedResource Include="Docente_Discente\Form14.resx">
       <DependentUpon>Form14.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professores\Form15.resx">
+    <EmbeddedResource Include="Docente_Discente\Form15.resx">
       <DependentUpon>Form15.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diretor de Turma\Form2.resx">

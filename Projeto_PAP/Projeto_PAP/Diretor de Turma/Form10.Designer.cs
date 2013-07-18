@@ -32,11 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form10));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.database1DataSet = new Projeto_PAP.Database1DataSet();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.DataTable1TableAdapter();
+            this.diretor_TurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.diretor_TurmaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Diretor_TurmaTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
-            this.dataTable1DataGridView = new System.Windows.Forms.DataGridView();
+            this.diretor_TurmaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -46,22 +51,12 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataTable1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.dataTable1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.diretor_TurmaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.diretor_TurmaDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingNavigator)).BeginInit();
-            this.dataTable1BindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,6 +66,11 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingNavigator)).BeginInit();
+            this.diretor_TurmaBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,10 +79,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(751, 53);
+            this.label1.Size = new System.Drawing.Size(751, 57);
             this.label1.TabIndex = 12;
             this.label1.Text = "Escola Profissional Centro Juvenil de Campanhã";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // button1
             // 
@@ -96,47 +96,114 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(751, 311);
+            this.splitContainer1.SplitterDistance = 57;
+            this.splitContainer1.TabIndex = 17;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.AutoScroll = true;
+            this.splitContainer2.Panel1.Controls.Add(this.diretor_TurmaDataGridView);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
+            this.splitContainer2.Size = new System.Drawing.Size(751, 250);
+            this.splitContainer2.SplitterDistance = 190;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(751, 34);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 34);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(751, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // database1DataSet
             // 
             this.database1DataSet.DataSetName = "Database1DataSet";
             this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataTable1BindingSource
+            // diretor_TurmaBindingSource
             // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.database1DataSet;
+            this.diretor_TurmaBindingSource.DataMember = "Diretor_Turma";
+            this.diretor_TurmaBindingSource.DataSource = this.database1DataSet;
             // 
-            // dataTable1TableAdapter
+            // diretor_TurmaTableAdapter
             // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            this.diretor_TurmaTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AlunoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
+            this.tableAdapterManager.Diretor_TurmaTableAdapter = this.diretor_TurmaTableAdapter;
             this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
+            this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
             this.tableAdapterManager.OcorrenciaTableAdapter = null;
             this.tableAdapterManager.ProfessoresTableAdapter = null;
             this.tableAdapterManager.TurmasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // dataTable1DataGridView
+            // diretor_TurmaBindingNavigator
             // 
-            this.dataTable1DataGridView.AutoGenerateColumns = false;
-            this.dataTable1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTable1DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dataTable1DataGridView.DataSource = this.dataTable1BindingSource;
-            this.dataTable1DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataTable1DataGridView.Location = new System.Drawing.Point(0, 0);
-            this.dataTable1DataGridView.Name = "dataTable1DataGridView";
-            this.dataTable1DataGridView.Size = new System.Drawing.Size(751, 161);
-            this.dataTable1DataGridView.TabIndex = 16;
+            this.diretor_TurmaBindingNavigator.AddNewItem = null;
+            this.diretor_TurmaBindingNavigator.BindingSource = this.diretor_TurmaBindingSource;
+            this.diretor_TurmaBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.diretor_TurmaBindingNavigator.DeleteItem = null;
+            this.diretor_TurmaBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.diretor_TurmaBindingNavigatorSaveItem});
+            this.diretor_TurmaBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.diretor_TurmaBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.diretor_TurmaBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.diretor_TurmaBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.diretor_TurmaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.diretor_TurmaBindingNavigator.Name = "diretor_TurmaBindingNavigator";
+            this.diretor_TurmaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.diretor_TurmaBindingNavigator.Size = new System.Drawing.Size(751, 25);
+            this.diretor_TurmaBindingNavigator.TabIndex = 18;
+            this.diretor_TurmaBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -179,7 +246,7 @@
             // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -202,98 +269,33 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // dataTable1BindingNavigatorSaveItem
+            // diretor_TurmaBindingNavigatorSaveItem
             // 
-            this.dataTable1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.dataTable1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("dataTable1BindingNavigatorSaveItem.Image")));
-            this.dataTable1BindingNavigatorSaveItem.Name = "dataTable1BindingNavigatorSaveItem";
-            this.dataTable1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.dataTable1BindingNavigatorSaveItem.Text = "Save Data";
+            this.diretor_TurmaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.diretor_TurmaBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("diretor_TurmaBindingNavigatorSaveItem.Image")));
+            this.diretor_TurmaBindingNavigatorSaveItem.Name = "diretor_TurmaBindingNavigatorSaveItem";
+            this.diretor_TurmaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.diretor_TurmaBindingNavigatorSaveItem.Text = "Save Data";
+            this.diretor_TurmaBindingNavigatorSaveItem.Click += new System.EventHandler(this.diretor_TurmaBindingNavigatorSaveItem_Click);
             // 
-            // dataTable1BindingNavigator
+            // diretor_TurmaDataGridView
             // 
-            this.dataTable1BindingNavigator.AddNewItem = null;
-            this.dataTable1BindingNavigator.BindingSource = this.dataTable1BindingSource;
-            this.dataTable1BindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.dataTable1BindingNavigator.DeleteItem = null;
-            this.dataTable1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.dataTable1BindingNavigatorSaveItem});
-            this.dataTable1BindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.dataTable1BindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.dataTable1BindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.dataTable1BindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.dataTable1BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.dataTable1BindingNavigator.Name = "dataTable1BindingNavigator";
-            this.dataTable1BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.dataTable1BindingNavigator.Size = new System.Drawing.Size(751, 25);
-            this.dataTable1BindingNavigator.TabIndex = 16;
-            this.dataTable1BindingNavigator.Text = "bindingNavigator1";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(751, 286);
-            this.splitContainer1.SplitterDistance = 53;
-            this.splitContainer1.TabIndex = 17;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.dataTable1DataGridView);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
-            this.splitContainer2.Size = new System.Drawing.Size(751, 229);
-            this.splitContainer2.SplitterDistance = 161;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(751, 42);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 42);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(751, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
+            this.diretor_TurmaDataGridView.AutoGenerateColumns = false;
+            this.diretor_TurmaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.diretor_TurmaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.diretor_TurmaDataGridView.DataSource = this.diretor_TurmaBindingSource;
+            this.diretor_TurmaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.diretor_TurmaDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.diretor_TurmaDataGridView.Name = "diretor_TurmaDataGridView";
+            this.diretor_TurmaDataGridView.Size = new System.Drawing.Size(751, 190);
+            this.diretor_TurmaDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -327,8 +329,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 311);
+            this.Controls.Add(this.diretor_TurmaBindingNavigator);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.dataTable1BindingNavigator);
             this.HelpButton = true;
             this.helpProvider1.SetHelpString(this, "Para alterar algum campo é necessário clicar duas vezes em cima");
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -338,12 +340,6 @@
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "Alterar Diretor Turma";
             this.Load += new System.EventHandler(this.Form10_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingNavigator)).EndInit();
-            this.dataTable1BindingNavigator.ResumeLayout(false);
-            this.dataTable1BindingNavigator.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -354,6 +350,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaBindingNavigator)).EndInit();
+            this.diretor_TurmaBindingNavigator.ResumeLayout(false);
+            this.diretor_TurmaBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diretor_TurmaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,27 +365,27 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
-        private Database1DataSetTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
-        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView dataTable1DataGridView;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton dataTable1BindingNavigatorSaveItem;
-        private System.Windows.Forms.BindingNavigator dataTable1BindingNavigator;
         private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource diretor_TurmaBindingSource;
+        private Database1DataSetTableAdapters.Diretor_TurmaTableAdapter diretor_TurmaTableAdapter;
+        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator diretor_TurmaBindingNavigator;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton diretor_TurmaBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView diretor_TurmaDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

@@ -11,6 +11,14 @@ namespace Projeto_PAP
 {
     public partial class Form13 : Form
     {
+        public void atualizarDataGrid()
+        {
+            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            this.alunoDataGridView.Refresh();
+        }
+        
+        
+        
         public Form13()
         {
             InitializeComponent();
@@ -26,6 +34,7 @@ namespace Projeto_PAP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            atualizarDataGrid();
             this.Close();
         }
 
@@ -34,6 +43,7 @@ namespace Projeto_PAP
             this.Validate();
             this.alunoBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            atualizarDataGrid();
 
         }
     }

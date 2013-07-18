@@ -70,7 +70,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.professoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -78,6 +78,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.faltasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.faltasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.FaltasTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
@@ -88,7 +89,6 @@
             this.alunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
             this.aluno_EncTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_EncTableAdapter();
             this.medida_DisciplinarTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Medida_DisciplinarTableAdapter();
-            this.professoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             alunoLabel = new System.Windows.Forms.Label();
             turmaLabel = new System.Windows.Forms.Label();
             encarregado_EducacaoLabel = new System.Windows.Forms.Label();
@@ -116,11 +116,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmaDTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // alunoLabel
@@ -422,14 +422,11 @@
             // 
             // comboBox5
             // 
-            this.comboBox5.DataSource = this.alunoEncBindingSource;
-            this.comboBox5.DisplayMember = "Encarregado_Educacao";
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(96, 112);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(153, 21);
             this.comboBox5.TabIndex = 45;
-            this.comboBox5.ValueMember = "ID_Aluno";
             // 
             // alunoEncBindingSource
             // 
@@ -535,10 +532,10 @@
             this.comboBox1.TabIndex = 31;
             this.comboBox1.ValueMember = "ID_Docente_Discente";
             // 
-            // professoresBindingSource
+            // professoresBindingSource1
             // 
-            this.professoresBindingSource.DataMember = "Professores";
-            this.professoresBindingSource.DataSource = this.database1DataSet;
+            this.professoresBindingSource1.DataMember = "Professores";
+            this.professoresBindingSource1.DataSource = this.database1DataSet;
             // 
             // textBox5
             // 
@@ -600,6 +597,11 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // professoresBindingSource
+            // 
+            this.professoresBindingSource.DataMember = "Professores";
+            this.professoresBindingSource.DataSource = this.database1DataSet;
+            // 
             // faltasBindingSource
             // 
             this.faltasBindingSource.DataMember = "Faltas";
@@ -651,11 +653,6 @@
             // 
             this.medida_DisciplinarTableAdapter.ClearBeforeFill = true;
             // 
-            // professoresBindingSource1
-            // 
-            this.professoresBindingSource1.DataMember = "Professores";
-            this.professoresBindingSource1.DataSource = this.database1DataSet;
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -683,11 +680,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmaDTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

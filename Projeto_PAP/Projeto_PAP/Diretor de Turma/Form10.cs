@@ -13,8 +13,8 @@ namespace Projeto_PAP
     {
         public void atualizarDataGrid()
         {
-            this.dataTable1TableAdapter.FillDT_Turma(this.database1DataSet.DataTable1);
-            this.dataTable1DataGridView.Refresh();
+            this.diretor_TurmaTableAdapter.Fill(this.database1DataSet.Diretor_Turma);
+            this.diretor_TurmaDataGridView.Refresh();
         }
         
         public Form10()
@@ -24,9 +24,9 @@ namespace Projeto_PAP
 
         private void Form10_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.DataTable1' table. You can move, or remove it, as needed.
-            this.dataTable1TableAdapter.FillDT_Turma(this.database1DataSet.DataTable1);
-
+            // TODO: This line of code loads data into the 'database1DataSet.Diretor_Turma' table. You can move, or remove it, as needed.
+            this.diretor_TurmaTableAdapter.Fill(this.database1DataSet.Diretor_Turma);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,6 +34,21 @@ namespace Projeto_PAP
             atualizarDataGrid();
             this.Close();
         }
+
+        
+
+        private void diretor_TurmaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.diretor_TurmaBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            atualizarDataGrid();
+        }
+
+
+        
+
+        
 
        
 

@@ -13,7 +13,7 @@ namespace Projeto_PAP
     {
         public void atualizarDataGrid()
         {
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
             this.faltasDataGridView.Refresh();
 
         }
@@ -29,10 +29,11 @@ namespace Projeto_PAP
         {
             // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
             this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
+            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
+            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
             // TODO: This line of code loads data into the 'database1DataSet.Aluno_Ocorrencia' table. You can move, or remove it, as needed.
             //this.aluno_OcorrenciaTableAdapter.FillOcorrencia(this.database1DataSet.Aluno_Ocorrencia);
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            
          }
 
 

@@ -31,37 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.button2 = new System.Windows.Forms.Button();
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
-            this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
-            this.alunoOcorrenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.faltasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.database1DataSet = new Projeto_PAP.Database1DataSet();
+            this.faltasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.faltasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.FaltasTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.faltasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoOcorrenciaBindingSource)).BeginInit();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,8 +63,9 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faltasDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,25 +80,6 @@
             this.button2.Text = "Voltar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // alunoBindingSource
-            // 
-            this.alunoBindingSource.DataMember = "Aluno";
-            this.alunoBindingSource.DataSource = this.database1DataSet;
-            // 
-            // alunoTableAdapter
-            // 
-            this.alunoTableAdapter.ClearBeforeFill = true;
-            // 
-            // alunoOcorrenciaBindingSource
-            // 
-            this.alunoOcorrenciaBindingSource.DataMember = "Aluno_Ocorrencia";
-            this.alunoOcorrenciaBindingSource.DataSource = this.database1DataSet;
             // 
             // label10
             // 
@@ -166,11 +141,6 @@
             this.splitContainer2.SplitterDistance = 223;
             this.splitContainer2.TabIndex = 0;
             // 
-            // faltasBindingSource
-            // 
-            this.faltasBindingSource.DataMember = "Faltas";
-            this.faltasBindingSource.DataSource = this.database1DataSet;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.button3);
@@ -189,14 +159,25 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // faltasBindingSource
+            // 
+            this.faltasBindingSource.DataMember = "Faltas";
+            this.faltasBindingSource.DataSource = this.database1DataSet;
+            // 
             // faltasTableAdapter
             // 
             this.faltasTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AlunoTableAdapter = this.alunoTableAdapter;
+            this.tableAdapterManager.AlunoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
             this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
             this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
@@ -214,18 +195,17 @@
             this.faltasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15});
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20});
             this.faltasDataGridView.DataSource = this.faltasBindingSource;
             this.faltasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.faltasDataGridView.Location = new System.Drawing.Point(0, 0);
@@ -237,23 +217,16 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Ocorrencia";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Ocorrencia";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Ocorrência";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Aluno";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Aluno Participante";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Aluno Participado";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Turma";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Turma";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -262,33 +235,33 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Contacto";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Contacto";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Aluno_Participante";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Aluno Participante";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // dataGridViewTextBoxColumn16
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Via_Contacto";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Via Contacto";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Professor";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Professor";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Docente_Discente";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Docente/Discente";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Diretor_Turma";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Diretor_Turma";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Diretor Turma";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Instrutor";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Instrutor";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -304,33 +277,33 @@
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn11
+            // dataGridViewTextBoxColumn17
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Data";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Data ";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Data_Factos";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Data Factos";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn13
+            // dataGridViewTextBoxColumn18
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Aluno_Participado";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Aluno Participado";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Data_Notificacao";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Data Notificação";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn14
+            // dataGridViewTextBoxColumn19
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Instrutor";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Instrutor";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Medida_Disciplinar";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Medida Disciplinar";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn15
+            // dataGridViewTextBoxColumn20
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Data_Processo";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Data Processo";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Detalhes_Medida";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Detalhes Medida Disciplinar";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
             // 
             // Form4
             // 
@@ -344,9 +317,6 @@
             this.Name = "Form4";
             this.Text = "Ocorrências";
             this.Load += new System.EventHandler(this.Form4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoOcorrenciaBindingSource)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -356,8 +326,9 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faltasDataGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -367,33 +338,36 @@
 
         //private Database1DataSetTableAdapters.Aluno_OcorrenciaTableAdapter aluno_OcorrenciaTableAdapter;
         private System.Windows.Forms.Button button2;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource alunoBindingSource;
-        private Database1DataSetTableAdapters.AlunoTableAdapter alunoTableAdapter;
-        private System.Windows.Forms.BindingSource alunoOcorrenciaBindingSource;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource faltasBindingSource;
         private Database1DataSetTableAdapters.FaltasTableAdapter faltasTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView faltasDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
     }
 }

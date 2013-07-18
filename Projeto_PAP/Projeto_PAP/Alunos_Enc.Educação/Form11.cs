@@ -16,12 +16,17 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        
+        public void atualizarDataGrid()
+        {
+            //this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
+            //this.aluno_EncDataGridView.Refresh();
+        }
 
         
 
         private void button1_Click(object sender, EventArgs e)
         {
+            atualizarDataGrid();
             this.Close();
         }
 
@@ -29,8 +34,27 @@ namespace Projeto_PAP
         {
             // TODO: This line of code loads data into the 'database1DataSet.Aluno_Enc' table. You can move, or remove it, as needed.
             this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
-
+            // TODO: This line of code loads data into the 'database1DataSet.Aluno_Enc' table. You can move, or remove it, as needed.
+            //this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
+           
         }
+
+        private void aluno_EncBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.aluno_EncBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            atualizarDataGrid();
+        }
+
+        
+        
+
+        
+
+      
+
+        
 
         
     }
