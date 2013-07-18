@@ -36,16 +36,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.professoresDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.professoresTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.ProfessoresTableAdapter();
-            this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
+            this.escolaDataSet = new Projeto_PAP.EscolaDataSet();
+            this.professoresTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.ProfessoresTableAdapter();
+            this.professoresDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new Projeto_PAP.EscolaDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,10 +59,10 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -149,48 +150,6 @@
             this.splitContainer3.SplitterDistance = 149;
             this.splitContainer3.TabIndex = 0;
             // 
-            // professoresDataGridView
-            // 
-            this.professoresDataGridView.AllowUserToAddRows = false;
-            this.professoresDataGridView.AllowUserToDeleteRows = false;
-            this.professoresDataGridView.AutoGenerateColumns = false;
-            this.professoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.professoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.professoresDataGridView.DataSource = this.professoresBindingSource;
-            this.professoresDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.professoresDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.professoresDataGridView.Name = "professoresDataGridView";
-            this.professoresDataGridView.ReadOnly = true;
-            this.professoresDataGridView.Size = new System.Drawing.Size(588, 149);
-            this.professoresDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Professor";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID_Professor";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Professor";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Professor";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // professoresBindingSource
-            // 
-            this.professoresBindingSource.DataMember = "Professores";
-            this.professoresBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.button1);
@@ -220,20 +179,70 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // escolaDataSet
+            // 
+            this.escolaDataSet.DataSetName = "EscolaDataSet";
+            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // professoresTableAdapter
             // 
             this.professoresTableAdapter.ClearBeforeFill = true;
             // 
+            // professoresDataGridView
+            // 
+            this.professoresDataGridView.AllowUserToAddRows = false;
+            this.professoresDataGridView.AllowUserToDeleteRows = false;
+            this.professoresDataGridView.AutoGenerateColumns = false;
+            this.professoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.professoresDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.professoresDataGridView.DataSource = this.professoresBindingSource;
+            this.professoresDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.professoresDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.professoresDataGridView.Name = "professoresDataGridView";
+            this.professoresDataGridView.ReadOnly = true;
+            this.professoresDataGridView.Size = new System.Drawing.Size(588, 149);
+            this.professoresDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "id";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Professor";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "contacto";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Contacto";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // professoresBindingSource
+            // 
+            this.professoresBindingSource.DataMember = "Professores";
+            this.professoresBindingSource.DataSource = this.escolaDataSet;
+            // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AlunoTableAdapter = null;
+            this.tableAdapterManager.AlunosTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
-            this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
-            this.tableAdapterManager.OcorrenciaTableAdapter = null;
-            this.tableAdapterManager.ProfessoresTableAdapter = this.professoresTableAdapter;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.CursosTableAdapter = null;
+            this.tableAdapterManager.DiretoresTurmaTableAdapter = null;
+            this.tableAdapterManager.ProfessoresTableAdapter = null;
             this.tableAdapterManager.TurmasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = Projeto_PAP.EscolaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Pesquisar_Professor
             // 
@@ -261,10 +270,10 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,12 +289,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource professoresBindingSource;
-        private Database1DataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter;
-        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView professoresDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private EscolaDataSet escolaDataSet;
+        private System.Windows.Forms.BindingSource professoresBindingSource;
+        private EscolaDataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter;
+        private EscolaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView professoresDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

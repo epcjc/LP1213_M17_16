@@ -16,18 +16,13 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void professoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.professoresBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
+        
 
         private void Apagar_Professor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
-            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
+            // TODO: This line of code loads data into the 'escolaDataSet.Professores' table. You can move, or remove it, as needed.
+            this.professoresTableAdapter.Fill(this.escolaDataSet.Professores);
+            
 
         }
 
@@ -35,7 +30,7 @@ namespace Projeto_PAP
         {
             try
             {
-                this.professoresTableAdapter.DeleteProf(Convert.ToInt16(this.comboBox1.SelectedValue));
+                this.professoresTableAdapter.DeleteProfessor(Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Eliminado com Sucesso");
                 this.Close();
             }

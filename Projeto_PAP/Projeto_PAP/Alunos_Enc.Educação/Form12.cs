@@ -13,8 +13,8 @@ namespace Projeto_PAP
     {
         public void atualizarDataGrid()
         {
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-            this.alunoDataGridView.Refresh();
+            this.alunosTableAdapter.Fill(this.escolaDataSet.Alunos);
+            this.alunosDataGridView.Refresh();
         }
         
         
@@ -26,13 +26,8 @@ namespace Projeto_PAP
        
         private void Form12_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-            
-           
-
+            // TODO: This line of code loads data into the 'escolaDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.escolaDataSet.Alunos);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,14 +35,7 @@ namespace Projeto_PAP
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form6 frm = new Form6();
-            frm.ShowDialog();
-            atualizarDataGrid();
-            
-        }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             Form13 frm = new Form13();
@@ -69,35 +57,5 @@ namespace Projeto_PAP
             atualizarDataGrid();
         }
 
-        private void alunoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.alunoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Form11 frm = new Form11();
-            frm.ShowDialog();
-            atualizarDataGrid();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Pesquisa_EncEduc frm = new Pesquisa_EncEduc();
-            frm.ShowDialog();
-            atualizarDataGrid();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Apagar_EncEducação frm = new Apagar_EncEducação();
-            frm.ShowDialog();
-            atualizarDataGrid();
-        }
-
-        
     }
 }

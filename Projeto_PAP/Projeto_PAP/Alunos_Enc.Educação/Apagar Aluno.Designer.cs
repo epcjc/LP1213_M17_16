@@ -32,19 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Apagar_Aluno));
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.alunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
-            this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            this.escolaDataSet = new Projeto_PAP.EscolaDataSet();
+            this.alunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.alunosTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.AlunosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,6 +51,8 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -69,24 +68,14 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.alunoBindingSource;
-            this.comboBox1.DisplayMember = "Aluno";
+            this.comboBox1.DataSource = this.alunosBindingSource;
+            this.comboBox1.DisplayMember = "nome";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(64, 19);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(223, 21);
             this.comboBox1.TabIndex = 28;
-            this.comboBox1.ValueMember = "ID_Aluno";
-            // 
-            // alunoBindingSource
-            // 
-            this.alunoBindingSource.DataMember = "Aluno";
-            this.alunoBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.comboBox1.ValueMember = "id_aluno";
             // 
             // label1
             // 
@@ -120,21 +109,6 @@
             this.button1.Text = "Apagar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // alunoTableAdapter
-            // 
-            this.alunoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AlunoTableAdapter = this.alunoTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
-            this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
-            this.tableAdapterManager.OcorrenciaTableAdapter = null;
-            this.tableAdapterManager.ProfessoresTableAdapter = null;
-            this.tableAdapterManager.TurmasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // splitContainer1
             // 
@@ -191,6 +165,20 @@
             this.statusStrip1.TabIndex = 31;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // escolaDataSet
+            // 
+            this.escolaDataSet.DataSetName = "EscolaDataSet";
+            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // alunosBindingSource
+            // 
+            this.alunosBindingSource.DataMember = "Alunos";
+            this.alunosBindingSource.DataSource = this.escolaDataSet;
+            // 
+            // alunosTableAdapter
+            // 
+            this.alunosTableAdapter.ClearBeforeFill = true;
+            // 
             // Apagar_Aluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,8 +192,6 @@
             this.Name = "Apagar_Aluno";
             this.Text = "Apagar Aluno";
             this.Load += new System.EventHandler(this.Apagar_Aluno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -216,6 +202,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alunosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,13 +216,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource alunoBindingSource;
-        private Database1DataSetTableAdapters.AlunoTableAdapter alunoTableAdapter;
-        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private EscolaDataSet escolaDataSet;
+        private System.Windows.Forms.BindingSource alunosBindingSource;
+        private EscolaDataSetTableAdapters.AlunosTableAdapter alunosTableAdapter;
     }
 }

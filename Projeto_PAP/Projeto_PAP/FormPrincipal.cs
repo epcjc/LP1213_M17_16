@@ -29,7 +29,7 @@ namespace Projeto_PAP
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            Pesquisa_DiretorTurma frm = new Pesquisa_DiretorTurma();
             frm.ShowDialog();
         }
 

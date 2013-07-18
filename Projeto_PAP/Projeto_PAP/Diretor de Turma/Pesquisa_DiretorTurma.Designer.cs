@@ -36,18 +36,18 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.turma_DiretorTurmaDataGridView = new System.Windows.Forms.DataGridView();
-            this.turma_DiretorTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
+            this.professor_TurmaDataGridView = new System.Windows.Forms.DataGridView();
+            this.Diretor_Turma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professor_TurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.escolaDataSet = new Projeto_PAP.EscolaDataSet();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.turma_DiretorTurmaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Turma_DiretorTurmaTableAdapter();
-            this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.professor_TurmaTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.Professor_TurmaTableAdapter();
+            this.tableAdapterManager = new Projeto_PAP.EscolaDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,9 +60,9 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.turma_DiretorTurmaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turma_DiretorTurmaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professor_TurmaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professor_TurmaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,8 +80,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(601, 304);
-            this.splitContainer1.SplitterDistance = 53;
+            this.splitContainer1.Size = new System.Drawing.Size(696, 304);
+            this.splitContainer1.SplitterDistance = 42;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
@@ -90,7 +90,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(601, 23);
+            this.label1.Size = new System.Drawing.Size(696, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Escola Profissional Centro Juvenil de Campanhã";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -110,22 +110,22 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(601, 247);
-            this.splitContainer2.SplitterDistance = 41;
+            this.splitContainer2.Size = new System.Drawing.Size(696, 258);
+            this.splitContainer2.SplitterDistance = 42;
             this.splitContainer2.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(4, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
+            this.textBox1.Size = new System.Drawing.Size(197, 20);
             this.textBox1.TabIndex = 36;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(164, 10);
+            this.button2.Location = new System.Drawing.Point(207, 11);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(81, 23);
             this.button2.TabIndex = 35;
             this.button2.Text = "Pesquisar";
             this.button2.UseVisualStyleBackColor = true;
@@ -141,44 +141,74 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.AutoScroll = true;
-            this.splitContainer3.Panel1.Controls.Add(this.turma_DiretorTurmaDataGridView);
+            this.splitContainer3.Panel1.Controls.Add(this.professor_TurmaDataGridView);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer3.Panel2.Controls.Add(this.statusStrip1);
-            this.splitContainer3.Size = new System.Drawing.Size(601, 202);
-            this.splitContainer3.SplitterDistance = 144;
+            this.splitContainer3.Size = new System.Drawing.Size(696, 212);
+            this.splitContainer3.SplitterDistance = 151;
             this.splitContainer3.TabIndex = 0;
             // 
-            // turma_DiretorTurmaDataGridView
+            // professor_TurmaDataGridView
             // 
-            this.turma_DiretorTurmaDataGridView.AllowUserToAddRows = false;
-            this.turma_DiretorTurmaDataGridView.AllowUserToDeleteRows = false;
-            this.turma_DiretorTurmaDataGridView.AutoGenerateColumns = false;
-            this.turma_DiretorTurmaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.turma_DiretorTurmaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
+            this.professor_TurmaDataGridView.AllowUserToAddRows = false;
+            this.professor_TurmaDataGridView.AllowUserToDeleteRows = false;
+            this.professor_TurmaDataGridView.AutoGenerateColumns = false;
+            this.professor_TurmaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.professor_TurmaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Diretor_Turma,
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.turma_DiretorTurmaDataGridView.DataSource = this.turma_DiretorTurmaBindingSource;
-            this.turma_DiretorTurmaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.turma_DiretorTurmaDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.turma_DiretorTurmaDataGridView.Name = "turma_DiretorTurmaDataGridView";
-            this.turma_DiretorTurmaDataGridView.ReadOnly = true;
-            this.turma_DiretorTurmaDataGridView.Size = new System.Drawing.Size(601, 144);
-            this.turma_DiretorTurmaDataGridView.TabIndex = 0;
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.professor_TurmaDataGridView.DataSource = this.professor_TurmaBindingSource;
+            this.professor_TurmaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.professor_TurmaDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.professor_TurmaDataGridView.Name = "professor_TurmaDataGridView";
+            this.professor_TurmaDataGridView.ReadOnly = true;
+            this.professor_TurmaDataGridView.Size = new System.Drawing.Size(696, 151);
+            this.professor_TurmaDataGridView.TabIndex = 0;
             // 
-            // turma_DiretorTurmaBindingSource
+            // Diretor_Turma
             // 
-            this.turma_DiretorTurmaBindingSource.DataMember = "Turma_DiretorTurma";
-            this.turma_DiretorTurmaBindingSource.DataSource = this.database1DataSet;
+            this.Diretor_Turma.DataPropertyName = "Diretor_Turma";
+            this.Diretor_Turma.HeaderText = "Diretor Turma";
+            this.Diretor_Turma.Name = "Diretor_Turma";
+            this.Diretor_Turma.ReadOnly = true;
             // 
-            // database1DataSet
+            // dataGridViewTextBoxColumn1
             // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Turma";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Turma";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "id_turma";
+            this.dataGridViewTextBoxColumn3.HeaderText = "id_turma";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn4.HeaderText = "id";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // professor_TurmaBindingSource
+            // 
+            this.professor_TurmaBindingSource.DataMember = "Professor_Turma";
+            this.professor_TurmaBindingSource.DataSource = this.escolaDataSet;
+            // 
+            // escolaDataSet
+            // 
+            this.escolaDataSet.DataSetName = "EscolaDataSet";
+            this.escolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // flowLayoutPanel1
             // 
@@ -186,7 +216,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(601, 32);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(696, 35);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // button1
@@ -195,77 +225,46 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(106, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Voltar";
+            this.button1.Text = "Voltar ao Menu";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 32);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 35);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(601, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(696, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // turma_DiretorTurmaTableAdapter
+            // professor_TurmaTableAdapter
             // 
-            this.turma_DiretorTurmaTableAdapter.ClearBeforeFill = true;
+            this.professor_TurmaTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AlunoTableAdapter = null;
+            this.tableAdapterManager.AlunosTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
-            this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
-            this.tableAdapterManager.OcorrenciaTableAdapter = null;
+            this.tableAdapterManager.CursosTableAdapter = null;
+            this.tableAdapterManager.DiretoresTurmaTableAdapter = null;
             this.tableAdapterManager.ProfessoresTableAdapter = null;
             this.tableAdapterManager.TurmasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID_Diretor_Turma";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ID_Diretor_Turma";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Diretor_Turma";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Diretor Turma";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Turma";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID_Turma";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Turma";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Turma";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.tableAdapterManager.UpdateOrder = Projeto_PAP.EscolaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Pesquisa_DiretorTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 304);
+            this.ClientSize = new System.Drawing.Size(696, 304);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Pesquisa_DiretorTurma";
-            this.Text = "Pesquisar Diretor Turma";
+            this.Text = "Diretores de Turma";
             this.Load += new System.EventHandler(this.Pesquisa_DiretorTurma_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -281,9 +280,9 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.turma_DiretorTurmaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turma_DiretorTurmaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professor_TurmaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professor_TurmaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.escolaDataSet)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -297,17 +296,18 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource turma_DiretorTurmaBindingSource;
-        private Database1DataSetTableAdapters.Turma_DiretorTurmaTableAdapter turma_DiretorTurmaTableAdapter;
-        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView turma_DiretorTurmaDataGridView;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private EscolaDataSetTableAdapters.Professor_TurmaTableAdapter professor_TurmaTableAdapter;
+        private EscolaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView professor_TurmaDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diretor_Turma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.BindingSource professor_TurmaBindingSource;
+        private EscolaDataSet escolaDataSet;
     }
 }

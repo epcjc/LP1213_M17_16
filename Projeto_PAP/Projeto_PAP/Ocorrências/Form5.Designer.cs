@@ -57,7 +57,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.alunoEncBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -78,6 +77,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.alunoEncBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.faltasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.faltasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.FaltasTableAdapter();
@@ -113,11 +113,11 @@
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medidaDisciplinarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmaDTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).BeginInit();
@@ -428,11 +428,6 @@
             this.comboBox5.Size = new System.Drawing.Size(153, 21);
             this.comboBox5.TabIndex = 45;
             // 
-            // alunoEncBindingSource
-            // 
-            this.alunoEncBindingSource.DataMember = "Aluno_Enc";
-            this.alunoEncBindingSource.DataSource = this.database1DataSet;
-            // 
             // comboBox4
             // 
             this.comboBox4.DataSource = this.alunoBindingSource;
@@ -597,6 +592,11 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // alunoEncBindingSource
+            // 
+            this.alunoEncBindingSource.DataMember = "Aluno_Enc";
+            this.alunoEncBindingSource.DataSource = this.database1DataSet;
+            // 
             // professoresBindingSource
             // 
             this.professoresBindingSource.DataMember = "Professores";
@@ -616,6 +616,9 @@
             this.tableAdapterManager.AlunoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.Diretor_Turma1TableAdapter = null;
+            this.tableAdapterManager.Diretor_Turma2TableAdapter = null;
+            this.tableAdapterManager.Diretor_Turma3TableAdapter = null;
             this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
             this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
             this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
@@ -677,11 +680,11 @@
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.medidaDisciplinarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.turmaDTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).EndInit();

@@ -11,6 +11,9 @@ namespace Projeto_PAP
 {
     public partial class Pesquisa_Aluno : Form
     {
+
+        
+        
         public Pesquisa_Aluno()
         {
             InitializeComponent();
@@ -18,8 +21,9 @@ namespace Projeto_PAP
 
         private void Pesquisa_Aluno_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            // TODO: This line of code loads data into the 'escolaDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.escolaDataSet.Alunos);
+            
             
 
         }
@@ -27,7 +31,7 @@ namespace Projeto_PAP
         
         private void button2_Click(object sender, EventArgs e)
         {
-            this.alunoTableAdapter.FillByPesAluno(this.database1DataSet.Aluno, this.textBox1.Text);
+            this.alunosTableAdapter.FillByPesAluno(this.escolaDataSet.Alunos, this.textBox1.Text);
             
         }
 
@@ -36,12 +40,15 @@ namespace Projeto_PAP
             this.Close();
         }
 
-        private void alunoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void alunosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.alunoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            this.alunosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.escolaDataSet);
+            
 
         }
+
+        
     }
 }

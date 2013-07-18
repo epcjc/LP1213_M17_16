@@ -70,10 +70,10 @@
     <Compile Include="Alunos_Enc.Educação\Apagar Aluno.Designer.cs">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diretor de Turma\Apagar DiretorTurma.cs">
+    <Compile Include="Encarregado Educação\Apagar DiretorTurma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diretor de Turma\Apagar DiretorTurma.Designer.cs">
+    <Compile Include="Encarregado Educação\Apagar DiretorTurma.Designer.cs">
       <DependentUpon>Apagar DiretorTurma.cs</DependentUpon>
     </Compile>
     <Compile Include="Encarregado Educação\Apagar EncEducação.cs">
@@ -81,6 +81,11 @@
     </Compile>
     <Compile Include="Encarregado Educação\Apagar EncEducação.Designer.cs">
       <DependentUpon>Apagar EncEducação.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EscolaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscolaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Ocorrências\Apagar Ocorrência.cs">
       <SubType>Form</SubType>
@@ -100,22 +105,22 @@
     <Compile Include="Diretor de Turma\Pesquisa_DiretorTurma.Designer.cs">
       <DependentUpon>Pesquisa_DiretorTurma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Docente_Discente\Pesquisar_Professor.cs">
+    <Compile Include="Professores\Pesquisar_Professor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Docente_Discente\Pesquisar_Professor.Designer.cs">
+    <Compile Include="Professores\Pesquisar_Professor.Designer.cs">
       <DependentUpon>Pesquisar_Professor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alunos_Enc.Educação\Pesquisa_EncEduc.cs">
+    <Compile Include="Encarregado Educação\Pesquisa_EncEduc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alunos_Enc.Educação\Pesquisa_EncEduc.Designer.cs">
+    <Compile Include="Encarregado Educação\Pesquisa_EncEduc.Designer.cs">
       <DependentUpon>Pesquisa_EncEduc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Docente_Discente\Apagar Professor.cs">
+    <Compile Include="Professores\Apagar Professor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Docente_Discente\Apagar Professor.Designer.cs">
+    <Compile Include="Professores\Apagar Professor.Designer.cs">
       <DependentUpon>Apagar Professor.cs</DependentUpon>
     </Compile>
     <Compile Include="Database1DataSet.cs">
@@ -127,22 +132,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Docente_Discente\Form1.cs">
+    <Compile Include="Professores\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Docente_Discente\Form1.Designer.cs">
+    <Compile Include="Professores\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diretor de Turma\Form10.cs">
+    <Compile Include="Encarregado Educação\Form10.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diretor de Turma\Form10.Designer.cs">
+    <Compile Include="Encarregado Educação\Form10.Designer.cs">
       <DependentUpon>Form10.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alunos_Enc.Educação\Form11.cs">
+    <Compile Include="Encarregado Educação\Form11.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alunos_Enc.Educação\Form11.Designer.cs">
+    <Compile Include="Encarregado Educação\Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
     </Compile>
     <Compile Include="Alunos_Enc.Educação\Form12.cs">
@@ -157,22 +162,22 @@
     <Compile Include="Alunos_Enc.Educação\Form13.Designer.cs">
       <DependentUpon>Form13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Docente_Discente\Form14.cs">
+    <Compile Include="Encarregado Educação\Form14.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Docente_Discente\Form14.Designer.cs">
+    <Compile Include="Encarregado Educação\Form14.Designer.cs">
       <DependentUpon>Form14.cs</DependentUpon>
     </Compile>
-    <Compile Include="Docente_Discente\Form15.cs">
+    <Compile Include="Professores\Form15.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Docente_Discente\Form15.Designer.cs">
+    <Compile Include="Professores\Form15.Designer.cs">
       <DependentUpon>Form15.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diretor de Turma\Form2.cs">
+    <Compile Include="Encarregado Educação\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diretor de Turma\Form2.Designer.cs">
+    <Compile Include="Encarregado Educação\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Encarregado Educação\Form3.cs">
@@ -193,16 +198,16 @@
     <Compile Include="Ocorrências\Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alunos_Enc.Educação\Form6.cs">
+    <Compile Include="Encarregado Educação\Form6.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alunos_Enc.Educação\Form6.Designer.cs">
+    <Compile Include="Encarregado Educação\Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diretor de Turma\Form7.cs">
+    <Compile Include="Encarregado Educação\Form7.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diretor de Turma\Form7.Designer.cs">
+    <Compile Include="Encarregado Educação\Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
     <Compile Include="Encarregado Educação\Form8.cs">
@@ -258,7 +263,7 @@
     <EmbeddedResource Include="Alunos_Enc.Educação\Apagar Aluno.resx">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Diretor de Turma\Apagar DiretorTurma.resx">
+    <EmbeddedResource Include="Encarregado Educação\Apagar DiretorTurma.resx">
       <DependentUpon>Apagar DiretorTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Encarregado Educação\Apagar EncEducação.resx">
@@ -273,22 +278,22 @@
     <EmbeddedResource Include="Diretor de Turma\Pesquisa_DiretorTurma.resx">
       <DependentUpon>Pesquisa_DiretorTurma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Docente_Discente\Pesquisar_Professor.resx">
+    <EmbeddedResource Include="Professores\Pesquisar_Professor.resx">
       <DependentUpon>Pesquisar_Professor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alunos_Enc.Educação\Pesquisa_EncEduc.resx">
+    <EmbeddedResource Include="Encarregado Educação\Pesquisa_EncEduc.resx">
       <DependentUpon>Pesquisa_EncEduc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Docente_Discente\Apagar Professor.resx">
+    <EmbeddedResource Include="Professores\Apagar Professor.resx">
       <DependentUpon>Apagar Professor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Docente_Discente\Form1.resx">
+    <EmbeddedResource Include="Professores\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Diretor de Turma\Form10.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form10.resx">
       <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alunos_Enc.Educação\Form11.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alunos_Enc.Educação\Form12.resx">
@@ -297,13 +302,13 @@
     <EmbeddedResource Include="Alunos_Enc.Educação\Form13.resx">
       <DependentUpon>Form13.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Docente_Discente\Form14.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form14.resx">
       <DependentUpon>Form14.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Docente_Discente\Form15.resx">
+    <EmbeddedResource Include="Professores\Form15.resx">
       <DependentUpon>Form15.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Diretor de Turma\Form2.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Encarregado Educação\Form3.resx">
@@ -315,10 +320,10 @@
     <EmbeddedResource Include="Ocorrências\Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alunos_Enc.Educação\Form6.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Diretor de Turma\Form7.resx">
+    <EmbeddedResource Include="Encarregado Educação\Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Encarregado Educação\Form8.resx">
@@ -372,6 +377,17 @@
     <None Include="Database1DataSet.xss">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
+    <None Include="EscolaDataSet.xsc">
+      <DependentUpon>EscolaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EscolaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EscolaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EscolaDataSet.xss">
+      <DependentUpon>EscolaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -389,6 +405,13 @@
     <Content Include="Database1_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Escola.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Escola_log.LDF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Escola.mdf</DependentUpon>
     </Content>
     <Content Include="Login.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

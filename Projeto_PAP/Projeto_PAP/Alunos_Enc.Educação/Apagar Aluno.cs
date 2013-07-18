@@ -16,18 +16,13 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void alunoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.alunoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
+        
 
         private void Apagar_Aluno_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            // TODO: This line of code loads data into the 'escolaDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.escolaDataSet.Alunos);
+            
 
         }
 
@@ -35,7 +30,8 @@ namespace Projeto_PAP
         {
             try
             {
-                this.alunoTableAdapter.DeleteAluno(Convert.ToInt16(this.comboBox1.SelectedValue));
+                this.alunosTableAdapter.DeleteAluno(Convert.ToString(this.comboBox1.SelectedValue));
+                
                 MessageBox.Show("Eliminado com Sucesso");
                 this.Close();
             }

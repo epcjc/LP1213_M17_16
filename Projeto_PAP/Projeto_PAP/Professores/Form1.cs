@@ -13,8 +13,8 @@ namespace Projeto_PAP
     {
         public void atualizarDataGrid()
         {
-            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
-            this.dataGridView1.Refresh();
+            this.professoresTableAdapter.Fill(this.escolaDataSet.Professores);
+            this.professoresDataGridView.Refresh();
         }
         
         
@@ -26,21 +26,14 @@ namespace Projeto_PAP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
-            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
-
+            // TODO: This line of code loads data into the 'escolaDataSet.Professores' table. You can move, or remove it, as needed.
+            this.professoresTableAdapter.Fill(this.escolaDataSet.Professores);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form14 frm = new Form14();
-            frm.ShowDialog();
-            atualizarDataGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -62,6 +55,14 @@ namespace Projeto_PAP
             Pesquisar_Professor frm = new Pesquisar_Professor();
             frm.ShowDialog();
             atualizarDataGrid();
+        }
+
+        private void professoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.professoresBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.escolaDataSet);
+
         }
     }
 }

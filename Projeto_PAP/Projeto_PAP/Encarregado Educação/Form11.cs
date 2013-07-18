@@ -16,24 +16,46 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void encarregado_EducacaoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        public void atualizarDataGrid()
         {
-            this.Validate();
-            this.encarregado_EducacaoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            //this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
+            //this.aluno_EncDataGridView.Refresh();
+        }
 
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            atualizarDataGrid();
+            this.Close();
         }
 
         private void Form11_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Encarregado_Educacao' table. You can move, or remove it, as needed.
-            this.encarregado_EducacaoTableAdapter.Fill(this.database1DataSet.Encarregado_Educacao);
-
+            // TODO: This line of code loads data into the 'database1DataSet.Aluno_Enc' table. You can move, or remove it, as needed.
+            this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
+            // TODO: This line of code loads data into the 'database1DataSet.Aluno_Enc' table. You can move, or remove it, as needed.
+            //this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void aluno_EncBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Validate();
+            this.aluno_EncBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            atualizarDataGrid();
         }
+
+        
+        
+
+        
+
+      
+
+        
+
+        
     }
 }

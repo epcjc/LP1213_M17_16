@@ -21,24 +21,27 @@ namespace Projeto_PAP
             this.Close();
         }
 
-        private void professoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.professoresBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
+        
 
         private void Pesquisar_Professor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
-            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
+            // TODO: This line of code loads data into the 'escolaDataSet.Professores' table. You can move, or remove it, as needed.
+            this.professoresTableAdapter.Fill(this.escolaDataSet.Professores);
+            
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.professoresTableAdapter.FillByPesProf(this.database1DataSet.Professores, this.textBox1.Text);        
+            this.professoresTableAdapter.FillByPesProfessores(this.escolaDataSet.Professores, this.textBox1.Text);
+        }
+
+        private void professoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.professoresBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.escolaDataSet);
+
         }
     }
 }

@@ -13,8 +13,8 @@ namespace Projeto_PAP
     {
         public void atualizarDataGrid()
         {
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-            this.alunoDataGridView.Refresh();
+            this.alunosTableAdapter.Fill(this.escolaDataSet.Alunos);
+            this.alunosDataGridView.Refresh();
         }
         
         
@@ -26,8 +26,9 @@ namespace Projeto_PAP
 
         private void Form13_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
+            // TODO: This line of code loads data into the 'escolaDataSet.Alunos' table. You can move, or remove it, as needed.
+            this.alunosTableAdapter.Fill(this.escolaDataSet.Alunos);
+            
             
 
         }
@@ -38,13 +39,15 @@ namespace Projeto_PAP
             this.Close();
         }
 
-        private void alunoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void alunosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.alunoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            this.alunosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.escolaDataSet);
             atualizarDataGrid();
 
         }
+
+        
     }
 }
