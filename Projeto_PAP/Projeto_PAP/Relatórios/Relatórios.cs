@@ -38,5 +38,23 @@ namespace Projeto_PAP
         {
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RelCursos frm = new RelCursos();
+            frm.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            RelCursoTurma frm = new RelCursoTurma();
+            frm.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            RelDiretorTurma frm = new RelDiretorTurma();
+            frm.ShowDialog();
+        }
     }
 }

@@ -9,26 +9,23 @@ using System.Windows.Forms;
 
 namespace Projeto_PAP
 {
-    public partial class RelOcorrencias : Form
+    public partial class RelDiretorTurma : Form
     {
-        public RelOcorrencias()
+        public RelDiretorTurma()
         {
             InitializeComponent();
         }
-
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void RelOcorrencias_Load(object sender, EventArgs e)
+        private void RelDiretorTurma_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'Database1DataSet.Aluno_Ocorrencia' table. You can move, or remove it, as needed.
-            this.Aluno_OcorrenciaTableAdapter.Fill(this.Database1DataSet.Aluno_Ocorrencia);
+            // TODO: This line of code loads data into the 'EscolaDataSet.Turma_DT' table. You can move, or remove it, as needed.
+            this.Turma_DTTableAdapter.Fill(this.EscolaDataSet.Turma_DT);
 
-            this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
     }

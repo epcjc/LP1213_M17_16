@@ -1,6 +1,6 @@
 ﻿namespace Projeto_PAP
 {
-    partial class RelAlunoEnc
+    partial class RelatAlunoTurma
     {
         /// <summary>
         /// Required designer variable.
@@ -30,22 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelAlunoEnc));
-            this.Aluno_EncBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelatAlunoTurma));
+            this.AlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Database1DataSet = new Projeto_PAP.Database1DataSet();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.Aluno_EncTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_EncTableAdapter();
+            this.AlunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
             this.EscolaDataSet = new Projeto_PAP.EscolaDataSet();
-            this.AlunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.AlunosTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.AlunosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Aluno_EncBindingSource)).BeginInit();
+            this.ProfessoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ProfessoresTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.ProfessoresTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -57,13 +56,13 @@
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EscolaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlunosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfessoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // Aluno_EncBindingSource
+            // AlunoBindingSource
             // 
-            this.Aluno_EncBindingSource.DataMember = "Aluno_Enc";
-            this.Aluno_EncBindingSource.DataSource = this.Database1DataSet;
+            this.AlunoBindingSource.DataMember = "Aluno";
+            this.AlunoBindingSource.DataSource = this.Database1DataSet;
             // 
             // Database1DataSet
             // 
@@ -80,13 +79,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(598, 217);
-            this.splitContainer1.SplitterDistance = 39;
+            this.splitContainer1.Size = new System.Drawing.Size(741, 272);
+            this.splitContainer1.SplitterDistance = 43;
             this.splitContainer1.TabIndex = 0;
             // 
             // label2
@@ -95,20 +93,10 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(598, 39);
-            this.label2.TabIndex = 16;
+            this.label2.Size = new System.Drawing.Size(741, 43);
+            this.label2.TabIndex = 14;
             this.label2.Text = "Escola Profissional Centro Juvenil de Campanhã";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(598, 39);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Relatório: Alunos/Enc. Educação";
             // 
             // splitContainer2
             // 
@@ -125,20 +113,20 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
-            this.splitContainer2.Size = new System.Drawing.Size(598, 174);
-            this.splitContainer2.SplitterDistance = 118;
+            this.splitContainer2.Size = new System.Drawing.Size(741, 225);
+            this.splitContainer2.SplitterDistance = 160;
             this.splitContainer2.TabIndex = 1;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.AlunosBindingSource;
+            reportDataSource1.Value = this.ProfessoresBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_PAP.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(598, 118);
+            this.reportViewer1.Size = new System.Drawing.Size(741, 160);
             this.reportViewer1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -147,7 +135,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(598, 30);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(741, 39);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // button1
@@ -156,7 +144,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
+            this.button1.Size = new System.Drawing.Size(115, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Voltar ao Menu";
             this.button1.UseVisualStyleBackColor = true;
@@ -164,43 +152,43 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 30);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 39);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(598, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(741, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // Aluno_EncTableAdapter
+            // AlunoTableAdapter
             // 
-            this.Aluno_EncTableAdapter.ClearBeforeFill = true;
+            this.AlunoTableAdapter.ClearBeforeFill = true;
             // 
             // EscolaDataSet
             // 
             this.EscolaDataSet.DataSetName = "EscolaDataSet";
             this.EscolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // AlunosBindingSource
+            // ProfessoresBindingSource
             // 
-            this.AlunosBindingSource.DataMember = "Alunos";
-            this.AlunosBindingSource.DataSource = this.EscolaDataSet;
+            this.ProfessoresBindingSource.DataMember = "Professores";
+            this.ProfessoresBindingSource.DataSource = this.EscolaDataSet;
             // 
-            // AlunosTableAdapter
+            // ProfessoresTableAdapter
             // 
-            this.AlunosTableAdapter.ClearBeforeFill = true;
+            this.ProfessoresTableAdapter.ClearBeforeFill = true;
             // 
-            // RelAlunoEnc
+            // RelatAlunoTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 217);
+            this.ClientSize = new System.Drawing.Size(741, 272);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RelAlunoEnc";
-            this.Text = "Relatório Aluno/ Enc. Educação";
-            this.Load += new System.EventHandler(this.RelAlunoEnc_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Aluno_EncBindingSource)).EndInit();
+            this.Name = "RelatAlunoTurma";
+            this.Text = "Relatório Professores";
+            this.Load += new System.EventHandler(this.RelatAlunoTurma_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -213,7 +201,7 @@
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EscolaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AlunosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfessoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,17 +210,16 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.BindingSource Aluno_EncBindingSource;
+        private System.Windows.Forms.BindingSource AlunoBindingSource;
         private Database1DataSet Database1DataSet;
-        private Database1DataSetTableAdapters.Aluno_EncTableAdapter Aluno_EncTableAdapter;
+        private Database1DataSetTableAdapters.AlunoTableAdapter AlunoTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource AlunosBindingSource;
+        private System.Windows.Forms.BindingSource ProfessoresBindingSource;
         private EscolaDataSet EscolaDataSet;
-        private EscolaDataSetTableAdapters.AlunosTableAdapter AlunosTableAdapter;
+        private EscolaDataSetTableAdapters.ProfessoresTableAdapter ProfessoresTableAdapter;
     }
 }

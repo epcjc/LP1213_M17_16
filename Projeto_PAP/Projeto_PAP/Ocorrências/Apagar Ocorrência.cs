@@ -16,26 +16,18 @@ namespace Projeto_PAP
             InitializeComponent();
         }
 
-        private void ocorrenciaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.ocorrenciaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
+        
 
         private void Apagar_Ocorrência_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Ocorrencia' table. You can move, or remove it, as needed.
-            this.ocorrenciaTableAdapter.Fill(this.database1DataSet.Ocorrencia);
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                this.ocorrenciaTableAdapter.DeleteOcorrência(Convert.ToInt16(this.comboBox1.SelectedValue));
+                //this.ocorrenciaTableAdapter.DeleteOcorrência(Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Eliminado com Sucesso");
                 this.Close();
             }

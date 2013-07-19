@@ -39,7 +39,6 @@
             this.escolaDataSet = new Projeto_PAP.EscolaDataSet();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.professor_TurmaTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.Professor_TurmaTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.EscolaDataSetTableAdapters.TableAdapterManager();
             this.professor_TurmaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -164,9 +163,7 @@
             this.statusStrip1.Text = "statusStrip1";
             // 
             // professor_TurmaTableAdapter
-            // 
-            this.professor_TurmaTableAdapter.ClearBeforeFill = true;
-            // 
+            
             // tableAdapterManager
             // 
             this.tableAdapterManager.AlunosTableAdapter = null;
@@ -393,7 +390,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private EscolaDataSet escolaDataSet;
         private System.Windows.Forms.BindingSource professor_TurmaBindingSource;
-        private EscolaDataSetTableAdapters.Professor_TurmaTableAdapter professor_TurmaTableAdapter;
         private EscolaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator professor_TurmaBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;

@@ -18,34 +18,11 @@ namespace Projeto_PAP
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'database1DataSet.Medida_Disciplinar' table. You can move, or remove it, as needed.
-            this.medida_DisciplinarTableAdapter.Fill(this.database1DataSet.Medida_Disciplinar);
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno_Enc' table. You can move, or remove it, as needed.
-            this.aluno_EncTableAdapter.FillAlunoEncEduc(this.database1DataSet.Aluno_Enc);
-            // TODO: This line of code loads data into the 'database1DataSet.Aluno' table. You can move, or remove it, as needed.
-            this.alunoTableAdapter.Fill(this.database1DataSet.Aluno);
-            // TODO: This line of code loads data into the 'database1DataSet.Ocorrencia' table. You can move, or remove it, as needed.
-            this.ocorrenciaTableAdapter.Fill(this.database1DataSet.Ocorrencia);
-            // TODO: This line of code loads data into the 'database1DataSet.TurmaDT' table. You can move, or remove it, as needed.
-            this.turmaDTTableAdapter.FillTurmaDT(this.database1DataSet.TurmaDT);
-            // TODO: This line of code loads data into the 'database1DataSet.Professores' table. You can move, or remove it, as needed.
-            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
-            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
-            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
-            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
-            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
-            // TODO: This line of code loads data into the 'database1DataSet.Faltas' table. You can move, or remove it, as needed.
-            this.faltasTableAdapter.FillOcorrência(this.database1DataSet.Faltas);
-            this.professoresTableAdapter.Fill(this.database1DataSet.Professores);
+            
             
         }
 
-        private void ocorrenciaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-
-        }
+        
 
         
 

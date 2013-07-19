@@ -60,6 +60,8 @@ namespace Projeto_PAP {
         
         private Diretor_Turma3DataTable tableDiretor_Turma3;
         
+        private AlunoTurmaDataTable tableAlunoTurma;
+        
         private global::System.Data.DataRelation relationFK_Aluno_Turmas;
         
         private global::System.Data.DataRelation relationFK_Diretor_Turma_Turmas;
@@ -107,6 +109,8 @@ namespace Projeto_PAP {
         private global::System.Data.DataRelation relationFK_Ocorrencia_Diretor_Turma6;
         
         private global::System.Data.DataRelation relationFK_Diretor_Turma_Turmas5;
+        
+        private global::System.Data.DataRelation relationFK_Aluno_Turmas1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -189,6 +193,9 @@ namespace Projeto_PAP {
                 }
                 if ((ds.Tables["Diretor_Turma3"] != null)) {
                     base.Tables.Add(new Diretor_Turma3DataTable(ds.Tables["Diretor_Turma3"]));
+                }
+                if ((ds.Tables["AlunoTurma"] != null)) {
+                    base.Tables.Add(new AlunoTurmaDataTable(ds.Tables["AlunoTurma"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -390,6 +397,16 @@ namespace Projeto_PAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public AlunoTurmaDataTable AlunoTurma {
+            get {
+                return this.tableAlunoTurma;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -508,6 +525,9 @@ namespace Projeto_PAP {
                 }
                 if ((ds.Tables["Diretor_Turma3"] != null)) {
                     base.Tables.Add(new Diretor_Turma3DataTable(ds.Tables["Diretor_Turma3"]));
+                }
+                if ((ds.Tables["AlunoTurma"] != null)) {
+                    base.Tables.Add(new AlunoTurmaDataTable(ds.Tables["AlunoTurma"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -650,6 +670,12 @@ namespace Projeto_PAP {
                     this.tableDiretor_Turma3.InitVars();
                 }
             }
+            this.tableAlunoTurma = ((AlunoTurmaDataTable)(base.Tables["AlunoTurma"]));
+            if ((initTable == true)) {
+                if ((this.tableAlunoTurma != null)) {
+                    this.tableAlunoTurma.InitVars();
+                }
+            }
             this.relationFK_Aluno_Turmas = this.Relations["FK_Aluno_Turmas"];
             this.relationFK_Diretor_Turma_Turmas = this.Relations["FK_Diretor_Turma_Turmas"];
             this.relationFK_Ocorrencia_Diretor_Turma = this.Relations["FK_Ocorrencia_Diretor_Turma"];
@@ -674,6 +700,7 @@ namespace Projeto_PAP {
             this.relationFK_Diretor_Turma_Turmas4 = this.Relations["FK_Diretor_Turma_Turmas4"];
             this.relationFK_Ocorrencia_Diretor_Turma6 = this.Relations["FK_Ocorrencia_Diretor_Turma6"];
             this.relationFK_Diretor_Turma_Turmas5 = this.Relations["FK_Diretor_Turma_Turmas5"];
+            this.relationFK_Aluno_Turmas1 = this.Relations["FK_Aluno_Turmas1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -720,6 +747,8 @@ namespace Projeto_PAP {
             base.Tables.Add(this.tableDiretor_Turma2);
             this.tableDiretor_Turma3 = new Diretor_Turma3DataTable();
             base.Tables.Add(this.tableDiretor_Turma3);
+            this.tableAlunoTurma = new AlunoTurmaDataTable();
+            base.Tables.Add(this.tableAlunoTurma);
             this.relationFK_Aluno_Turmas = new global::System.Data.DataRelation("FK_Aluno_Turmas", new global::System.Data.DataColumn[] {
                         this.tableTurmas.ID_TurmaColumn}, new global::System.Data.DataColumn[] {
                         this.tableAluno.ID_TurmaColumn}, false);
@@ -816,6 +845,10 @@ namespace Projeto_PAP {
                         this.tableTurmas.ID_TurmaColumn}, new global::System.Data.DataColumn[] {
                         this.tableDiretor_Turma3.ID_TurmaColumn}, false);
             this.Relations.Add(this.relationFK_Diretor_Turma_Turmas5);
+            this.relationFK_Aluno_Turmas1 = new global::System.Data.DataRelation("FK_Aluno_Turmas1", new global::System.Data.DataColumn[] {
+                        this.tableTurmas.ID_TurmaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAlunoTurma.ID_TurmaColumn}, false);
+            this.Relations.Add(this.relationFK_Aluno_Turmas1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -928,6 +961,12 @@ namespace Projeto_PAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeAlunoTurma() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1034,6 +1073,9 @@ namespace Projeto_PAP {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void Diretor_Turma3RowChangeEventHandler(object sender, Diretor_Turma3RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void AlunoTurmaRowChangeEventHandler(object sender, AlunoTurmaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -7059,6 +7101,316 @@ namespace Projeto_PAP {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class AlunoTurmaDataTable : global::System.Data.TypedTableBase<AlunoTurmaRow> {
+            
+            private global::System.Data.DataColumn columnID_Turma;
+            
+            private global::System.Data.DataColumn columnTurma;
+            
+            private global::System.Data.DataColumn columnAluno;
+            
+            private global::System.Data.DataColumn columnDiretor_Turma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaDataTable() {
+                this.TableName = "AlunoTurma";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal AlunoTurmaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected AlunoTurmaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_TurmaColumn {
+                get {
+                    return this.columnID_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TurmaColumn {
+                get {
+                    return this.columnTurma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AlunoColumn {
+                get {
+                    return this.columnAluno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Diretor_TurmaColumn {
+                get {
+                    return this.columnDiretor_Turma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaRow this[int index] {
+                get {
+                    return ((AlunoTurmaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AlunoTurmaRowChangeEventHandler AlunoTurmaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AlunoTurmaRowChangeEventHandler AlunoTurmaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AlunoTurmaRowChangeEventHandler AlunoTurmaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event AlunoTurmaRowChangeEventHandler AlunoTurmaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddAlunoTurmaRow(AlunoTurmaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaRow AddAlunoTurmaRow(string Turma, string Aluno, string Diretor_Turma) {
+                AlunoTurmaRow rowAlunoTurmaRow = ((AlunoTurmaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Turma,
+                        Aluno,
+                        Diretor_Turma};
+                rowAlunoTurmaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAlunoTurmaRow);
+                return rowAlunoTurmaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaRow FindByID_Turma(int ID_Turma) {
+                return ((AlunoTurmaRow)(this.Rows.Find(new object[] {
+                            ID_Turma})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                AlunoTurmaDataTable cln = ((AlunoTurmaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new AlunoTurmaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Turma = base.Columns["ID_Turma"];
+                this.columnTurma = base.Columns["Turma"];
+                this.columnAluno = base.Columns["Aluno"];
+                this.columnDiretor_Turma = base.Columns["Diretor_Turma"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID_Turma = new global::System.Data.DataColumn("ID_Turma", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Turma);
+                this.columnTurma = new global::System.Data.DataColumn("Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTurma);
+                this.columnAluno = new global::System.Data.DataColumn("Aluno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAluno);
+                this.columnDiretor_Turma = new global::System.Data.DataColumn("Diretor_Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiretor_Turma);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Turma}, true));
+                this.columnID_Turma.AutoIncrement = true;
+                this.columnID_Turma.AutoIncrementSeed = -1;
+                this.columnID_Turma.AutoIncrementStep = -1;
+                this.columnID_Turma.AllowDBNull = false;
+                this.columnID_Turma.ReadOnly = true;
+                this.columnID_Turma.Unique = true;
+                this.columnTurma.AllowDBNull = false;
+                this.columnTurma.MaxLength = 50;
+                this.columnAluno.AllowDBNull = false;
+                this.columnAluno.MaxLength = 50;
+                this.columnDiretor_Turma.AllowDBNull = false;
+                this.columnDiretor_Turma.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaRow NewAlunoTurmaRow() {
+                return ((AlunoTurmaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new AlunoTurmaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(AlunoTurmaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.AlunoTurmaRowChanged != null)) {
+                    this.AlunoTurmaRowChanged(this, new AlunoTurmaRowChangeEvent(((AlunoTurmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.AlunoTurmaRowChanging != null)) {
+                    this.AlunoTurmaRowChanging(this, new AlunoTurmaRowChangeEvent(((AlunoTurmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.AlunoTurmaRowDeleted != null)) {
+                    this.AlunoTurmaRowDeleted(this, new AlunoTurmaRowChangeEvent(((AlunoTurmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.AlunoTurmaRowDeleting != null)) {
+                    this.AlunoTurmaRowDeleting(this, new AlunoTurmaRowChangeEvent(((AlunoTurmaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveAlunoTurmaRow(AlunoTurmaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Database1DataSet ds = new Database1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "AlunoTurmaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class AlunoRow : global::System.Data.DataRow {
@@ -7990,6 +8342,17 @@ namespace Projeto_PAP {
                 }
                 else {
                     return ((Diretor_Turma3Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Diretor_Turma_Turmas5"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaRow[] GetAlunoTurmaRows() {
+                if ((this.Table.ChildRelations["FK_Aluno_Turmas1"] == null)) {
+                    return new AlunoTurmaRow[0];
+                }
+                else {
+                    return ((AlunoTurmaRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Aluno_Turmas1"])));
                 }
             }
         }
@@ -9230,6 +9593,76 @@ namespace Projeto_PAP {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class AlunoTurmaRow : global::System.Data.DataRow {
+            
+            private AlunoTurmaDataTable tableAlunoTurma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal AlunoTurmaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableAlunoTurma = ((AlunoTurmaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Turma {
+                get {
+                    return ((int)(this[this.tableAlunoTurma.ID_TurmaColumn]));
+                }
+                set {
+                    this[this.tableAlunoTurma.ID_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Turma {
+                get {
+                    return ((string)(this[this.tableAlunoTurma.TurmaColumn]));
+                }
+                set {
+                    this[this.tableAlunoTurma.TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Aluno {
+                get {
+                    return ((string)(this[this.tableAlunoTurma.AlunoColumn]));
+                }
+                set {
+                    this[this.tableAlunoTurma.AlunoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Diretor_Turma {
+                get {
+                    return ((string)(this[this.tableAlunoTurma.Diretor_TurmaColumn]));
+                }
+                set {
+                    this[this.tableAlunoTurma.Diretor_TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TurmasRow TurmasRow {
+                get {
+                    return ((TurmasRow)(this.GetParentRow(this.Table.ParentRelations["FK_Aluno_Turmas1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Aluno_Turmas1"]);
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -9827,6 +10260,40 @@ namespace Projeto_PAP {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Diretor_Turma3Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class AlunoTurmaRowChangeEvent : global::System.EventArgs {
+            
+            private AlunoTurmaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaRowChangeEvent(AlunoTurmaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlunoTurmaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -15267,6 +15734,179 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class AlunoTurmaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public AlunoTurmaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "AlunoTurma";
+            tableMapping.ColumnMappings.Add("ID_Turma", "ID_Turma");
+            tableMapping.ColumnMappings.Add("Turma", "Turma");
+            tableMapping.ColumnMappings.Add("Aluno", "Aluno");
+            tableMapping.ColumnMappings.Add("Diretor_Turma", "Diretor_Turma");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Projeto_PAP.Properties.Settings.Default.Database1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT     Turmas.ID_Turma, Turmas.Turma, Aluno.Aluno, Diretor_Turma.Diretor_Turma
+FROM         Aluno INNER JOIN
+                      Turmas ON Aluno.ID_Turma = Turmas.ID_Turma INNER JOIN
+                      Diretor_Turma ON Turmas.ID_Turma = Diretor_Turma.ID_Turma";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Database1DataSet.AlunoTurmaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Database1DataSet.AlunoTurmaDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.AlunoTurmaDataTable dataTable = new Database1DataSet.AlunoTurmaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15584,12 +16224,12 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._diretor_TurmaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._alunoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._diretor_TurmaTableAdapter.Update(updatedRows));
+                    result = (result + this._alunoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15602,12 +16242,21 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._alunoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._diretor_TurmaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._alunoTableAdapter.Update(updatedRows));
+                    result = (result + this._diretor_TurmaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._diretor_Turma1TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._diretor_Turma1TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15626,15 +16275,6 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._diretor_Turma2TableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._diretor_Turma1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._diretor_Turma1TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15682,11 +16322,11 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._diretor_TurmaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._alunoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._diretor_TurmaTableAdapter.Update(addedRows));
+                    result = (result + this._alunoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15698,11 +16338,19 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._alunoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._diretor_TurmaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._alunoTableAdapter.Update(addedRows));
+                    result = (result + this._diretor_TurmaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._diretor_Turma1TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._diretor_Turma1TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15719,14 +16367,6 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._diretor_Turma2TableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._diretor_Turma1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._diretor_Turma1TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15772,14 +16412,6 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._diretor_Turma1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._diretor_Turma1TableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._diretor_Turma2TableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma2.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -15796,11 +16428,19 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._alunoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._diretor_Turma1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._alunoTableAdapter.Update(deletedRows));
+                    result = (result + this._diretor_Turma1TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._diretor_TurmaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._diretor_TurmaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15812,11 +16452,11 @@ SELECT ID_Diretor_Turma, Diretor_Turma, ID_Turma FROM Diretor_Turma WHERE (ID_Di
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._diretor_TurmaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Diretor_Turma.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._alunoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Aluno.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._diretor_TurmaTableAdapter.Update(deletedRows));
+                    result = (result + this._alunoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

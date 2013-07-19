@@ -31,7 +31,7 @@ namespace Projeto_PAP
         
         private void button2_Click(object sender, EventArgs e)
         {
-            this.alunosTableAdapter.FillByPesAluno(this.escolaDataSet.Alunos, this.textBox1.Text);
+            //this.alunosTableAdapter.FillByPesAluno(this.escolaDataSet.Alunos, this.textBox1.Text);
             
         }
 

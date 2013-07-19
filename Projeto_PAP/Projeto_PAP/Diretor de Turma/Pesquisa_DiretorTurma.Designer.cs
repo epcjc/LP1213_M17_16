@@ -46,7 +46,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.professor_TurmaTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.Professor_TurmaTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.EscolaDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -240,9 +239,7 @@
             this.statusStrip1.Text = "statusStrip1";
             // 
             // professor_TurmaTableAdapter
-            // 
-            this.professor_TurmaTableAdapter.ClearBeforeFill = true;
-            // 
+             
             // tableAdapterManager
             // 
             this.tableAdapterManager.AlunosTableAdapter = null;
@@ -299,7 +296,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private EscolaDataSetTableAdapters.Professor_TurmaTableAdapter professor_TurmaTableAdapter;
         private EscolaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView professor_TurmaDataGridView;

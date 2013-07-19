@@ -59,7 +59,7 @@ namespace Projeto_PAP
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form5 frm = new Form5();
+            CriarOcorrência frm = new CriarOcorrência();
             frm.ShowDialog();
         }
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label alunoLabel;
             System.Windows.Forms.Label turmaLabel;
             System.Windows.Forms.Label encarregado_EducacaoLabel;
@@ -49,8 +48,6 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.medidaDisciplinarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -58,18 +55,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.alunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.turmaDTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.professoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -77,18 +71,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.alunoEncBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.professoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faltasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faltasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.FaltasTableAdapter();
-            this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
-            this.professoresTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.ProfessoresTableAdapter();
-            this.turmaDTTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.TurmaDTTableAdapter();
-            this.ocorrenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ocorrenciaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.OcorrenciaTableAdapter();
-            this.alunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
-            this.aluno_EncTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Aluno_EncTableAdapter();
-            this.medida_DisciplinarTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.Medida_DisciplinarTableAdapter();
             alunoLabel = new System.Windows.Forms.Label();
             turmaLabel = new System.Windows.Forms.Label();
             encarregado_EducacaoLabel = new System.Windows.Forms.Label();
@@ -111,32 +93,23 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.medidaDisciplinarBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmaDTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // alunoLabel
             // 
             alunoLabel.AutoSize = true;
-            alunoLabel.Location = new System.Drawing.Point(18, 9);
+            alunoLabel.Location = new System.Drawing.Point(18, 15);
             alunoLabel.Name = "alunoLabel";
-            alunoLabel.Size = new System.Drawing.Size(63, 26);
+            alunoLabel.Size = new System.Drawing.Size(63, 13);
             alunoLabel.TabIndex = 2;
-            alunoLabel.Text = "Aluno\r\nParticipante";
+            alunoLabel.Text = "Participante";
             alunoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // turmaLabel
             // 
             turmaLabel.AutoSize = true;
-            turmaLabel.Location = new System.Drawing.Point(31, 78);
+            turmaLabel.Location = new System.Drawing.Point(31, 48);
             turmaLabel.Name = "turmaLabel";
             turmaLabel.Size = new System.Drawing.Size(37, 13);
             turmaLabel.TabIndex = 4;
@@ -233,7 +206,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(19, 45);
+            label1.Location = new System.Drawing.Point(18, 75);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(60, 26);
             label1.TabIndex = 38;
@@ -340,7 +313,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer2.Panel2.Controls.Add(this.statusStrip1);
             this.splitContainer2.Size = new System.Drawing.Size(791, 363);
-            this.splitContainer2.SplitterDistance = 276;
+            this.splitContainer2.SplitterDistance = 303;
             this.splitContainer2.TabIndex = 0;
             // 
             // label6
@@ -354,24 +327,12 @@
             // 
             // comboBox6
             // 
-            this.comboBox6.DataSource = this.medidaDisciplinarBindingSource;
-            this.comboBox6.DisplayMember = "Medida";
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(621, 145);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(149, 21);
             this.comboBox6.TabIndex = 51;
             this.comboBox6.ValueMember = "ID";
-            // 
-            // medidaDisciplinarBindingSource
-            // 
-            this.medidaDisciplinarBindingSource.DataMember = "Medida_Disciplinar";
-            this.medidaDisciplinarBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox3
             // 
@@ -430,19 +391,11 @@
             // 
             // comboBox4
             // 
-            this.comboBox4.DataSource = this.alunoBindingSource;
-            this.comboBox4.DisplayMember = "Aluno";
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(96, 45);
+            this.comboBox4.Location = new System.Drawing.Point(95, 75);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(153, 21);
+            this.comboBox4.Size = new System.Drawing.Size(154, 21);
             this.comboBox4.TabIndex = 44;
-            this.comboBox4.ValueMember = "ID_Aluno";
-            // 
-            // alunoBindingSource
-            // 
-            this.alunoBindingSource.DataMember = "Aluno";
-            this.alunoBindingSource.DataSource = this.database1DataSet;
             // 
             // textBox11
             // 
@@ -467,19 +420,12 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.DataSource = this.turmaDTBindingSource;
-            this.comboBox3.DisplayMember = "Turma";
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(96, 75);
+            this.comboBox3.Location = new System.Drawing.Point(96, 45);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(153, 21);
             this.comboBox3.TabIndex = 36;
             this.comboBox3.ValueMember = "ID_Turma";
-            // 
-            // turmaDTBindingSource
-            // 
-            this.turmaDTBindingSource.DataMember = "TurmaDT";
-            this.turmaDTBindingSource.DataSource = this.database1DataSet;
             // 
             // textBox8
             // 
@@ -507,8 +453,6 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.DataSource = this.turmaDTBindingSource;
-            this.comboBox2.DisplayMember = "Diretor_Turma";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(351, 12);
             this.comboBox2.Name = "comboBox2";
@@ -518,19 +462,12 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.professoresBindingSource1;
-            this.comboBox1.DisplayMember = "Docente_Discente";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(96, 214);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(153, 21);
             this.comboBox1.TabIndex = 31;
             this.comboBox1.ValueMember = "ID_Docente_Discente";
-            // 
-            // professoresBindingSource1
-            // 
-            this.professoresBindingSource1.DataMember = "Professores";
-            this.professoresBindingSource1.DataSource = this.database1DataSet;
             // 
             // textBox5
             // 
@@ -560,7 +497,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(791, 61);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(791, 34);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // button1
@@ -586,75 +523,11 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 61);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 34);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(791, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // alunoEncBindingSource
-            // 
-            this.alunoEncBindingSource.DataMember = "Aluno_Enc";
-            this.alunoEncBindingSource.DataSource = this.database1DataSet;
-            // 
-            // professoresBindingSource
-            // 
-            this.professoresBindingSource.DataMember = "Professores";
-            this.professoresBindingSource.DataSource = this.database1DataSet;
-            // 
-            // faltasBindingSource
-            // 
-            this.faltasBindingSource.DataMember = "Faltas";
-            this.faltasBindingSource.DataSource = this.database1DataSet;
-            // 
-            // faltasTableAdapter
-            // 
-            this.faltasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AlunoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.Diretor_Turma1TableAdapter = null;
-            this.tableAdapterManager.Diretor_Turma2TableAdapter = null;
-            this.tableAdapterManager.Diretor_Turma3TableAdapter = null;
-            this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
-            this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
-            this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
-            this.tableAdapterManager.OcorrenciaTableAdapter = null;
-            this.tableAdapterManager.ProfessoresTableAdapter = null;
-            this.tableAdapterManager.TurmasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // professoresTableAdapter
-            // 
-            this.professoresTableAdapter.ClearBeforeFill = true;
-            // 
-            // turmaDTTableAdapter
-            // 
-            this.turmaDTTableAdapter.ClearBeforeFill = true;
-            // 
-            // ocorrenciaBindingSource
-            // 
-            this.ocorrenciaBindingSource.DataMember = "Ocorrencia";
-            this.ocorrenciaBindingSource.DataSource = this.database1DataSet;
-            // 
-            // ocorrenciaTableAdapter
-            // 
-            this.ocorrenciaTableAdapter.ClearBeforeFill = true;
-            // 
-            // alunoTableAdapter
-            // 
-            this.alunoTableAdapter.ClearBeforeFill = true;
-            // 
-            // aluno_EncTableAdapter
-            // 
-            this.aluno_EncTableAdapter.ClearBeforeFill = true;
-            // 
-            // medida_DisciplinarTableAdapter
-            // 
-            this.medida_DisciplinarTableAdapter.ClearBeforeFill = true;
             // 
             // Form5
             // 
@@ -678,16 +551,7 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.medidaDisciplinarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alunoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.turmaDTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.alunoEncBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.professoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -697,15 +561,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource faltasBindingSource;
-        private Database1DataSetTableAdapters.FaltasTableAdapter faltasTableAdapter;
-        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.BindingSource professoresBindingSource;
-        private Database1DataSetTableAdapters.ProfessoresTableAdapter professoresTableAdapter;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
@@ -715,29 +573,18 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.BindingSource turmaDTBindingSource;
-        private Database1DataSetTableAdapters.TurmaDTTableAdapter turmaDTTableAdapter;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.BindingSource ocorrenciaBindingSource;
-        private Database1DataSetTableAdapters.OcorrenciaTableAdapter ocorrenciaTableAdapter;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.BindingSource alunoBindingSource;
-        private Database1DataSetTableAdapters.AlunoTableAdapter alunoTableAdapter;
         private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.BindingSource alunoEncBindingSource;
-        private Database1DataSetTableAdapters.Aluno_EncTableAdapter aluno_EncTableAdapter;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.BindingSource medidaDisciplinarBindingSource;
-        private Database1DataSetTableAdapters.Medida_DisciplinarTableAdapter medida_DisciplinarTableAdapter;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.BindingSource professoresBindingSource1;
     }
 }

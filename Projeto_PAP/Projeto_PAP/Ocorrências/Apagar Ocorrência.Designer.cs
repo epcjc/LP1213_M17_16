@@ -28,23 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Apagar_Ocorrência));
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.ocorrenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.ocorrenciaTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.OcorrenciaTableAdapter();
-            this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,24 +62,11 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataSource = this.ocorrenciaBindingSource;
-            this.comboBox1.DisplayMember = "ID_Ocorrencia";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(108, 18);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(145, 21);
             this.comboBox1.TabIndex = 40;
-            this.comboBox1.ValueMember = "ID_Ocorrencia";
-            // 
-            // ocorrenciaBindingSource
-            // 
-            this.ocorrenciaBindingSource.DataMember = "Ocorrencia";
-            this.ocorrenciaBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -120,21 +100,6 @@
             this.button1.Text = "Apagar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ocorrenciaTableAdapter
-            // 
-            this.ocorrenciaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AlunoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
-            this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
-            this.tableAdapterManager.OcorrenciaTableAdapter = this.ocorrenciaTableAdapter;
-            this.tableAdapterManager.ProfessoresTableAdapter = null;
-            this.tableAdapterManager.TurmasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // splitContainer1
             // 
@@ -204,8 +169,6 @@
             this.Name = "Apagar_Ocorrência";
             this.Text = "Apagar Ocorrência";
             this.Load += new System.EventHandler(this.Apagar_Ocorrência_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -228,10 +191,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource ocorrenciaBindingSource;
-        private Database1DataSetTableAdapters.OcorrenciaTableAdapter ocorrenciaTableAdapter;
-        private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

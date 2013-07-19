@@ -70,6 +70,12 @@
     <Compile Include="Alunos_Enc.Educação\Apagar Aluno.Designer.cs">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="CriarOcorrência.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarOcorrência.Designer.cs">
+      <DependentUpon>CriarOcorrência.cs</DependentUpon>
+    </Compile>
     <Compile Include="Encarregado Educação\Apagar DiretorTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,11 +248,11 @@
     <Compile Include="Relatórios\RelAlunoEnc.Designer.cs">
       <DependentUpon>RelAlunoEnc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Relatórios\RelatAlunoTurma.cs">
+    <Compile Include="Relatórios\RelatProfessores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Relatórios\RelatAlunoTurma.Designer.cs">
-      <DependentUpon>RelatAlunoTurma.cs</DependentUpon>
+    <Compile Include="Relatórios\RelatProfessores.Designer.cs">
+      <DependentUpon>RelatProfessores.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatórios\Relatórios.cs">
       <SubType>Form</SubType>
@@ -260,8 +266,29 @@
     <Compile Include="Relatórios\RelOcorrencias.Designer.cs">
       <DependentUpon>RelOcorrencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Relatórios\RelCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\RelCursos.Designer.cs">
+      <DependentUpon>RelCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\RelCursoTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\RelCursoTurma.Designer.cs">
+      <DependentUpon>RelCursoTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\RelDiretorTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\RelDiretorTurma.Designer.cs">
+      <DependentUpon>RelDiretorTurma.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alunos_Enc.Educação\Apagar Aluno.resx">
       <DependentUpon>Apagar Aluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CriarOcorrência.resx">
+      <DependentUpon>CriarOcorrência.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Encarregado Educação\Apagar DiretorTurma.resx">
       <DependentUpon>Apagar DiretorTurma.cs</DependentUpon>
@@ -350,8 +377,8 @@
     <EmbeddedResource Include="Relatórios\RelAlunoEnc.resx">
       <DependentUpon>RelAlunoEnc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatórios\RelatAlunoTurma.resx">
-      <DependentUpon>RelatAlunoTurma.cs</DependentUpon>
+    <EmbeddedResource Include="Relatórios\RelatProfessores.resx">
+      <DependentUpon>RelatProfessores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatórios\Relatórios.resx">
       <DependentUpon>Relatórios.cs</DependentUpon>
@@ -359,9 +386,20 @@
     <EmbeddedResource Include="Relatórios\RelOcorrencias.resx">
       <DependentUpon>RelOcorrencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatórios\Report1.rdlc" />
-    <EmbeddedResource Include="Relatórios\Report2.rdlc" />
-    <EmbeddedResource Include="Relatórios\Report3.rdlc" />
+    <EmbeddedResource Include="Relatórios\RelCursos.resx">
+      <DependentUpon>RelCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\RelCursoTurma.resx">
+      <DependentUpon>RelCursoTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\RelDiretorTurma.resx">
+      <DependentUpon>RelDiretorTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
     <None Include="Ajuda.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

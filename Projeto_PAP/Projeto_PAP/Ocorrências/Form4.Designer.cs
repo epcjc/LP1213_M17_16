@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -37,24 +36,10 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.database1DataSet = new Projeto_PAP.Database1DataSet();
-            this.faltasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.faltasTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.FaltasTableAdapter();
             this.tableAdapterManager = new Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager();
-            this.faltasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,9 +49,9 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faltasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -131,7 +116,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.AutoScroll = true;
-            this.splitContainer2.Panel1.Controls.Add(this.faltasDataGridView);
+            this.splitContainer2.Panel1.Controls.Add(this.splitContainer3);
             // 
             // splitContainer2.Panel2
             // 
@@ -159,25 +144,14 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // faltasBindingSource
-            // 
-            this.faltasBindingSource.DataMember = "Faltas";
-            this.faltasBindingSource.DataSource = this.database1DataSet;
-            // 
-            // faltasTableAdapter
-            // 
-            this.faltasTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.AlunoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.Diretor_Turma1TableAdapter = null;
+            this.tableAdapterManager.Diretor_Turma2TableAdapter = null;
+            this.tableAdapterManager.Diretor_Turma3TableAdapter = null;
             this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
             this.tableAdapterManager.Encarregado_EducacaoTableAdapter = null;
             this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
@@ -186,124 +160,36 @@
             this.tableAdapterManager.TurmasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // faltasDataGridView
+            // splitContainer3
             // 
-            this.faltasDataGridView.AllowUserToAddRows = false;
-            this.faltasDataGridView.AllowUserToDeleteRows = false;
-            this.faltasDataGridView.AutoGenerateColumns = false;
-            this.faltasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.faltasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20});
-            this.faltasDataGridView.DataSource = this.faltasBindingSource;
-            this.faltasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.faltasDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.faltasDataGridView.Name = "faltasDataGridView";
-            this.faltasDataGridView.ReadOnly = true;
-            this.faltasDataGridView.Size = new System.Drawing.Size(987, 223);
-            this.faltasDataGridView.TabIndex = 0;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // dataGridViewTextBoxColumn1
+            // splitContainer3.Panel1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_Ocorrencia";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Ocorrência";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.splitContainer3.Panel1.Controls.Add(this.button1);
+            this.splitContainer3.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer3.Size = new System.Drawing.Size(987, 223);
+            this.splitContainer3.SplitterDistance = 36;
+            this.splitContainer3.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn2
+            // textBox1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Aluno";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Aluno Participado";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.textBox1.Location = new System.Drawing.Point(12, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(147, 20);
+            this.textBox1.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn4
+            // button1
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Encarregado_Educacao";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Encarregado Educação";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Aluno_Participante";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Aluno Participante";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Docente_Discente";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Docente/Discente";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Diretor_Turma";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Diretor Turma";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Instrutor";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Instrutor";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Observacoes";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Observações";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Testemunhas";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Testemunhas";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Data_Factos";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Data Factos";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Data_Notificacao";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Data Notificação";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Medida_Disciplinar";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Medida Disciplinar";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Detalhes_Medida";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Detalhes Medida Disciplinar";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.button1.Location = new System.Drawing.Point(165, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Pesquisar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form4
             // 
@@ -327,9 +213,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faltasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.faltasDataGridView)).EndInit();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,23 +238,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource faltasBindingSource;
-        private Database1DataSetTableAdapters.FaltasTableAdapter faltasTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView faltasDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

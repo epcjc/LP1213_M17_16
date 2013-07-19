@@ -11,11 +11,7 @@ namespace Projeto_PAP
 {
     public partial class Form2 : Form
     {
-        public void atualizarDataGrid()
-        {
-            this.professor_TurmaTableAdapter.FillProfessorTurma(this.escolaDataSet.Professor_Turma);
-            this.professor_TurmaDataGridView.Refresh();
-        }
+        
 
 
         
@@ -28,8 +24,6 @@ namespace Projeto_PAP
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'escolaDataSet.Professor_Turma' table. You can move, or remove it, as needed.
-            this.professor_TurmaTableAdapter.FillProfessorTurma(this.escolaDataSet.Professor_Turma);
             
         }
 
@@ -42,28 +36,28 @@ namespace Projeto_PAP
         {
             Form7 frm = new Form7();
             frm.ShowDialog();
-            atualizarDataGrid();
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form10 frm = new Form10();
             frm.ShowDialog();
-            atualizarDataGrid();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Apagar_DiretorTurma frm = new Apagar_DiretorTurma();
             frm.ShowDialog();
-            atualizarDataGrid();
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Pesquisa_DiretorTurma frm = new Pesquisa_DiretorTurma();
             frm.ShowDialog();
-            atualizarDataGrid();
+           
         }
 
 

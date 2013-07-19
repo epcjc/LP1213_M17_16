@@ -18,8 +18,6 @@ namespace Projeto_PAP
 
         private void Pesquisa_DiretorTurma_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'escolaDataSet.Professor_Turma' table. You can move, or remove it, as needed.
-            this.professor_TurmaTableAdapter.FillProfessorTurma(this.escolaDataSet.Professor_Turma);
             
         }
 
@@ -30,7 +28,7 @@ namespace Projeto_PAP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.professor_TurmaTableAdapter.FillByPesDiretor_Turma(this.escolaDataSet.Professor_Turma, this.textBox1.Text);
+            //this.professor_TurmaTableAdapter.FillByPesDiretor_Turma(this.escolaDataSet.Professor_Turma, this.textBox1.Text);
         }
     }
 }

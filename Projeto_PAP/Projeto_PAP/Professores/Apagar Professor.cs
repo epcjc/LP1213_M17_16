@@ -30,7 +30,7 @@ namespace Projeto_PAP
         {
             try
             {
-                this.professoresTableAdapter.DeleteProfessor(Convert.ToInt16(this.comboBox1.SelectedValue));
+                //this.professoresTableAdapter.DeleteProfessor(Convert.ToInt16(this.comboBox1.SelectedValue));
                 MessageBox.Show("Eliminado com Sucesso");
                 this.Close();
             }

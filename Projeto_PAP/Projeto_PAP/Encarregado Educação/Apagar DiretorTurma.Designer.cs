@@ -41,8 +41,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.escolaDataSet = new Projeto_PAP.EscolaDataSet();
             this.professorTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.professor_TurmaTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.Professor_TurmaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -176,10 +174,6 @@
             this.professorTurmaBindingSource.DataMember = "Professor_Turma";
             this.professorTurmaBindingSource.DataSource = this.escolaDataSet;
             // 
-            // professor_TurmaTableAdapter
-            // 
-            this.professor_TurmaTableAdapter.ClearBeforeFill = true;
-            // 
             // Apagar_DiretorTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +216,5 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private EscolaDataSet escolaDataSet;
         private System.Windows.Forms.BindingSource professorTurmaBindingSource;
-        private EscolaDataSetTableAdapters.Professor_TurmaTableAdapter professor_TurmaTableAdapter;
     }
 }

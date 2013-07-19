@@ -30,7 +30,7 @@ namespace Projeto_PAP
         {
             try
             {
-                this.alunosTableAdapter.DeleteAluno(Convert.ToString(this.comboBox1.SelectedValue));
+                //this.alunosTableAdapter.DeleteAluno(Convert.ToString(this.comboBox1.SelectedValue));
                 
                 MessageBox.Show("Eliminado com Sucesso");
                 this.Close();

@@ -33,7 +33,7 @@ namespace Projeto_PAP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.professoresTableAdapter.FillByPesProfessores(this.escolaDataSet.Professores, this.textBox1.Text);
+            //this.professoresTableAdapter.FillByPesProfessores(this.escolaDataSet.Professores, this.textBox1.Text);
         }
 
         private void professoresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
