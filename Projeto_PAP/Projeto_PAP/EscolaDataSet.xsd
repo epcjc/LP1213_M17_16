@@ -510,6 +510,43 @@ FROM         DiretoresTurma INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EscolaConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     Ocorrencias.id_ocorrencia, Turmas.descricao AS Turma, Alunos.nome AS Aluno, Professores.nome AS DiretorTurma, Ocorrencias.participante, 
+                      Ocorrencias.outrosParticipantes, Ocorrencias.instrutor, Ocorrencias.observações, Ocorrencias.testemunhas, Ocorrencias.dataFactos, 
+                      Ocorrencias.dataNotificacao, MedidasDisciplinares.medida, Ocorrencias.detalhes
+FROM         Alunos INNER JOIN
+                      Ocorrencias ON Alunos.id_aluno = Ocorrencias.id_alunoParticipado INNER JOIN
+                      Turmas ON Alunos.id_turma = Turmas.id_turma AND Ocorrencias.id_turma = Turmas.id_turma INNER JOIN
+                      MedidasDisciplinares ON Ocorrencias.id_medida = MedidasDisciplinares.id INNER JOIN
+                      DiretoresTurma ON Turmas.id_turma = DiretoresTurma.id_turma INNER JOIN
+                      Professores ON DiretoresTurma.id_professor = Professores.id INNER JOIN
+                      Cursos ON Turmas.id_curso = Cursos.id_curso</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_ocorrencia" DataSetColumn="id_ocorrencia" />
+              <Mapping SourceColumn="Turma" DataSetColumn="Turma" />
+              <Mapping SourceColumn="Aluno" DataSetColumn="Aluno" />
+              <Mapping SourceColumn="DiretorTurma" DataSetColumn="DiretorTurma" />
+              <Mapping SourceColumn="participante" DataSetColumn="participante" />
+              <Mapping SourceColumn="outrosParticipantes" DataSetColumn="outrosParticipantes" />
+              <Mapping SourceColumn="instrutor" DataSetColumn="instrutor" />
+              <Mapping SourceColumn="observações" DataSetColumn="observações" />
+              <Mapping SourceColumn="testemunhas" DataSetColumn="testemunhas" />
+              <Mapping SourceColumn="dataFactos" DataSetColumn="dataFactos" />
+              <Mapping SourceColumn="dataNotificacao" DataSetColumn="dataNotificacao" />
+              <Mapping SourceColumn="medida" DataSetColumn="medida" />
+              <Mapping SourceColumn="detalhes" DataSetColumn="detalhes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -765,6 +802,85 @@ FROM         DiretoresTurma INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_ocorrencia" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_ocorrencia" msprop:Generator_ColumnPropNameInRow="id_ocorrencia" msprop:Generator_ColumnPropNameInTable="id_ocorrenciaColumn" msprop:Generator_UserColumnName="id_ocorrencia" type="xs:int" />
+              <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Aluno" msprop:Generator_ColumnVarNameInTable="columnAluno" msprop:Generator_ColumnPropNameInRow="Aluno" msprop:Generator_ColumnPropNameInTable="AlunoColumn" msprop:Generator_UserColumnName="Aluno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiretorTurma" msprop:Generator_ColumnVarNameInTable="columnDiretorTurma" msprop:Generator_ColumnPropNameInRow="DiretorTurma" msprop:Generator_ColumnPropNameInTable="DiretorTurmaColumn" msprop:Generator_UserColumnName="DiretorTurma">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="participante" msprop:Generator_ColumnVarNameInTable="columnparticipante" msprop:Generator_ColumnPropNameInRow="participante" msprop:Generator_ColumnPropNameInTable="participanteColumn" msprop:Generator_UserColumnName="participante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="outrosParticipantes" msprop:Generator_ColumnVarNameInTable="columnoutrosParticipantes" msprop:Generator_ColumnPropNameInRow="outrosParticipantes" msprop:Generator_ColumnPropNameInTable="outrosParticipantesColumn" msprop:Generator_UserColumnName="outrosParticipantes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="instrutor" msprop:Generator_ColumnVarNameInTable="columninstrutor" msprop:Generator_ColumnPropNameInRow="instrutor" msprop:Generator_ColumnPropNameInTable="instrutorColumn" msprop:Generator_UserColumnName="instrutor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="observações" msprop:Generator_ColumnVarNameInTable="columnobservações" msprop:Generator_ColumnPropNameInRow="observações" msprop:Generator_ColumnPropNameInTable="observaçõesColumn" msprop:Generator_UserColumnName="observações">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="testemunhas" msprop:Generator_ColumnVarNameInTable="columntestemunhas" msprop:Generator_ColumnPropNameInRow="testemunhas" msprop:Generator_ColumnPropNameInTable="testemunhasColumn" msprop:Generator_UserColumnName="testemunhas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dataFactos" msprop:Generator_ColumnVarNameInTable="columndataFactos" msprop:Generator_ColumnPropNameInRow="dataFactos" msprop:Generator_ColumnPropNameInTable="dataFactosColumn" msprop:Generator_UserColumnName="dataFactos" type="xs:dateTime" />
+              <xs:element name="dataNotificacao" msprop:Generator_ColumnVarNameInTable="columndataNotificacao" msprop:Generator_ColumnPropNameInRow="dataNotificacao" msprop:Generator_ColumnPropNameInTable="dataNotificacaoColumn" msprop:Generator_UserColumnName="dataNotificacao" type="xs:dateTime" />
+              <xs:element name="medida" msprop:Generator_ColumnVarNameInTable="columnmedida" msprop:Generator_ColumnPropNameInRow="medida" msprop:Generator_ColumnPropNameInTable="medidaColumn" msprop:Generator_UserColumnName="medida">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="detalhes" msprop:Generator_ColumnVarNameInTable="columndetalhes" msprop:Generator_ColumnPropNameInRow="detalhes" msprop:Generator_ColumnPropNameInTable="detalhesColumn" msprop:Generator_UserColumnName="detalhes">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -801,18 +917,22 @@ FROM         DiretoresTurma INNER JOIN
       <xs:field xpath="mstns:id_turma" />
       <xs:field xpath="mstns:id_curso" />
     </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id_ocorrencia" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Alunos_Turmas" msdata:parent="Turmas" msdata:child="Alunos" msdata:parentkey="id_turma" msdata:childkey="id_turma" msprop:Generator_UserChildTable="Alunos" msprop:Generator_ChildPropName="GetAlunosRows" msprop:Generator_ParentPropName="TurmasRow" msprop:Generator_UserRelationName="FK_Alunos_Turmas" msprop:Generator_RelationVarName="relationFK_Alunos_Turmas" msprop:Generator_UserParentTable="Turmas" />
-      <msdata:Relationship name="FK_DiretoresTurma_Professores" msdata:parent="Professores" msdata:child="DiretoresTurma" msdata:parentkey="id" msdata:childkey="id_professor" msprop:Generator_UserChildTable="DiretoresTurma" msprop:Generator_ChildPropName="GetDiretoresTurmaRows" msprop:Generator_ParentPropName="ProfessoresRow" msprop:Generator_UserRelationName="FK_DiretoresTurma_Professores" msprop:Generator_RelationVarName="relationFK_DiretoresTurma_Professores" msprop:Generator_UserParentTable="Professores" />
-      <msdata:Relationship name="FK_DiretoresTurma_Turmas" msdata:parent="Turmas" msdata:child="DiretoresTurma" msdata:parentkey="id_turma" msdata:childkey="id_turma" msprop:Generator_UserChildTable="DiretoresTurma" msprop:Generator_ChildPropName="GetDiretoresTurmaRows" msprop:Generator_ParentPropName="TurmasRow" msprop:Generator_UserRelationName="FK_DiretoresTurma_Turmas" msprop:Generator_RelationVarName="relationFK_DiretoresTurma_Turmas" msprop:Generator_UserParentTable="Turmas" />
-      <msdata:Relationship name="FK_Turmas_Cursos" msdata:parent="Cursos" msdata:child="Turmas" msdata:parentkey="id_curso" msdata:childkey="id_curso" msprop:Generator_UserChildTable="Turmas" msprop:Generator_ChildPropName="GetTurmasRows" msprop:Generator_ParentPropName="CursosRow" msprop:Generator_UserRelationName="FK_Turmas_Cursos" msprop:Generator_RelationVarName="relationFK_Turmas_Cursos" msprop:Generator_UserParentTable="Cursos" />
-      <msdata:Relationship name="FK_Ocorrencias_Alunos" msdata:parent="Alunos" msdata:child="Ocorrencias" msdata:parentkey="id_aluno" msdata:childkey="id_alunoParticipado" msprop:Generator_UserChildTable="Ocorrencias" msprop:Generator_ChildPropName="GetOcorrenciasRows" msprop:Generator_ParentPropName="AlunosRow" msprop:Generator_UserRelationName="FK_Ocorrencias_Alunos" msprop:Generator_RelationVarName="relationFK_Ocorrencias_Alunos" msprop:Generator_UserParentTable="Alunos" />
-      <msdata:Relationship name="FK_Ocorrencias_Turmas" msdata:parent="Turmas" msdata:child="Ocorrencias" msdata:parentkey="id_turma" msdata:childkey="id_turma" msprop:Generator_UserChildTable="Ocorrencias" msprop:Generator_ChildPropName="GetOcorrenciasRows" msprop:Generator_ParentPropName="TurmasRow" msprop:Generator_UserRelationName="FK_Ocorrencias_Turmas" msprop:Generator_RelationVarName="relationFK_Ocorrencias_Turmas" msprop:Generator_UserParentTable="Turmas" />
-      <msdata:Relationship name="MedidasDisciplinares_Ocorrencias" msdata:parent="MedidasDisciplinares" msdata:child="Ocorrencias" msdata:parentkey="id" msdata:childkey="id_medida" msprop:Generator_UserChildTable="Ocorrencias" msprop:Generator_ChildPropName="GetOcorrenciasRows" msprop:Generator_ParentPropName="MedidasDisciplinaresRow" msprop:Generator_UserRelationName="MedidasDisciplinares_Ocorrencias" msprop:Generator_RelationVarName="relationMedidasDisciplinares_Ocorrencias" msprop:Generator_UserParentTable="MedidasDisciplinares" />
-      <msdata:Relationship name="FK_Turmas_Cursos1" msdata:parent="Turma_Curso" msdata:child="Turmas" msdata:parentkey="id_curso" msdata:childkey="id_curso" msprop:Generator_UserChildTable="Turmas" msprop:Generator_ChildPropName="GetTurmasRows" msprop:Generator_ParentPropName="Turma_CursoRow" msprop:Generator_UserRelationName="FK_Turmas_Cursos1" msprop:Generator_RelationVarName="relationFK_Turmas_Cursos1" msprop:Generator_UserParentTable="Turma_Curso" />
-      <msdata:Relationship name="FK_DiretoresTurma_Professores1" msdata:parent="Turma_DT" msdata:child="DiretoresTurma" msdata:parentkey="id" msdata:childkey="id_professor" msprop:Generator_UserChildTable="DiretoresTurma" msprop:Generator_ChildPropName="GetDiretoresTurmaRows" msprop:Generator_ParentPropName="Turma_DTRow" msprop:Generator_UserRelationName="FK_DiretoresTurma_Professores1" msprop:Generator_RelationVarName="relationFK_DiretoresTurma_Professores1" msprop:Generator_UserParentTable="Turma_DT" />
+      <msdata:Relationship name="FK_Alunos_Turmas" msdata:parent="Turmas" msdata:child="Alunos" msdata:parentkey="id_turma" msdata:childkey="id_turma" msprop:Generator_UserChildTable="Alunos" msprop:Generator_ChildPropName="GetAlunosRows" msprop:Generator_UserParentTable="Turmas" msprop:Generator_UserRelationName="FK_Alunos_Turmas" msprop:Generator_RelationVarName="relationFK_Alunos_Turmas" msprop:Generator_ParentPropName="TurmasRow" />
+      <msdata:Relationship name="FK_DiretoresTurma_Professores" msdata:parent="Professores" msdata:child="DiretoresTurma" msdata:parentkey="id" msdata:childkey="id_professor" msprop:Generator_UserChildTable="DiretoresTurma" msprop:Generator_ChildPropName="GetDiretoresTurmaRows" msprop:Generator_UserParentTable="Professores" msprop:Generator_UserRelationName="FK_DiretoresTurma_Professores" msprop:Generator_RelationVarName="relationFK_DiretoresTurma_Professores" msprop:Generator_ParentPropName="ProfessoresRow" />
+      <msdata:Relationship name="FK_DiretoresTurma_Turmas" msdata:parent="Turmas" msdata:child="DiretoresTurma" msdata:parentkey="id_turma" msdata:childkey="id_turma" msprop:Generator_UserChildTable="DiretoresTurma" msprop:Generator_ChildPropName="GetDiretoresTurmaRows" msprop:Generator_UserParentTable="Turmas" msprop:Generator_UserRelationName="FK_DiretoresTurma_Turmas" msprop:Generator_RelationVarName="relationFK_DiretoresTurma_Turmas" msprop:Generator_ParentPropName="TurmasRow" />
+      <msdata:Relationship name="FK_Turmas_Cursos" msdata:parent="Cursos" msdata:child="Turmas" msdata:parentkey="id_curso" msdata:childkey="id_curso" msprop:Generator_UserChildTable="Turmas" msprop:Generator_ChildPropName="GetTurmasRows" msprop:Generator_UserParentTable="Cursos" msprop:Generator_UserRelationName="FK_Turmas_Cursos" msprop:Generator_RelationVarName="relationFK_Turmas_Cursos" msprop:Generator_ParentPropName="CursosRow" />
+      <msdata:Relationship name="FK_Ocorrencias_Alunos" msdata:parent="Alunos" msdata:child="Ocorrencias" msdata:parentkey="id_aluno" msdata:childkey="id_alunoParticipado" msprop:Generator_UserChildTable="Ocorrencias" msprop:Generator_ChildPropName="GetOcorrenciasRows" msprop:Generator_UserParentTable="Alunos" msprop:Generator_UserRelationName="FK_Ocorrencias_Alunos" msprop:Generator_RelationVarName="relationFK_Ocorrencias_Alunos" msprop:Generator_ParentPropName="AlunosRow" />
+      <msdata:Relationship name="FK_Ocorrencias_Turmas" msdata:parent="Turmas" msdata:child="Ocorrencias" msdata:parentkey="id_turma" msdata:childkey="id_turma" msprop:Generator_UserChildTable="Ocorrencias" msprop:Generator_ChildPropName="GetOcorrenciasRows" msprop:Generator_UserParentTable="Turmas" msprop:Generator_UserRelationName="FK_Ocorrencias_Turmas" msprop:Generator_RelationVarName="relationFK_Ocorrencias_Turmas" msprop:Generator_ParentPropName="TurmasRow" />
+      <msdata:Relationship name="MedidasDisciplinares_Ocorrencias" msdata:parent="MedidasDisciplinares" msdata:child="Ocorrencias" msdata:parentkey="id" msdata:childkey="id_medida" msprop:Generator_UserChildTable="Ocorrencias" msprop:Generator_ChildPropName="GetOcorrenciasRows" msprop:Generator_UserParentTable="MedidasDisciplinares" msprop:Generator_UserRelationName="MedidasDisciplinares_Ocorrencias" msprop:Generator_RelationVarName="relationMedidasDisciplinares_Ocorrencias" msprop:Generator_ParentPropName="MedidasDisciplinaresRow" />
+      <msdata:Relationship name="FK_Turmas_Cursos1" msdata:parent="Turma_Curso" msdata:child="Turmas" msdata:parentkey="id_curso" msdata:childkey="id_curso" msprop:Generator_UserChildTable="Turmas" msprop:Generator_ChildPropName="GetTurmasRows" msprop:Generator_UserParentTable="Turma_Curso" msprop:Generator_UserRelationName="FK_Turmas_Cursos1" msprop:Generator_RelationVarName="relationFK_Turmas_Cursos1" msprop:Generator_ParentPropName="Turma_CursoRow" />
+      <msdata:Relationship name="FK_DiretoresTurma_Professores1" msdata:parent="Turma_DT" msdata:child="DiretoresTurma" msdata:parentkey="id" msdata:childkey="id_professor" msprop:Generator_UserChildTable="DiretoresTurma" msprop:Generator_ChildPropName="GetDiretoresTurmaRows" msprop:Generator_UserParentTable="Turma_DT" msprop:Generator_UserRelationName="FK_DiretoresTurma_Professores1" msprop:Generator_RelationVarName="relationFK_DiretoresTurma_Professores1" msprop:Generator_ParentPropName="Turma_DTRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

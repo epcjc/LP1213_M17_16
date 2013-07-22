@@ -27,6 +27,9 @@ namespace Projeto_PAP
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'escolaDataSet.DataTable1' table. You can move, or remove it, as needed.
+            this.dataTable1TableAdapter.Fill(this.escolaDataSet.DataTable1);
+            
             
          }
 
@@ -45,6 +48,7 @@ namespace Projeto_PAP
             atualizarDataGrid();
             
         }
+
 
         
 
