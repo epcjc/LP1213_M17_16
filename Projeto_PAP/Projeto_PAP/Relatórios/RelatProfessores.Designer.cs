@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelatAlunoTurma));
+            this.ProfessoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.EscolaDataSet = new Projeto_PAP.EscolaDataSet();
             this.AlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Database1DataSet = new Projeto_PAP.Database1DataSet();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -41,9 +43,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.AlunoTableAdapter = new Projeto_PAP.Database1DataSetTableAdapters.AlunoTableAdapter();
-            this.EscolaDataSet = new Projeto_PAP.EscolaDataSet();
-            this.ProfessoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProfessoresTableAdapter = new Projeto_PAP.EscolaDataSetTableAdapters.ProfessoresTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfessoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EscolaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -55,9 +57,17 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EscolaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfessoresBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ProfessoresBindingSource
+            // 
+            this.ProfessoresBindingSource.DataMember = "Professores";
+            this.ProfessoresBindingSource.DataSource = this.EscolaDataSet;
+            // 
+            // EscolaDataSet
+            // 
+            this.EscolaDataSet.DataSetName = "EscolaDataSet";
+            this.EscolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // AlunoBindingSource
             // 
@@ -162,16 +172,6 @@
             // 
             this.AlunoTableAdapter.ClearBeforeFill = true;
             // 
-            // EscolaDataSet
-            // 
-            this.EscolaDataSet.DataSetName = "EscolaDataSet";
-            this.EscolaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ProfessoresBindingSource
-            // 
-            this.ProfessoresBindingSource.DataMember = "Professores";
-            this.ProfessoresBindingSource.DataSource = this.EscolaDataSet;
-            // 
             // ProfessoresTableAdapter
             // 
             this.ProfessoresTableAdapter.ClearBeforeFill = true;
@@ -183,11 +183,11 @@
             this.ClientSize = new System.Drawing.Size(741, 272);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "RelatAlunoTurma";
             this.Text = "Relatório Professores";
             this.Load += new System.EventHandler(this.RelatAlunoTurma_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ProfessoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EscolaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -200,8 +200,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.EscolaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfessoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
