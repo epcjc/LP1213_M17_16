@@ -31,10 +31,7 @@ namespace Projeto_PAP
 
         }
 
-        private void ocorrenciaBindingNavigator_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void ocorrenciaDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -42,6 +39,13 @@ namespace Projeto_PAP
             frmGerirOcorrencia frm = new frmGerirOcorrencia();
             frm.Id_ocorrencia = Convert.ToInt16(dgvr.Cells[0].Value);
             frm.ShowDialog();
+
+            if (frm.fechouOcorrencia)
+            {
+                this.ocorrenciaTableAdapter.FillByAbertas(this.database1DataSet1.Ocorrencia);
+            }
+
+            frm.Dispose();
         }
     }
 }

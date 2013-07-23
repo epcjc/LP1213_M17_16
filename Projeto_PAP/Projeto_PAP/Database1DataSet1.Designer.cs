@@ -5853,20 +5853,34 @@ SELECT ID_Ocorrencia, ID_AlunoParticipado, id_professorparticipante, id_alunopar
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT * FROM dbo.Ocorrencia";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT * FROM dbo.Ocorrencia\r\nwhere estado = \'aberta\'";
+            this._commandCollection[1].CommandText = "UPDATE [dbo].[Ocorrencia] SET [Medida_Disciplinar] = @Medida_Disciplinar, [Detalh" +
+                "es_Medida] = @Detalhes_Medida, estado=\'fechada\'  WHERE ID_Ocorrencia = @ID_Ocorr" +
+                "encia";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medida_Disciplinar", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Medida_Disciplinar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Detalhes_Medida", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Detalhes_Medida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Ocorrencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ocorrencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM dbo.Ocorrencia\r\nWHERE ID_Ocorrencia = @id_Ocorrencia";
+            this._commandCollection[2].CommandText = "SELECT * FROM dbo.Ocorrencia\r\nwhere estado = \'aberta\'";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Ocorrencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ocorrencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT * FROM dbo.Ocorrencia\r\nWHERE ID_Ocorrencia = @id_Ocorrencia";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Ocorrencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Ocorrencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT * FROM dbo.Ocorrencia\r\nwhere id_alunoParticipado = @idparticipado";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idparticipado", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_AlunoParticipado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5898,7 +5912,7 @@ SELECT ID_Ocorrencia, ID_AlunoParticipado, id_professorparticipante, id_alunopar
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByAbertas(Database1DataSet1.OcorrenciaDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -5911,7 +5925,7 @@ SELECT ID_Ocorrencia, ID_AlunoParticipado, id_professorparticipante, id_alunopar
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Database1DataSet1.OcorrenciaDataTable GetDataByAbertas() {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             Database1DataSet1.OcorrenciaDataTable dataTable = new Database1DataSet1.OcorrenciaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5922,7 +5936,7 @@ SELECT ID_Ocorrencia, ID_AlunoParticipado, id_professorparticipante, id_alunopar
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByIdOcorrencia(Database1DataSet1.OcorrenciaDataTable dataTable, int id_Ocorrencia) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_Ocorrencia));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5936,8 +5950,34 @@ SELECT ID_Ocorrencia, ID_AlunoParticipado, id_professorparticipante, id_alunopar
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Database1DataSet1.OcorrenciaDataTable GetDataByIdOcorrencia(int id_Ocorrencia) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_Ocorrencia));
+            Database1DataSet1.OcorrenciaDataTable dataTable = new Database1DataSet1.OcorrenciaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIdParticipado(Database1DataSet1.OcorrenciaDataTable dataTable, int idparticipado) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idparticipado));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Database1DataSet1.OcorrenciaDataTable GetDataByIdParticipado(int idparticipado) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idparticipado));
             Database1DataSet1.OcorrenciaDataTable dataTable = new Database1DataSet1.OcorrenciaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6347,6 +6387,42 @@ SELECT ID_Ocorrencia, ID_AlunoParticipado, id_professorparticipante, id_alunopar
                     global::System.Nullable<int> Original_dias_preventiva, 
                     string Original_estado) {
             return this.Update(ID_AlunoParticipado, id_professorparticipante, id_alunoparticipante, Observacoes, Data_Factos, Instrutor, Data_Notificacao, Medida_Disciplinar, Detalhes_Medida, dias_preventiva, estado, Original_ID_Ocorrencia, Original_ID_AlunoParticipado, Original_id_professorparticipante, Original_id_alunoparticipante, Original_Observacoes, Original_Data_Factos, Original_Instrutor, Original_Data_Notificacao, Original_Medida_Disciplinar, Original_Detalhes_Medida, Original_dias_preventiva, Original_estado, Original_ID_Ocorrencia);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int AtualizarMedida(string Medida_Disciplinar, string Detalhes_Medida, int ID_Ocorrencia) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Medida_Disciplinar == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Medida_Disciplinar));
+            }
+            if ((Detalhes_Medida == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Detalhes_Medida));
+            }
+            command.Parameters[2].Value = ((int)(ID_Ocorrencia));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -7378,23 +7454,34 @@ SELECT cod, id_ocorrencia, id_testemunha, nome_testemunha, testemunho, data_test
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        OcorrenciaTestemunhas.*\r\nFROM            OcorrenciaTestemunhas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        OcorrenciaTestemunhas.*\r\nFROM            OcorrenciaTestemunhas\r\nwhe" +
-                "re cod=@cod";
+            this._commandCollection[1].CommandText = "UPDATE [OcorrenciaTestemunhas] SET testemunho = @testemunho WHERE cod = @cod";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@testemunho", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "testemunho", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        OcorrenciaTestemunhas.*\r\nFROM            OcorrenciaTestemunhas\r\nWhe" +
-                "re  id_ocorrencia = @id_ocorrencia";
+            this._commandCollection[2].CommandText = "DELETE FROM [OcorrenciaTestemunhas] WHERE cod = @cod";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_ocorrencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_ocorrencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        OcorrenciaTestemunhas.*\r\nFROM            OcorrenciaTestemunhas\r\nwhe" +
+                "re cod=@cod";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "cod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT        OcorrenciaTestemunhas.*\r\nFROM            OcorrenciaTestemunhas\r\nWhe" +
+                "re  id_ocorrencia = @id_ocorrencia";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_ocorrencia", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_ocorrencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7426,7 +7513,7 @@ SELECT cod, id_ocorrencia, id_testemunha, nome_testemunha, testemunho, data_test
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByCod(Database1DataSet1.OcorrenciaTestemunhasDataTable dataTable, int cod) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(cod));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7440,7 +7527,7 @@ SELECT cod, id_ocorrencia, id_testemunha, nome_testemunha, testemunho, data_test
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Database1DataSet1.OcorrenciaTestemunhasDataTable GetDataByCod(int cod) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(cod));
             Database1DataSet1.OcorrenciaTestemunhasDataTable dataTable = new Database1DataSet1.OcorrenciaTestemunhasDataTable();
             this.Adapter.Fill(dataTable);
@@ -7452,7 +7539,7 @@ SELECT cod, id_ocorrencia, id_testemunha, nome_testemunha, testemunho, data_test
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByIdOcorrencia(Database1DataSet1.OcorrenciaTestemunhasDataTable dataTable, int id_ocorrencia) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_ocorrencia));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7466,7 +7553,7 @@ SELECT cod, id_ocorrencia, id_testemunha, nome_testemunha, testemunho, data_test
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Database1DataSet1.OcorrenciaTestemunhasDataTable GetDataByIOcorrencia(int id_ocorrencia) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_ocorrencia));
             Database1DataSet1.OcorrenciaTestemunhasDataTable dataTable = new Database1DataSet1.OcorrenciaTestemunhasDataTable();
             this.Adapter.Fill(dataTable);
@@ -7638,6 +7725,60 @@ SELECT cod, id_ocorrencia, id_testemunha, nome_testemunha, testemunho, data_test
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(int id_ocorrencia, int id_testemunha, string nome_testemunha, string testemunho, System.DateTime data_testemunho, int Original_cod, int Original_id_ocorrencia, int Original_id_testemunha, string Original_nome_testemunha, string Original_testemunho, System.DateTime Original_data_testemunho) {
             return this.Update(id_ocorrencia, id_testemunha, nome_testemunha, testemunho, data_testemunho, Original_cod, Original_id_ocorrencia, Original_id_testemunha, Original_nome_testemunha, Original_testemunho, Original_data_testemunho, Original_cod);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int AtualizarTestemunho(string testemunho, int cod) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((testemunho == null)) {
+                throw new global::System.ArgumentNullException("testemunho");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(testemunho));
+            }
+            command.Parameters[1].Value = ((int)(cod));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int EliminarTestemunho(int cod) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((int)(cod));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

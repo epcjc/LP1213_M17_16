@@ -19,6 +19,8 @@ namespace Projeto_PAP
             set;
         }
 
+        public Boolean fechouOcorrencia;
+
         public frmGerirOcorrencia()
         {
             InitializeComponent();
@@ -26,19 +28,29 @@ namespace Projeto_PAP
 
         private void frmGerirOcorrencia_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'database1DataSet1.Ocorrencia' table. You can move, or remove it, as needed.
+            this.ocorrenciaTableAdapter.Fill(this.database1DataSet1.Ocorrencia);
+            
+            
             // TODO: This line of code loads data into the 'database1DataSet1.OcorrenciaTestemunhas' table. You can move, or remove it, as needed.
-            this.ocorrenciaTestemunhasTableAdapter.Fill(this.database1DataSet1.OcorrenciaTestemunhas);
+            this.ocorrenciaTestemunhasTableAdapter.FillByIdOcorrencia(this.database1DataSet1.OcorrenciaTestemunhas, Id_ocorrencia);
 
             // TODO: This line of code loads data into the 'database1DataSet1.AlunosOcorrencia' table. You can move, or remove it, as needed.
             this.alunosOcorrenciaTableAdapter.FillByIdOcorrencia(this.database1DataSet1.AlunosOcorrencia, Id_ocorrencia);
 
             if (database1DataSet1.OcorrenciaTestemunhas.Rows.Count == 0)
             {
-                this.button2.Visible = false;
+                this.button2.Enabled = false;
+                this.button3.Enabled = false;
             }
             else {
-                this.button2.Visible = true;
+                this.button2.Enabled = true;
+                this.button3.Enabled = true;
                 }
+
+            this.comboBox1.SelectedIndex = 0;
+
+            fechouOcorrencia = false;
 
         }
 
@@ -48,6 +60,7 @@ namespace Projeto_PAP
 
             DataRowView drv = (DataRowView) this.listBox1.SelectedItem;
             frm.Id_ocorrenciaTestemunha = Convert.ToInt16(drv[0]);
+            frm.mostraAlterar = true;
            
             frm.ShowDialog();
         }
@@ -59,7 +72,71 @@ namespace Projeto_PAP
 
             frm.ShowDialog();
 
-            this.ocorrenciaTestemunhasTableAdapter.Fill(this.database1DataSet1.OcorrenciaTestemunhas);
+            this.ocorrenciaTestemunhasTableAdapter.FillByIdOcorrencia(this.database1DataSet1.OcorrenciaTestemunhas, Id_ocorrencia);
+
+            if (database1DataSet1.OcorrenciaTestemunhas.Rows.Count == 0)
+            {
+                this.button2.Enabled = false;
+                this.button3.Enabled = false;
+            }
+            else
+            {
+                this.button2.Enabled = true;
+                this.button3.Enabled = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DataRowView drv = (DataRowView)this.listBox1.SelectedItem;
+            this.ocorrenciaTestemunhasTableAdapter.EliminarTestemunho(Convert.ToInt16(drv[0]));
+
+            this.ocorrenciaTestemunhasTableAdapter.FillByIdOcorrencia(this.database1DataSet1.OcorrenciaTestemunhas, Id_ocorrencia);
+
+            if (database1DataSet1.OcorrenciaTestemunhas.Rows.Count == 0)
+            {
+                this.button2.Enabled = false;
+                this.button3.Enabled = false;
+            }
+            else
+            {
+                this.button2.Enabled = true;
+                this.button3.Enabled = true;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                if (this.textBox1.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("Medida não pode ser vazia");
+                    return;
+                }
+
+                if (database1DataSet1.OcorrenciaTestemunhas.Rows.Count == 0) {
+                     MessageBox.Show("Não existem autos!");
+                    return;
+                }
+
+                this.ocorrenciaTableAdapter.AtualizarMedida(this.comboBox1.SelectedItem.ToString(),
+                    this.textBox1.Text, Id_ocorrencia);
+                MessageBox.Show("Ocorrência fechada");
+
+                fechouOcorrencia = true;
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+
+           
 
         }
     }

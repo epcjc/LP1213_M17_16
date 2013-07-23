@@ -107,7 +107,7 @@
             this.ocorrenciaBindingNavigator.Size = new System.Drawing.Size(633, 25);
             this.ocorrenciaBindingNavigator.TabIndex = 0;
             this.ocorrenciaBindingNavigator.Text = "bindingNavigator1";
-            this.ocorrenciaBindingNavigator.RefreshItems += new System.EventHandler(this.ocorrenciaBindingNavigator_RefreshItems);
+          
             // 
             // bindingNavigatorCountItem
             // 

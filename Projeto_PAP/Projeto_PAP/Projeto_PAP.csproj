@@ -114,6 +114,12 @@
     <Compile Include="frmNovoAuto.Designer.cs">
       <DependentUpon>frmNovoAuto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOcorrenciaPorAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOcorrenciaPorAluno.Designer.cs">
+      <DependentUpon>frmOcorrenciaPorAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOcorrenciasAbertas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     </Compile>
     <Compile Include="frmVerAuto.Designer.cs">
       <DependentUpon>frmVerAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerDetalhesOcorrencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerDetalhesOcorrencia.Designer.cs">
+      <DependentUpon>frmVerDetalhesOcorrencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Ocorrências\Apagar Ocorrência.cs">
       <SubType>Form</SubType>
@@ -335,11 +347,17 @@
     <EmbeddedResource Include="frmNovoAuto.resx">
       <DependentUpon>frmNovoAuto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOcorrenciaPorAluno.resx">
+      <DependentUpon>frmOcorrenciaPorAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOcorrenciasAbertas.resx">
       <DependentUpon>frmOcorrenciasAbertas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerAuto.resx">
       <DependentUpon>frmVerAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerDetalhesOcorrencia.resx">
+      <DependentUpon>frmVerDetalhesOcorrencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ocorrências\Apagar Ocorrência.resx">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>

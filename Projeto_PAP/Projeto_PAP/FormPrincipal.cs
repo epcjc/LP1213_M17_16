@@ -74,6 +74,12 @@ namespace Projeto_PAP
             Help.ShowHelp(this, "Ajuda.chm");
         }
 
+         private void button2_Click_1(object sender, EventArgs e)
+         {
+             frmOcorrenciaPorAluno frm = new frmOcorrenciaPorAluno();
+             frm.ShowDialog();
+         }
+
         
 
         

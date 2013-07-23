@@ -19,6 +19,8 @@ namespace Projeto_PAP
             set;
         }
 
+        public Boolean mostraAlterar;
+
         
 
         public frmVerAuto()
@@ -37,11 +39,25 @@ namespace Projeto_PAP
             // TODO: This line of code loads data into the 'database1DataSet1.OcorrenciaTestemunhas' table. You can move, or remove it, as needed.
             this.ocorrenciaTestemunhasTableAdapter.FillByCod(this.database1DataSet1.OcorrenciaTestemunhas, Id_ocorrenciaTestemunha);
 
+            if (mostraAlterar)
+            {
+                this.button2.Visible = true;
+            }
+            else
+            {
+                this.button2.Visible = false;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.ocorrenciaTestemunhasTableAdapter.AtualizarTestemunho(this.testemunhoTextBox.Text, Id_ocorrenciaTestemunha);
         }
     }
 }

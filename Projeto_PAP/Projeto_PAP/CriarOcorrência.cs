@@ -44,25 +44,34 @@ namespace Projeto_PAP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ndias = 0;
-            if (radioButton1.Checked == true) {
-                ndias = Convert.ToInt16(this.textBox3.Text);
+            try
+            {
+                int ndias = 0;
+                if (radioButton1.Checked == true)
+                {
+                    ndias = Convert.ToInt16(this.textBox3.Text);
+                }
+
+                this.ocorrenciaTableAdapter.Insert(Convert.ToInt16(this.listBox1.SelectedValue),
+                    null,
+                    null,
+                    textBox2.Text,
+                    this.dateTimePicker1.Value,
+                    this.textBox5.Text,
+                    null,
+                    null,
+                    null,
+                    ndias,
+                    "aberta");
+
+
+                this.Close();
             }
-
-            this.ocorrenciaTableAdapter.Insert(Convert.ToInt16(this.listBox1.SelectedValue),
-                null,
-                null,
-                textBox2.Text,
-                this.dateTimePicker1.Value,
-                this.textBox5.Text,
-                null,
-                null,
-                null,
-                ndias,
-                "aberta");
-
-
-            this.Close();
+            catch
+            {
+                MessageBox.Show("ERRO");
+            }
+                
 
         }
 

@@ -31,7 +31,7 @@ namespace Projeto_PAP
             this.Aluno_EncTableAdapter.FillAlunoEncEduc(this.Database1DataSet.Aluno_Enc);
 
             this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
+          
         }
     }
 }

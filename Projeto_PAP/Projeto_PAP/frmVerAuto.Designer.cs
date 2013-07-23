@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.testemunhoTextBox = new System.Windows.Forms.TextBox();
             this.data_testemunhoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ocorrenciaTestemunhasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +94,7 @@
             this.nome_testemunhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ocorrenciaTestemunhasBindingSource, "nome_testemunha", true));
             this.nome_testemunhaTextBox.Location = new System.Drawing.Point(91, 74);
             this.nome_testemunhaTextBox.Name = "nome_testemunhaTextBox";
+            this.nome_testemunhaTextBox.ReadOnly = true;
             this.nome_testemunhaTextBox.Size = new System.Drawing.Size(120, 20);
             this.nome_testemunhaTextBox.TabIndex = 6;
             // 
@@ -127,17 +129,29 @@
             // data_testemunhoDateTimePicker
             // 
             this.data_testemunhoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.ocorrenciaTestemunhasBindingSource, "data_testemunho", true));
+            this.data_testemunhoDateTimePicker.Enabled = false;
             this.data_testemunhoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.data_testemunhoDateTimePicker.Location = new System.Drawing.Point(91, 31);
             this.data_testemunhoDateTimePicker.Name = "data_testemunhoDateTimePicker";
             this.data_testemunhoDateTimePicker.Size = new System.Drawing.Size(120, 20);
             this.data_testemunhoDateTimePicker.TabIndex = 12;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(242, 368);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Alterar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmVerAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 411);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.data_testemunhoDateTimePicker);
             this.Controls.Add(this.testemunhoTextBox);
             this.Controls.Add(this.button1);
@@ -169,5 +183,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox testemunhoTextBox;
         private System.Windows.Forms.DateTimePicker data_testemunhoDateTimePicker;
+        private System.Windows.Forms.Button button2;
     }
 }
