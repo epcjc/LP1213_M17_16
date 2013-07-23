@@ -327,7 +327,7 @@
             this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
             this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
             this.tableAdapterManager.OcorrenciaTableAdapter = this.ocorrenciaTableAdapter;
-            this.tableAdapterManager.OcorrenciaTestemunhasTableAdapter = null;
+           
             this.tableAdapterManager.ProfessoresTableAdapter = null;
             this.tableAdapterManager.TurmasTableAdapter = this.turmasTableAdapter;
             this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;

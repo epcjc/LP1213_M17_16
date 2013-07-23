@@ -77,7 +77,6 @@
             this.tableAdapterManager.Diretor_TurmaTableAdapter = null;
             this.tableAdapterManager.Medida_DisciplinarTableAdapter = null;
             this.tableAdapterManager.OcorrenciaTableAdapter = this.ocorrenciaTableAdapter;
-            this.tableAdapterManager.OcorrenciaTestemunhasTableAdapter = null;
             this.tableAdapterManager.ProfessoresTableAdapter = null;
             this.tableAdapterManager.TurmasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_PAP.Database1DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -196,6 +195,7 @@
             this.ocorrenciaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ocorrenciaDataGridView.Size = new System.Drawing.Size(602, 220);
             this.ocorrenciaDataGridView.TabIndex = 1;
+            this.ocorrenciaDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ocorrenciaDataGridView_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 

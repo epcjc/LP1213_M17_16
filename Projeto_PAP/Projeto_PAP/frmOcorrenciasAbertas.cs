@@ -35,5 +35,13 @@ namespace Projeto_PAP
         {
 
         }
+
+        private void ocorrenciaDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow dgvr = this.ocorrenciaDataGridView.Rows[e.RowIndex];
+            frmGerirOcorrencia frm = new frmGerirOcorrencia();
+            frm.Id_ocorrencia = Convert.ToInt16(dgvr.Cells[0].Value);
+            frm.ShowDialog();
+        }
     }
 }

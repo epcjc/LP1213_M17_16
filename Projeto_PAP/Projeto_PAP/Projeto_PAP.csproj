@@ -76,6 +76,10 @@
     <Compile Include="CriarOcorrência.Designer.cs">
       <DependentUpon>CriarOcorrência.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database1DataSet1.cs">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Database1DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,11 +102,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EscolaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmGerirOcorrencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerirOcorrencia.Designer.cs">
+      <DependentUpon>frmGerirOcorrencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNovoAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNovoAuto.Designer.cs">
+      <DependentUpon>frmNovoAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOcorrenciasAbertas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmOcorrenciasAbertas.Designer.cs">
       <DependentUpon>frmOcorrenciasAbertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerAuto.Designer.cs">
+      <DependentUpon>frmVerAuto.cs</DependentUpon>
     </Compile>
     <Compile Include="Ocorrências\Apagar Ocorrência.cs">
       <SubType>Form</SubType>
@@ -307,8 +329,17 @@
     <EmbeddedResource Include="Encarregado Educação\Apagar EncEducação.resx">
       <DependentUpon>Apagar EncEducação.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGerirOcorrencia.resx">
+      <DependentUpon>frmGerirOcorrencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNovoAuto.resx">
+      <DependentUpon>frmNovoAuto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOcorrenciasAbertas.resx">
       <DependentUpon>frmOcorrenciasAbertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerAuto.resx">
+      <DependentUpon>frmVerAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ocorrências\Apagar Ocorrência.resx">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
