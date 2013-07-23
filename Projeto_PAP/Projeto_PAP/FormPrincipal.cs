@@ -41,7 +41,7 @@ namespace Projeto_PAP
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form4 frm = new Form4();
+            frmOcorrenciasAbertas frm = new frmOcorrenciasAbertas();
             frm.ShowDialog();
         }
 

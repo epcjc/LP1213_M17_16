@@ -76,6 +76,11 @@
     <Compile Include="CriarOcorrência.Designer.cs">
       <DependentUpon>CriarOcorrência.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Encarregado Educação\Apagar DiretorTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +97,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EscolaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmOcorrenciasAbertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOcorrenciasAbertas.Designer.cs">
+      <DependentUpon>frmOcorrenciasAbertas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ocorrências\Apagar Ocorrência.cs">
       <SubType>Form</SubType>
@@ -296,6 +307,9 @@
     <EmbeddedResource Include="Encarregado Educação\Apagar EncEducação.resx">
       <DependentUpon>Apagar EncEducação.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOcorrenciasAbertas.resx">
+      <DependentUpon>frmOcorrenciasAbertas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ocorrências\Apagar Ocorrência.resx">
       <DependentUpon>Apagar Ocorrência.cs</DependentUpon>
     </EmbeddedResource>
@@ -414,6 +428,17 @@
     </None>
     <None Include="Database1DataSet.xss">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsc">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet1.xss">
+      <DependentUpon>Database1DataSet1.xsd</DependentUpon>
     </None>
     <None Include="EscolaDataSet.xsc">
       <DependentUpon>EscolaDataSet.xsd</DependentUpon>

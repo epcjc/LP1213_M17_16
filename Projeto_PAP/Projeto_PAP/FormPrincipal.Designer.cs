@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(473, 118);
+            this.button5.Location = new System.Drawing.Point(473, 161);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(156, 28);
             this.button5.TabIndex = 4;
@@ -69,7 +70,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(156, 28);
             this.button6.TabIndex = 5;
-            this.button6.Text = "Ocorrências";
+            this.button6.Text = "Ocorrências Abertas";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -106,7 +107,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(473, 163);
+            this.button10.Location = new System.Drawing.Point(473, 205);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(156, 28);
             this.button10.TabIndex = 12;
@@ -125,11 +126,22 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(473, 116);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 28);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Ocorrências";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 350);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label2);
@@ -159,5 +171,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button2;
     }
 }
